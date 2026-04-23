@@ -92,7 +92,7 @@ export function AvariasTable({ data }: AvariasTableProps) {
         <TableBody>
           {sorted.map((item) => (
             <TableRow key={item.id} className="hover:bg-muted/30">
-              <TableCell className="font-mono text-sm">{formatDate(item.dataEnvio)}</TableCell>
+              <TableCell className="font-mono text-sm">{item.data ? formatDate(item.data) : "—"}</TableCell>
               <TableCell className="font-mono font-medium">{item.placa}</TableCell>
               <TableCell>
                 <Badge variant="outline" className="text-xs whitespace-nowrap">{item.contrato}</Badge>
