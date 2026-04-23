@@ -30,7 +30,7 @@ function getCategoriaColor(cat: string) {
   }
 }
 
-type SortField = "data" | "valor" | "diasAtraso" | "placa";
+type SortField = "dataEnvio" | "valor" | "diasAtraso" | "placa";
 
 export function AvariasTable({ data }: AvariasTableProps) {
   const [sortField, setSortField] = useState<SortField>("diasAtraso");
@@ -65,7 +65,7 @@ export function AvariasTable({ data }: AvariasTableProps) {
         <TableHeader>
           <TableRow className="bg-muted/50">
             <TableHead>
-              <Button variant="ghost" size="sm" onClick={() => toggleSort("data")} className="h-8 -ml-3 font-semibold">
+              <Button variant="ghost" size="sm" onClick={() => toggleSort("dataEnvio")} className="h-8 -ml-3 font-semibold">
                 Data Envio <ArrowUpDown className="ml-1 h-3 w-3" />
               </Button>
             </TableHead>
@@ -92,7 +92,7 @@ export function AvariasTable({ data }: AvariasTableProps) {
         <TableBody>
           {sorted.map((item) => (
             <TableRow key={item.id} className="hover:bg-muted/30">
-              <TableCell className="font-mono text-sm">{item.data ? formatDate(item.data) : "—"}</TableCell>
+              <TableCell className="font-mono text-sm">{item.dataEnvio ? formatDate(item.dataEnvio) : "—"}</TableCell>
               <TableCell className="font-mono font-medium">{item.placa}</TableCell>
               <TableCell>
                 <Badge variant="outline" className="text-xs whitespace-nowrap">{item.contrato}</Badge>
