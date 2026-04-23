@@ -30,7 +30,7 @@ function getCategoriaColor(cat: string) {
   }
 }
 
-type SortField = "data" | "valor" | "diasAtraso" | "placa";
+type SortField = "dataEnvio" | "valor" | "diasAtraso" | "placa";
 
 export function AvariasTable({ data }: AvariasTableProps) {
   const [sortField, setSortField] = useState<SortField>("diasAtraso");
