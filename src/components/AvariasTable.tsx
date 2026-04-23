@@ -65,7 +65,7 @@ export function AvariasTable({ data }: AvariasTableProps) {
         <TableHeader>
           <TableRow className="bg-muted/50">
             <TableHead>
-              <Button variant="ghost" size="sm" onClick={() => toggleSort("data")} className="h-8 -ml-3 font-semibold">
+              <Button variant="ghost" size="sm" onClick={() => toggleSort("dataEnvio")} className="h-8 -ml-3 font-semibold">
                 Data Envio <ArrowUpDown className="ml-1 h-3 w-3" />
               </Button>
             </TableHead>
