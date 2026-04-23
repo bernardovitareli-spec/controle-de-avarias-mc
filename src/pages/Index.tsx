@@ -106,7 +106,7 @@ const Index = () => {
           <KPICard
             title="Contratos Ativos"
             value={String(contratos.length)}
-            subtitle="SALOBO · SLB · CKS"
+            subtitle={`${avariasData.length} avarias na base`}
             icon={FileText}
           />
           <KPICard
