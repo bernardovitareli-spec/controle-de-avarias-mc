@@ -185,8 +185,8 @@ const Index = () => {
                     formatter={(value: number) => formatCurrency(value)}
                   />
                   <Bar dataKey="valor" radius={[6, 6, 0, 0]}>
-                    {byContract.map((entry) => (
-                      <Cell key={entry.name} fill={CONTRACT_COLORS[entry.name] || "hsl(var(--primary))"} />
+                    {byContract.map((entry, idx) => (
+                      <Cell key={entry.name} fill={getContractColor(entry.name, idx)} />
                     ))}
                   </Bar>
                 </BarChart>
