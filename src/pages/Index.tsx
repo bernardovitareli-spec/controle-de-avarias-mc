@@ -81,7 +81,7 @@ const Index = () => {
         <div className="max-w-[1400px] mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
             <div>
-              <h1 className="text-2xl font-bold tracking-tight">Gestão de Avarias — Ápia</h1>
+              <h1 className="text-2xl font-bold tracking-tight">Gestão de Avarias - MC</h1>
               <p className="text-sm text-muted-foreground mt-0.5">
                 Painel executivo · Atualizado em {new Date().toLocaleDateString("pt-BR")}
               </p>
