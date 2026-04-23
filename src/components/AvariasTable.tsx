@@ -19,17 +19,18 @@ function getDelayColor(dias: number) {
 
 function getCategoriaColor(cat: string) {
   switch (cat) {
-    case "Liberado": return "bg-emerald-100 text-emerald-800 border-emerald-200";
+    case "Concluído": return "bg-emerald-100 text-emerald-800 border-emerald-200";
+    case "Fechado": return "bg-slate-100 text-slate-700 border-slate-200";
     case "Acordado": return "bg-blue-100 text-blue-800 border-blue-200";
     case "Reposição": return "bg-amber-100 text-amber-800 border-amber-200";
-    case "Fechado": return "bg-slate-100 text-slate-700 border-slate-200";
     case "À Negociar": return "bg-red-100 text-red-800 border-red-200";
-    case "Pendente Diego": return "bg-purple-100 text-purple-800 border-purple-200";
+    case "À Enviar": return "bg-orange-100 text-orange-800 border-orange-200";
+    case "Pendente Assinatura": return "bg-purple-100 text-purple-800 border-purple-200";
     default: return "bg-muted text-muted-foreground";
   }
 }
 
-type SortField = "dataEnvio" | "valor" | "diasAtraso" | "placa";
+type SortField = "data" | "valor" | "diasAtraso" | "placa";
 
 export function AvariasTable({ data }: AvariasTableProps) {
   const [sortField, setSortField] = useState<SortField>("diasAtraso");
