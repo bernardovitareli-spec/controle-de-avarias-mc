@@ -15,19 +15,25 @@ import { BarChart, Bar, XAxis, YAxis, CartesianGrid, PieChart, Pie, Cell, Respon
 import { DollarSign, Truck, Clock, AlertTriangle, FileText, Filter } from "lucide-react";
 
 const CATEGORY_COLORS: Record<string, string> = {
-  "Liberado": "hsl(142, 71%, 45%)",
+  "Concluído": "hsl(142, 71%, 45%)",
+  "Fechado": "hsl(220, 10%, 55%)",
   "Acordado": "hsl(220, 70%, 50%)",
   "Reposição": "hsl(38, 92%, 50%)",
-  "Fechado": "hsl(220, 10%, 55%)",
   "À Negociar": "hsl(0, 72%, 51%)",
-  "Pendente Diego": "hsl(280, 65%, 60%)",
+  "À Enviar": "hsl(25, 95%, 55%)",
+  "Pendente Assinatura": "hsl(280, 65%, 60%)",
+  "Sem Parecer": "hsl(220, 10%, 70%)",
 };
 
-const CONTRACT_COLORS: Record<string, string> = {
-  "ÁPIA SALOBO": "hsl(220, 70%, 50%)",
-  "APIA SLB": "hsl(160, 60%, 45%)",
-  "APIA CKS": "hsl(30, 80%, 55%)",
-};
+// Paleta cíclica para os 24 contratos
+const CONTRACT_PALETTE = [
+  "hsl(220, 70%, 50%)", "hsl(160, 60%, 45%)", "hsl(30, 80%, 55%)",
+  "hsl(280, 65%, 60%)", "hsl(0, 72%, 51%)", "hsl(190, 80%, 45%)",
+  "hsl(45, 90%, 50%)", "hsl(340, 75%, 55%)", "hsl(120, 50%, 45%)",
+  "hsl(260, 60%, 55%)", "hsl(15, 85%, 55%)", "hsl(200, 65%, 45%)",
+];
+const getContractColor = (name: string, idx: number) =>
+  CONTRACT_PALETTE[idx % CONTRACT_PALETTE.length];
 
 const formatCurrency = (v: number) =>
   v.toLocaleString("pt-BR", { style: "currency", currency: "BRL" });
@@ -100,7 +106,7 @@ const Index = () => {
           <KPICard
             title="Contratos Ativos"
             value={String(contratos.length)}
-            subtitle="SALOBO · SLB · CKS"
+            subtitle={`${avariasData.length} avarias na base`}
             icon={FileText}
           />
           <KPICard
@@ -179,8 +185,8 @@ const Index = () => {
                     formatter={(value: number) => formatCurrency(value)}
                   />
                   <Bar dataKey="valor" radius={[6, 6, 0, 0]}>
-                    {byContract.map((entry) => (
-                      <Cell key={entry.name} fill={CONTRACT_COLORS[entry.name] || "hsl(var(--primary))"} />
+                    {byContract.map((entry, idx) => (
+                      <Cell key={entry.name} fill={getContractColor(entry.name, idx)} />
                     ))}
                   </Bar>
                 </BarChart>
@@ -236,7 +242,7 @@ const Index = () => {
 
         {/* Contract Summary Cards */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-          {contratos.map((contrato) => {
+          {contratos.map((contrato, idx) => {
             const items = filtered.filter((a) => a.contrato === contrato);
             if (items.length === 0) return null;
             const total = items.reduce((s, a) => s + a.valor, 0);
@@ -247,7 +253,7 @@ const Index = () => {
               <Card key={contrato} className="relative overflow-hidden">
                 <div
                   className="absolute top-0 left-0 w-1 h-full"
-                  style={{ backgroundColor: CONTRACT_COLORS[contrato] }}
+                  style={{ backgroundColor: getContractColor(contrato, idx) }}
                 />
                 <CardContent className="p-5 pl-6">
                   <div className="flex items-start justify-between mb-3">
