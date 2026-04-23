@@ -1,6 +1,6 @@
 export interface Avaria {
   id: number;
-  data: string;
+  dataEnvio: string;
   placa: string;
   contrato: string;
   status: string;
@@ -17,7 +17,7 @@ export const REFERENCE_DATE = "2026-04-23";
 export const avariasData: Avaria[] = [
   {
     "id": 1,
-    "data": "2025-05-15",
+    "dataEnvio": "2025-05-15",
     "placa": "QJB5J63",
     "contrato": "CIVIL MASTER",
     "status": "CONCLUIDO",
@@ -30,7 +30,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 2,
-    "data": "2025-05-22",
+    "dataEnvio": "2025-05-22",
     "placa": "SDU4J24",
     "contrato": "CIVIL MASTER",
     "status": "CONCLUIDO",
@@ -43,7 +43,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 3,
-    "data": "2025-06-04",
+    "dataEnvio": "2025-06-04",
     "placa": "EC280925",
     "contrato": "ITERCELER",
     "status": "CONCLUIDO",
@@ -56,7 +56,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 4,
-    "data": "2025-06-04",
+    "dataEnvio": "2025-06-04",
     "placa": "RWW2H30",
     "contrato": "FGS",
     "status": "CONCLUIDO",
@@ -69,7 +69,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 5,
-    "data": "2025-06-04",
+    "dataEnvio": "2025-06-04",
     "placa": "RCL3H46",
     "contrato": "FGS",
     "status": "CONCLUIDO",
@@ -82,7 +82,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 6,
-    "data": "2025-06-04",
+    "dataEnvio": "2025-06-04",
     "placa": "QVA1J26",
     "contrato": "FGS",
     "status": "CONCLUIDO",
@@ -95,7 +95,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 7,
-    "data": "2025-06-04",
+    "dataEnvio": "2025-06-04",
     "placa": "QVC1C22",
     "contrato": "FGS",
     "status": "CONCLUIDO",
@@ -108,7 +108,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 8,
-    "data": "2025-06-04",
+    "dataEnvio": "2025-06-04",
     "placa": "RWP9G28",
     "contrato": "FGS",
     "status": "CONCLUIDO",
@@ -121,7 +121,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 9,
-    "data": "2025-06-12",
+    "dataEnvio": "2025-06-12",
     "placa": "RBM6E91",
     "contrato": "PCP BARBOSA",
     "status": "CONCLUIDO",
@@ -134,7 +134,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 10,
-    "data": "2025-06-20",
+    "dataEnvio": "2025-06-20",
     "placa": "SDG9G24",
     "contrato": "ITERCELER",
     "status": "CONCLUIDO",
@@ -147,7 +147,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 11,
-    "data": "2025-06-20",
+    "dataEnvio": "2025-06-20",
     "placa": "RWP9G38",
     "contrato": "ITERCELER",
     "status": "CONCLUIDO",
@@ -160,7 +160,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 12,
-    "data": "2025-06-20",
+    "dataEnvio": "2025-06-20",
     "placa": "SDC5A11",
     "contrato": "ITERCELER",
     "status": "CONCLUIDO",
@@ -173,7 +173,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 13,
-    "data": "2025-06-20",
+    "dataEnvio": "2025-06-20",
     "placa": "RCD8F91",
     "contrato": "ITERCELER",
     "status": "CONCLUIDO",
@@ -186,7 +186,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 14,
-    "data": "2025-06-20",
+    "dataEnvio": "2025-06-20",
     "placa": "RCJ5D41",
     "contrato": "ITERCELER",
     "status": "CONCLUIDO",
@@ -199,7 +199,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 15,
-    "data": "2025-06-20",
+    "dataEnvio": "2025-06-20",
     "placa": "RWV7F01",
     "contrato": "MARRUÁ",
     "status": "CONCLUIDO",
@@ -212,7 +212,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 16,
-    "data": "2025-06-27",
+    "dataEnvio": "2025-06-27",
     "placa": "PQP4285",
     "contrato": "FBI",
     "status": "CONCLUIDO",
@@ -225,7 +225,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 17,
-    "data": "2025-06-27",
+    "dataEnvio": "2025-06-27",
     "placa": "FTZ7G95",
     "contrato": "FBI",
     "status": "CONCLUIDO",
@@ -238,7 +238,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 18,
-    "data": "2025-07-01",
+    "dataEnvio": "2025-07-01",
     "placa": "QTN7A85",
     "contrato": "A&L",
     "status": "CONCLUIDO",
@@ -251,7 +251,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 19,
-    "data": "2025-07-01",
+    "dataEnvio": "2025-07-01",
     "placa": "RCK1J15",
     "contrato": "A&L",
     "status": "CONCLUIDO",
@@ -264,7 +264,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 20,
-    "data": "2025-07-01",
+    "dataEnvio": "2025-07-01",
     "placa": "QVK3J73",
     "contrato": "A&L",
     "status": "CONCLUIDO",
@@ -277,7 +277,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 21,
-    "data": "2025-07-16",
+    "dataEnvio": "2025-07-16",
     "placa": "SDG9D24",
     "contrato": "ITERCELER",
     "status": "CONCLUIDO",
@@ -290,7 +290,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 22,
-    "data": "2025-07-17",
+    "dataEnvio": "2025-07-17",
     "placa": "RWP9G18",
     "contrato": "FGS",
     "status": "CONCLUIDO",
@@ -303,7 +303,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 23,
-    "data": "2025-07-17",
+    "dataEnvio": "2025-07-17",
     "placa": "RWP9G28",
     "contrato": "FGS",
     "status": "CONCLUIDO",
@@ -316,7 +316,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 24,
-    "data": "2025-07-17",
+    "dataEnvio": "2025-07-17",
     "placa": "QVK4J78",
     "contrato": "FGS",
     "status": "CONCLUIDO",
@@ -329,7 +329,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 25,
-    "data": "2025-07-17",
+    "dataEnvio": "2025-07-17",
     "placa": "RWW2H30",
     "contrato": "FGS",
     "status": "CONCLUIDO",
@@ -342,7 +342,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 26,
-    "data": "2025-07-17",
+    "dataEnvio": "2025-07-17",
     "placa": "QVK4J88",
     "contrato": "FGS",
     "status": "CONCLUIDO",
@@ -355,7 +355,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 27,
-    "data": "2025-07-17",
+    "dataEnvio": "2025-07-17",
     "placa": "RCL3H46",
     "contrato": "FGS",
     "status": "CONCLUIDO",
@@ -368,7 +368,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 28,
-    "data": "2025-07-24",
+    "dataEnvio": "2025-07-24",
     "placa": "QWB3C11",
     "contrato": "TECNOSONDA",
     "status": "CONCLUIDO",
@@ -381,7 +381,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 29,
-    "data": "2025-07-24",
+    "dataEnvio": "2025-07-24",
     "placa": "QVO3J59",
     "contrato": "TECNOSONDA",
     "status": "CONCLUIDO",
@@ -394,7 +394,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 30,
-    "data": "2025-07-23",
+    "dataEnvio": "2025-07-23",
     "placa": "RBM6F01",
     "contrato": "PCP BARBOSA",
     "status": "CONCLUIDO",
@@ -407,7 +407,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 31,
-    "data": "2025-07-23",
+    "dataEnvio": "2025-07-23",
     "placa": "QDW5314",
     "contrato": "A&L",
     "status": "CONCLUIDO",
@@ -420,7 +420,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 32,
-    "data": "2025-07-23",
+    "dataEnvio": "2025-07-23",
     "placa": "QWB3C06",
     "contrato": "A&L",
     "status": "CONCLUIDO",
@@ -433,7 +433,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 33,
-    "data": "2025-07-23",
+    "dataEnvio": "2025-07-23",
     "placa": "QVO3I09",
     "contrato": "A&L",
     "status": "CONCLUIDO",
@@ -446,7 +446,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 34,
-    "data": "2025-08-04",
+    "dataEnvio": "2025-08-04",
     "placa": "EC281164",
     "contrato": "ITERCELER",
     "status": "CONCLUIDO",
@@ -459,7 +459,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 35,
-    "data": "2025-08-05",
+    "dataEnvio": "2025-08-05",
     "placa": "OMV3290",
     "contrato": "FBI",
     "status": "CONCLUIDO",
@@ -472,7 +472,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 36,
-    "data": "2025-08-05",
+    "dataEnvio": "2025-08-05",
     "placa": "QVK3J73",
     "contrato": "A&L",
     "status": "CONCLUIDO",
@@ -485,7 +485,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 37,
-    "data": "2025-08-05",
+    "dataEnvio": "2025-08-05",
     "placa": "QVOI09",
     "contrato": "A&L",
     "status": "CONCLUIDO",
@@ -498,7 +498,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 38,
-    "data": "2025-08-05",
+    "dataEnvio": "2025-08-05",
     "placa": "RBM6E91",
     "contrato": "PCP BARBOSA",
     "status": "CONCLUIDO",
@@ -511,7 +511,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 39,
-    "data": "2025-08-05",
+    "dataEnvio": "2025-08-05",
     "placa": "QVT3B54",
     "contrato": "CIVIL MASTER",
     "status": "CONCLUIDO",
@@ -524,7 +524,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 40,
-    "data": "2025-08-05",
+    "dataEnvio": "2025-08-05",
     "placa": "QVY0I49",
     "contrato": "CIVIL MASTER",
     "status": "CONCLUIDO",
@@ -537,7 +537,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 41,
-    "data": "2025-08-05",
+    "dataEnvio": "2025-08-05",
     "placa": "RWW2H30",
     "contrato": "CIVIL MASTER",
     "status": "CONCLUIDO",
@@ -550,7 +550,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 42,
-    "data": "2025-08-05",
+    "dataEnvio": "2025-08-05",
     "placa": "SDU4J24",
     "contrato": "CIVIL MASTER",
     "status": "CONCLUIDO",
@@ -563,7 +563,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 43,
-    "data": "2025-08-05",
+    "dataEnvio": "2025-08-05",
     "placa": "QVE3B37",
     "contrato": "CIVIL MASTER",
     "status": "CONCLUIDO",
@@ -576,7 +576,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 44,
-    "data": "2025-08-14",
+    "dataEnvio": "2025-08-14",
     "placa": "RCK1J15",
     "contrato": "A&L",
     "status": "CONCLUIDO",
@@ -589,7 +589,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 45,
-    "data": "2025-08-14",
+    "dataEnvio": "2025-08-14",
     "placa": "QWB3C06",
     "contrato": "A&L",
     "status": "CONCLUIDO",
@@ -602,7 +602,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 46,
-    "data": "2025-08-19",
+    "dataEnvio": "2025-08-19",
     "placa": "QVA1J26",
     "contrato": "FGS",
     "status": "CONCLUIDO",
@@ -615,7 +615,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 47,
-    "data": "2025-08-05",
+    "dataEnvio": "2025-08-05",
     "placa": "SZD9E08",
     "contrato": "APIA CKS",
     "status": "CONCLUIDO",
@@ -628,7 +628,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 48,
-    "data": "2025-06-18",
+    "dataEnvio": "2025-06-18",
     "placa": "SZD9D98",
     "contrato": "APIA CKS",
     "status": "CONCLUIDO",
@@ -641,7 +641,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 49,
-    "data": "2025-08-22",
+    "dataEnvio": "2025-08-22",
     "placa": "OFO5328",
     "contrato": "SODEXO",
     "status": "CONCLUIDO",
@@ -654,7 +654,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 50,
-    "data": "2025-08-27",
+    "dataEnvio": "2025-08-27",
     "placa": "PQP4285",
     "contrato": "FBI",
     "status": "CONCLUIDO",
@@ -667,7 +667,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 51,
-    "data": "2025-08-27",
+    "dataEnvio": "2025-08-27",
     "placa": "QDW5314",
     "contrato": "FBI",
     "status": "CONCLUIDO",
@@ -680,7 +680,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 52,
-    "data": "2025-08-27",
+    "dataEnvio": "2025-08-27",
     "placa": "SCM6A17",
     "contrato": "ITERCELER",
     "status": "CONCLUIDO",
@@ -693,7 +693,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 53,
-    "data": "2025-08-27",
+    "dataEnvio": "2025-08-27",
     "placa": "QVO3I79",
     "contrato": "FGS",
     "status": "CONCLUIDO",
@@ -706,7 +706,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 54,
-    "data": "2025-08-27",
+    "dataEnvio": "2025-08-27",
     "placa": "QVS5661",
     "contrato": "FGS",
     "status": "CONCLUIDO",
@@ -719,7 +719,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 55,
-    "data": "2025-09-09",
+    "dataEnvio": "2025-09-09",
     "placa": "RCJ5D41",
     "contrato": "CIVIL MASTER",
     "status": "CONCLUIDO",
@@ -732,7 +732,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 56,
-    "data": "2025-09-09",
+    "dataEnvio": "2025-09-09",
     "placa": "RCD8F91",
     "contrato": "CIVIL MASTER",
     "status": "CONCLUIDO",
@@ -745,7 +745,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 57,
-    "data": "2025-09-09",
+    "dataEnvio": "2025-09-09",
     "placa": "RWP9G28",
     "contrato": "CIVIL MASTER",
     "status": "CONCLUIDO",
@@ -758,7 +758,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 58,
-    "data": "2025-09-09",
+    "dataEnvio": "2025-09-09",
     "placa": "EC245544",
     "contrato": "CIVIL MASTER",
     "status": "CONCLUIDO",
@@ -771,7 +771,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 59,
-    "data": "2025-09-09",
+    "dataEnvio": "2025-09-09",
     "placa": "QVT3B54",
     "contrato": "CIVIL MASTER",
     "status": "CONCLUIDO",
@@ -784,7 +784,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 60,
-    "data": "2025-09-09",
+    "dataEnvio": "2025-09-09",
     "placa": "RWP9G18",
     "contrato": "CIVIL MASTER",
     "status": "CONCLUIDO",
@@ -797,7 +797,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 61,
-    "data": "2025-09-11",
+    "dataEnvio": "2025-09-11",
     "placa": "QDW5314",
     "contrato": "FBI",
     "status": "CONCLUIDO",
@@ -810,7 +810,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 62,
-    "data": "2025-09-11",
+    "dataEnvio": "2025-09-11",
     "placa": "PQP4285",
     "contrato": "FBI",
     "status": "CONCLUIDO",
@@ -823,7 +823,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 63,
-    "data": "2025-09-12",
+    "dataEnvio": "2025-09-12",
     "placa": "QVZ1F07",
     "contrato": "FGS",
     "status": "CONCLUIDO",
@@ -836,7 +836,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 64,
-    "data": "2025-09-12",
+    "dataEnvio": "2025-09-12",
     "placa": "QVK9E74",
     "contrato": "FGS",
     "status": "CONCLUIDO",
@@ -849,7 +849,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 65,
-    "data": "2025-09-12",
+    "dataEnvio": "2025-09-12",
     "placa": "QVC1C12",
     "contrato": "FGS",
     "status": "CONCLUIDO",
@@ -862,7 +862,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 66,
-    "data": "2025-09-12",
+    "dataEnvio": "2025-09-12",
     "placa": "QVC1C22",
     "contrato": "FGS",
     "status": "CONCLUIDO",
@@ -875,7 +875,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 67,
-    "data": "2025-09-12",
+    "dataEnvio": "2025-09-12",
     "placa": "QVO3I79",
     "contrato": "FGS",
     "status": "CONCLUIDO",
@@ -888,7 +888,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 68,
-    "data": "2025-09-12",
+    "dataEnvio": "2025-09-12",
     "placa": "QVS5C61",
     "contrato": "FGS",
     "status": "CONCLUIDO",
@@ -901,7 +901,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 69,
-    "data": "2025-09-12",
+    "dataEnvio": "2025-09-12",
     "placa": "QVO3I09",
     "contrato": "A&L",
     "status": "CONCLUIDO",
@@ -914,7 +914,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 70,
-    "data": "2025-09-12",
+    "dataEnvio": "2025-09-12",
     "placa": "SZQ9D09",
     "contrato": "A&L",
     "status": "CONCLUIDO",
@@ -927,7 +927,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 71,
-    "data": "2025-09-12",
+    "dataEnvio": "2025-09-12",
     "placa": "RCK1J15/SCC5D73",
     "contrato": "A&L",
     "status": "CONCLUIDO",
@@ -940,7 +940,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 72,
-    "data": "2025-09-12",
+    "dataEnvio": "2025-09-12",
     "placa": "QWB3C06",
     "contrato": "A&L",
     "status": "CONCLUIDO",
@@ -953,7 +953,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 73,
-    "data": "2025-09-12",
+    "dataEnvio": "2025-09-12",
     "placa": "SZL6J43",
     "contrato": "A&L",
     "status": "CONCLUIDO",
@@ -966,7 +966,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 74,
-    "data": "2025-09-12",
+    "dataEnvio": "2025-09-12",
     "placa": "QTN7A85",
     "contrato": "A&L",
     "status": "CONCLUIDO",
@@ -979,7 +979,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 75,
-    "data": "2025-05-28",
+    "dataEnvio": "2025-05-28",
     "placa": "SZD9A68",
     "contrato": "APIA CKS",
     "status": "CONCLUIDO",
@@ -992,7 +992,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 76,
-    "data": "2025-09-23",
+    "dataEnvio": "2025-09-23",
     "placa": "EC281164",
     "contrato": "ITERCELER",
     "status": "CONCLUIDO",
@@ -1005,7 +1005,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 77,
-    "data": "2025-09-29",
+    "dataEnvio": "2025-09-29",
     "placa": "OFO5328",
     "contrato": "SODEXO",
     "status": "CONCLUIDO",
@@ -1018,7 +1018,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 78,
-    "data": "2025-09-29",
+    "dataEnvio": "2025-09-29",
     "placa": "RBM6E91",
     "contrato": "PCP BARBOSA",
     "status": "CONCLUIDO",
@@ -1031,7 +1031,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 79,
-    "data": "2025-10-06",
+    "dataEnvio": "2025-10-06",
     "placa": "PC073769",
     "contrato": "ÁPIA REDENÇÃO",
     "status": "CONCLUIDO",
@@ -1044,7 +1044,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 80,
-    "data": "2025-08-05",
+    "dataEnvio": "2025-08-05",
     "placa": "SZD9A48",
     "contrato": "APIA CKS",
     "status": "CONCLUIDO",
@@ -1057,7 +1057,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 81,
-    "data": "2025-07-24",
+    "dataEnvio": "2025-07-24",
     "placa": "SZB3H50",
     "contrato": "APIA CKS",
     "status": "CONCLUIDO",
@@ -1070,7 +1070,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 82,
-    "data": "2025-10-06",
+    "dataEnvio": "2025-10-06",
     "placa": "QVE3B37",
     "contrato": "CIVIL MASTER",
     "status": "CONCLUIDO",
@@ -1083,7 +1083,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 83,
-    "data": "2025-10-06",
+    "dataEnvio": "2025-10-06",
     "placa": "RWP9G18",
     "contrato": "CIVIL MASTER",
     "status": "CONCLUIDO",
@@ -1096,7 +1096,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 84,
-    "data": "2025-10-06",
+    "dataEnvio": "2025-10-06",
     "placa": "QVK3J83",
     "contrato": "CIVIL MASTER",
     "status": "CONCLUIDO",
@@ -1109,7 +1109,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 85,
-    "data": "2025-10-06",
+    "dataEnvio": "2025-10-06",
     "placa": "QJB5J63",
     "contrato": "CIVIL MASTER",
     "status": "CONCLUIDO",
@@ -1122,7 +1122,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 86,
-    "data": "2025-10-06",
+    "dataEnvio": "2025-10-06",
     "placa": "SDU4J24",
     "contrato": "CIVIL MASTER",
     "status": "CONCLUIDO",
@@ -1135,7 +1135,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 87,
-    "data": "2025-10-06",
+    "dataEnvio": "2025-10-06",
     "placa": "QVO3J59",
     "contrato": "CIVIL MASTER",
     "status": "CONCLUIDO",
@@ -1148,7 +1148,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 88,
-    "data": "2025-10-06",
+    "dataEnvio": "2025-10-06",
     "placa": "QVT3B54",
     "contrato": "CIVIL MASTER",
     "status": "CONCLUIDO",
@@ -1161,7 +1161,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 89,
-    "data": "2025-10-06",
+    "dataEnvio": "2025-10-06",
     "placa": "QVK4J88",
     "contrato": "CIVIL MASTER",
     "status": "CONCLUIDO",
@@ -1174,7 +1174,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 90,
-    "data": "2025-10-06",
+    "dataEnvio": "2025-10-06",
     "placa": "QVE3B37",
     "contrato": "CIVIL MASTER",
     "status": "CONCLUIDO",
@@ -1187,7 +1187,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 91,
-    "data": "2025-10-06",
+    "dataEnvio": "2025-10-06",
     "placa": "RBM6F01",
     "contrato": "PCP BARBOSA",
     "status": "CONCLUIDO",
@@ -1200,7 +1200,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 92,
-    "data": "2025-10-06",
+    "dataEnvio": "2025-10-06",
     "placa": "QTN6A80",
     "contrato": "SODEXO",
     "status": "CONCLUIDO",
@@ -1213,7 +1213,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 93,
-    "data": "2025-07-24",
+    "dataEnvio": "2025-07-24",
     "placa": "RWP9G48",
     "contrato": "APIA CKS",
     "status": "CONCLUIDO",
@@ -1226,7 +1226,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 94,
-    "data": "2025-08-20",
+    "dataEnvio": "2025-08-20",
     "placa": "QVS3F00",
     "contrato": "APIA CKS",
     "status": "CONCLUIDO",
@@ -1239,7 +1239,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 95,
-    "data": "2025-10-08",
+    "dataEnvio": "2025-10-08",
     "placa": "QVY0I49",
     "contrato": "CIVIL MASTER",
     "status": "CONCLUIDO",
@@ -1252,7 +1252,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 96,
-    "data": "2025-07-24",
+    "dataEnvio": "2025-07-24",
     "placa": "QVS3E80",
     "contrato": "APIA CKS",
     "status": "CONCLUIDO",
@@ -1265,7 +1265,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 97,
-    "data": "2025-08-05",
+    "dataEnvio": "2025-08-05",
     "placa": "QVO8F44",
     "contrato": "APIA CKS",
     "status": "CONCLUIDO",
@@ -1278,7 +1278,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 98,
-    "data": "2025-05-27",
+    "dataEnvio": "2025-05-27",
     "placa": "QEZ7B45",
     "contrato": "APIA CKS",
     "status": "CONCLUIDO",
@@ -1291,7 +1291,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 99,
-    "data": "2025-06-11",
+    "dataEnvio": "2025-06-11",
     "placa": "PC073769",
     "contrato": "ORMEC",
     "status": "CONCLUIDO",
@@ -1304,7 +1304,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 100,
-    "data": "2025-06-21",
+    "dataEnvio": "2025-06-21",
     "placa": "SDU4J24",
     "contrato": "CIVIL MASTER",
     "status": "CONCLUIDO",
@@ -1317,7 +1317,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 101,
-    "data": "2025-06-25",
+    "dataEnvio": "2025-06-25",
     "placa": "QEX9036",
     "contrato": "ÁPIA SALOBO",
     "status": "FECHADO",
@@ -1330,7 +1330,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 102,
-    "data": "2025-06-25",
+    "dataEnvio": "2025-06-25",
     "placa": "EC245904",
     "contrato": "ÁPIA SALOBO",
     "status": "FECHADO",
@@ -1343,7 +1343,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 103,
-    "data": "2025-06-26",
+    "dataEnvio": "2025-06-26",
     "placa": "QVE3B37",
     "contrato": "CIVIL MASTER",
     "status": "CONCLUIDO",
@@ -1356,7 +1356,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 104,
-    "data": "2025-06-25",
+    "dataEnvio": "2025-06-25",
     "placa": "SZD9E28",
     "contrato": "APIA CKS",
     "status": "FECHADO",
@@ -1369,7 +1369,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 105,
-    "data": "2025-10-28",
+    "dataEnvio": "2025-10-28",
     "placa": "SZD9E28",
     "contrato": "APIA CKS",
     "status": "FECHADO",
@@ -1382,7 +1382,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 106,
-    "data": "2025-10-28",
+    "dataEnvio": "2025-10-28",
     "placa": "SZD9E28",
     "contrato": "APIA CKS",
     "status": "FECHADO",
@@ -1395,7 +1395,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 107,
-    "data": "2025-07-24",
+    "dataEnvio": "2025-07-24",
     "placa": "QVO3H29",
     "contrato": "ÁPIA SALOBO",
     "status": "FECHADO",
@@ -1408,7 +1408,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 108,
-    "data": "2025-07-24",
+    "dataEnvio": "2025-07-24",
     "placa": "RXF9J48",
     "contrato": "ÁPIA SALOBO",
     "status": "FECHADO",
@@ -1421,7 +1421,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 109,
-    "data": "2025-10-28",
+    "dataEnvio": "2025-10-28",
     "placa": "SZD9E28",
     "contrato": "APIA CKS",
     "status": "FECHADO",
@@ -1434,7 +1434,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 110,
-    "data": "2025-07-24",
+    "dataEnvio": "2025-07-24",
     "placa": "RWW2H30",
     "contrato": "CIVIL MASTER",
     "status": "CONCLUIDO",
@@ -1447,7 +1447,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 111,
-    "data": "2025-10-28",
+    "dataEnvio": "2025-10-28",
     "placa": "SZD9E28",
     "contrato": "APIA CKS",
     "status": "FECHADO",
@@ -1460,7 +1460,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 112,
-    "data": "2025-10-28",
+    "dataEnvio": "2025-10-28",
     "placa": "SZD9E28",
     "contrato": "APIA CKS",
     "status": "FECHADO",
@@ -1473,7 +1473,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 113,
-    "data": "2025-10-28",
+    "dataEnvio": "2025-10-28",
     "placa": "SZD9E28",
     "contrato": "APIA CKS",
     "status": "FECHADO",
@@ -1486,7 +1486,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 114,
-    "data": "2025-08-05",
+    "dataEnvio": "2025-08-05",
     "placa": "PXM1492",
     "contrato": "LIGGA",
     "status": "CONCLUIDO",
@@ -1499,7 +1499,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 115,
-    "data": "2025-08-20",
+    "dataEnvio": "2025-08-20",
     "placa": "QVK4J58",
     "contrato": "ÁPIA SALOBO",
     "status": "FECHADO",
@@ -1512,7 +1512,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 116,
-    "data": "2025-08-27",
+    "dataEnvio": "2025-08-27",
     "placa": "EC246830",
     "contrato": "CIVIL MASTER",
     "status": "CONCLUIDO",
@@ -1525,7 +1525,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 117,
-    "data": "2025-09-15",
+    "dataEnvio": "2025-09-15",
     "placa": "QJB5J63",
     "contrato": "CIVIL MASTER",
     "status": "CONCLUIDO",
@@ -1538,7 +1538,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 118,
-    "data": "2025-07-24",
+    "dataEnvio": "2025-07-24",
     "placa": "SZD9A68",
     "contrato": "APIA CKS",
     "status": "FECHADO",
@@ -1551,7 +1551,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 119,
-    "data": "2025-09-15",
+    "dataEnvio": "2025-09-15",
     "placa": "QVO3I09",
     "contrato": "ÁPIA SALOBO",
     "status": "FECHADO",
@@ -1564,7 +1564,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 120,
-    "data": "2025-09-20",
+    "dataEnvio": "2025-09-20",
     "placa": "QVO3J59",
     "contrato": "CIVIL MASTER",
     "status": "CONCLUIDO",
@@ -1577,7 +1577,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 121,
-    "data": "2025-10-02",
+    "dataEnvio": "2025-10-02",
     "placa": "QDW5404",
     "contrato": "ORMEC",
     "status": "CONCLUIDO",
@@ -1590,7 +1590,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 122,
-    "data": "2025-09-29",
+    "dataEnvio": "2025-09-29",
     "placa": "RCK1J15",
     "contrato": "A&L ORILANDIA",
     "status": "CONCLUIDO",
@@ -1603,7 +1603,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 123,
-    "data": "2025-10-01",
+    "dataEnvio": "2025-10-01",
     "placa": "QEP7543",
     "contrato": "LIGGA",
     "status": "CONCLUIDO",
@@ -1616,7 +1616,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 124,
-    "data": "2025-10-06",
+    "dataEnvio": "2025-10-06",
     "placa": "PC073769",
     "contrato": "ÁPIA REDENÇÃO",
     "status": "CONCLUIDO",
@@ -1629,7 +1629,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 125,
-    "data": "2025-10-06",
+    "dataEnvio": "2025-10-06",
     "placa": "PC073769",
     "contrato": "ÁPIA REDENÇÃO",
     "status": "CONCLUIDO",
@@ -1642,7 +1642,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 126,
-    "data": "2025-10-06",
+    "dataEnvio": "2025-10-06",
     "placa": "PC073769",
     "contrato": "ÁPIA REDENÇÃO",
     "status": "CONCLUIDO",
@@ -1655,7 +1655,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 127,
-    "data": "2025-10-06",
+    "dataEnvio": "2025-10-06",
     "placa": "RNG3H31",
     "contrato": "ÁPIA REDENÇÃO",
     "status": "CONCLUIDO",
@@ -1668,7 +1668,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 128,
-    "data": "2025-10-06",
+    "dataEnvio": "2025-10-06",
     "placa": "RNG3H31",
     "contrato": "ÁPIA REDENÇÃO",
     "status": "CONCLUIDO",
@@ -1681,7 +1681,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 129,
-    "data": "2025-10-06",
+    "dataEnvio": "2025-10-06",
     "placa": "RNG3H31",
     "contrato": "ÁPIA REDENÇÃO",
     "status": "CONCLUIDO",
@@ -1694,7 +1694,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 130,
-    "data": "2025-10-06",
+    "dataEnvio": "2025-10-06",
     "placa": "SDC5A11",
     "contrato": "ÁPIA REDENÇÃO",
     "status": "CONCLUIDO",
@@ -1707,7 +1707,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 131,
-    "data": "2025-10-06",
+    "dataEnvio": "2025-10-06",
     "placa": "SDC5A11",
     "contrato": "ÁPIA REDENÇÃO",
     "status": "CONCLUIDO",
@@ -1720,7 +1720,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 132,
-    "data": "2025-10-06",
+    "dataEnvio": "2025-10-06",
     "placa": "SDC5A11",
     "contrato": "ÁPIA REDENÇÃO",
     "status": "CONCLUIDO",
@@ -1733,7 +1733,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 133,
-    "data": "2025-10-06",
+    "dataEnvio": "2025-10-06",
     "placa": "SDC5A11",
     "contrato": "ÁPIA REDENÇÃO",
     "status": "CONCLUIDO",
@@ -1746,7 +1746,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 134,
-    "data": "2025-10-06",
+    "dataEnvio": "2025-10-06",
     "placa": "SDC5A11",
     "contrato": "ÁPIA REDENÇÃO",
     "status": "CONCLUIDO",
@@ -1759,7 +1759,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 135,
-    "data": "2025-10-06",
+    "dataEnvio": "2025-10-06",
     "placa": "QVL4A42",
     "contrato": "FGS",
     "status": "CONCLUIDO",
@@ -1772,7 +1772,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 136,
-    "data": "2025-10-06",
+    "dataEnvio": "2025-10-06",
     "placa": "QVA1J26",
     "contrato": "FGS",
     "status": "CONCLUIDO",
@@ -1785,7 +1785,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 137,
-    "data": "2025-10-06",
+    "dataEnvio": "2025-10-06",
     "placa": "QVA1J26",
     "contrato": "FGS",
     "status": "CONCLUIDO",
@@ -1798,7 +1798,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 138,
-    "data": "2025-10-06",
+    "dataEnvio": "2025-10-06",
     "placa": "QVA1J26",
     "contrato": "FGS",
     "status": "CONCLUIDO",
@@ -1811,7 +1811,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 139,
-    "data": "2025-10-06",
+    "dataEnvio": "2025-10-06",
     "placa": "QVK9E74",
     "contrato": "FGS",
     "status": "CONCLUIDO",
@@ -1824,7 +1824,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 140,
-    "data": "2025-10-06",
+    "dataEnvio": "2025-10-06",
     "placa": "QVC1C12",
     "contrato": "FGS",
     "status": "CONCLUIDO",
@@ -1837,7 +1837,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 141,
-    "data": "2025-10-06",
+    "dataEnvio": "2025-10-06",
     "placa": "QVC1C22",
     "contrato": "FGS",
     "status": "CONCLUIDO",
@@ -1850,7 +1850,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 142,
-    "data": "2025-10-06",
+    "dataEnvio": "2025-10-06",
     "placa": "QVL4A42",
     "contrato": "FGS",
     "status": "CONCLUIDO",
@@ -1863,7 +1863,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 143,
-    "data": "2025-06-25",
+    "dataEnvio": "2025-06-25",
     "placa": "SDZ9A58",
     "contrato": "APIA CKS",
     "status": "FECHADO",
@@ -1876,7 +1876,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 144,
-    "data": "2025-10-07",
+    "dataEnvio": "2025-10-07",
     "placa": "RWW6C40",
     "contrato": "APIA CKS",
     "status": "CONCLUIDO",
@@ -1889,7 +1889,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 145,
-    "data": "2025-10-07",
+    "dataEnvio": "2025-10-07",
     "placa": "RWW6C40",
     "contrato": "APIA CKS",
     "status": "CONCLUIDO",
@@ -1902,7 +1902,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 146,
-    "data": "2025-10-07",
+    "dataEnvio": "2025-10-07",
     "placa": "RWW6C40",
     "contrato": "APIA CKS",
     "status": "CONCLUIDO",
@@ -1915,7 +1915,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 147,
-    "data": "2025-10-06",
+    "dataEnvio": "2025-10-06",
     "placa": "QVO3I09",
     "contrato": "A&L SLB",
     "status": "CONCLUIDO",
@@ -1928,7 +1928,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 148,
-    "data": "2025-10-06",
+    "dataEnvio": "2025-10-06",
     "placa": "SDQ9D09",
     "contrato": "A&L SLB",
     "status": "CONCLUIDO",
@@ -1941,7 +1941,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 149,
-    "data": "2025-10-06",
+    "dataEnvio": "2025-10-06",
     "placa": "QTN7A85",
     "contrato": "A&L SLB",
     "status": "CONCLUIDO",
@@ -1954,7 +1954,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 150,
-    "data": "2025-10-06",
+    "dataEnvio": "2025-10-06",
     "placa": "QDW5H04",
     "contrato": "LIGGA",
     "status": "CONCLUIDO",
@@ -1967,7 +1967,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 151,
-    "data": "2025-10-06",
+    "dataEnvio": "2025-10-06",
     "placa": "QEP7543",
     "contrato": "LIGGA",
     "status": "CONCLUIDO",
@@ -1980,7 +1980,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 152,
-    "data": "2025-10-06",
+    "dataEnvio": "2025-10-06",
     "placa": "RUN3B49",
     "contrato": "ÁPIA SALOBO",
     "status": "FECHADO",
@@ -1993,7 +1993,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 153,
-    "data": "2025-10-07",
+    "dataEnvio": "2025-10-07",
     "placa": "RWW6C40",
     "contrato": "APIA CKS",
     "status": "CONCLUIDO",
@@ -2006,7 +2006,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 154,
-    "data": "2025-10-07",
+    "dataEnvio": "2025-10-07",
     "placa": "RWW6C40",
     "contrato": "APIA CKS",
     "status": "CONCLUIDO",
@@ -2019,7 +2019,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 155,
-    "data": "2025-10-16",
+    "dataEnvio": "2025-10-16",
     "placa": "RWW6C40",
     "contrato": "APIA CKS",
     "status": "CONCLUIDO",
@@ -2032,7 +2032,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 156,
-    "data": "2025-10-15",
+    "dataEnvio": "2025-10-15",
     "placa": "SZH8A08",
     "contrato": "ÁPIA SALOBO",
     "status": "FECHADO",
@@ -2045,7 +2045,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 157,
-    "data": "2025-10-06",
+    "dataEnvio": "2025-10-06",
     "placa": "QVS3E80",
     "contrato": "APIA CKS",
     "status": "CONCLUIDO",
@@ -2058,7 +2058,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 158,
-    "data": "2025-10-06",
+    "dataEnvio": "2025-10-06",
     "placa": "QVQ6G52",
     "contrato": "APIA CKS",
     "status": "CONCLUIDO",
@@ -2071,7 +2071,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 159,
-    "data": "2025-10-06",
+    "dataEnvio": "2025-10-06",
     "placa": "QVQ6G52",
     "contrato": "APIA CKS",
     "status": "CONCLUIDO",
@@ -2084,7 +2084,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 160,
-    "data": "2025-11-10",
+    "dataEnvio": "2025-11-10",
     "placa": "EC245259",
     "contrato": "ÁPIA SALOBO",
     "status": "FECHADO",
@@ -2097,7 +2097,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 161,
-    "data": "2025-11-10",
+    "dataEnvio": "2025-11-10",
     "placa": "QVK4J58",
     "contrato": "ÁPIA SALOBO",
     "status": "FECHADO",
@@ -2110,7 +2110,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 162,
-    "data": "2025-11-07",
+    "dataEnvio": "2025-11-07",
     "placa": "QVK3J73",
     "contrato": "A&L SLB",
     "status": "CONCLUIDO",
@@ -2123,7 +2123,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 163,
-    "data": "2025-11-07",
+    "dataEnvio": "2025-11-07",
     "placa": "QVK3J73",
     "contrato": "A&L SLB",
     "status": "CONCLUIDO",
@@ -2136,7 +2136,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 164,
-    "data": "2025-11-06",
+    "dataEnvio": "2025-11-06",
     "placa": "RWP9G18",
     "contrato": "CIVIL MASTER",
     "status": "CONCLUIDO",
@@ -2149,7 +2149,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 165,
-    "data": "2025-11-06",
+    "dataEnvio": "2025-11-06",
     "placa": "RWP9G18",
     "contrato": "CIVIL MASTER",
     "status": "CONCLUIDO",
@@ -2162,7 +2162,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 166,
-    "data": "2025-11-06",
+    "dataEnvio": "2025-11-06",
     "placa": "RWP9G18",
     "contrato": "CIVIL MASTER",
     "status": "CONCLUIDO",
@@ -2175,7 +2175,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 167,
-    "data": "2025-11-06",
+    "dataEnvio": "2025-11-06",
     "placa": "RWP9G18",
     "contrato": "CIVIL MASTER",
     "status": "CONCLUIDO",
@@ -2188,7 +2188,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 168,
-    "data": "2025-11-06",
+    "dataEnvio": "2025-11-06",
     "placa": "RWP9G18",
     "contrato": "CIVIL MASTER",
     "status": "CONCLUIDO",
@@ -2201,7 +2201,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 169,
-    "data": "2025-11-10",
+    "dataEnvio": "2025-11-10",
     "placa": "QVS5C61",
     "contrato": "ÁPIA SALOBO",
     "status": "FECHADO",
@@ -2214,7 +2214,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 170,
-    "data": "2025-11-10",
+    "dataEnvio": "2025-11-10",
     "placa": "QVS5C61",
     "contrato": "ÁPIA SALOBO",
     "status": "FECHADO",
@@ -2227,7 +2227,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 171,
-    "data": "2025-11-10",
+    "dataEnvio": "2025-11-10",
     "placa": "QVS5C61",
     "contrato": "ÁPIA SALOBO",
     "status": "FECHADO",
@@ -2240,7 +2240,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 172,
-    "data": "2025-11-10",
+    "dataEnvio": "2025-11-10",
     "placa": "QVS5C61",
     "contrato": "ÁPIA SALOBO",
     "status": "FECHADO",
@@ -2253,7 +2253,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 173,
-    "data": "2025-11-10",
+    "dataEnvio": "2025-11-10",
     "placa": "QVS5C61",
     "contrato": "ÁPIA SALOBO",
     "status": "FECHADO",
@@ -2266,7 +2266,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 174,
-    "data": "2025-11-07",
+    "dataEnvio": "2025-11-07",
     "placa": "RWV7F01",
     "contrato": "MARRUÁ",
     "status": "FECHADO",
@@ -2279,7 +2279,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 175,
-    "data": "2025-11-07",
+    "dataEnvio": "2025-11-07",
     "placa": "RWV7F01",
     "contrato": "MARRUÁ",
     "status": "FECHADO",
@@ -2292,7 +2292,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 176,
-    "data": "2025-08-20",
+    "dataEnvio": "2025-08-20",
     "placa": "QEZ7B45",
     "contrato": "APIA CKS",
     "status": "FECHADO",
@@ -2305,7 +2305,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 177,
-    "data": "2025-10-06",
+    "dataEnvio": "2025-10-06",
     "placa": "QEZ7B45",
     "contrato": "APIA CKS",
     "status": "FECHADO",
@@ -2318,7 +2318,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 178,
-    "data": "2025-10-06",
+    "dataEnvio": "2025-10-06",
     "placa": "QEZ7B45",
     "contrato": "APIA CKS",
     "status": "FECHADO",
@@ -2331,7 +2331,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 179,
-    "data": "2025-09-15",
+    "dataEnvio": "2025-09-15",
     "placa": "QEZ7845",
     "contrato": "APIA CKS",
     "status": "CONCLUIDO",
@@ -2344,7 +2344,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 180,
-    "data": "2025-10-06",
+    "dataEnvio": "2025-10-06",
     "placa": "EC245710",
     "contrato": "APIA CKS",
     "status": "FECHADO",
@@ -2357,7 +2357,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 181,
-    "data": "2025-10-06",
+    "dataEnvio": "2025-10-06",
     "placa": "EC245710",
     "contrato": "APIA CKS",
     "status": "FECHADO",
@@ -2370,7 +2370,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 182,
-    "data": "2025-10-06",
+    "dataEnvio": "2025-10-06",
     "placa": "EC245710",
     "contrato": "APIA CKS",
     "status": "FECHADO",
@@ -2383,7 +2383,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 183,
-    "data": "2025-11-07",
+    "dataEnvio": "2025-11-07",
     "placa": "QTN7A85",
     "contrato": "A&L SLB",
     "status": "CONCLUIDO",
@@ -2396,7 +2396,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 184,
-    "data": "2025-11-07",
+    "dataEnvio": "2025-11-07",
     "placa": "QTN7A85",
     "contrato": "A&L SLB",
     "status": "CONCLUIDO",
@@ -2409,7 +2409,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 185,
-    "data": "2025-11-07",
+    "dataEnvio": "2025-11-07",
     "placa": "QTN7A85",
     "contrato": "A&L SLB",
     "status": "CONCLUIDO",
@@ -2422,7 +2422,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 186,
-    "data": "2025-11-07",
+    "dataEnvio": "2025-11-07",
     "placa": "QTN7A85",
     "contrato": "A&L SLB",
     "status": "CONCLUIDO",
@@ -2435,7 +2435,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 187,
-    "data": "2025-11-07",
+    "dataEnvio": "2025-11-07",
     "placa": "QTN7A85",
     "contrato": "A&L SLB",
     "status": "CONCLUIDO",
@@ -2448,7 +2448,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 188,
-    "data": "2025-11-07",
+    "dataEnvio": "2025-11-07",
     "placa": "QTN7A85",
     "contrato": "A&L SLB",
     "status": "CONCLUIDO",
@@ -2461,7 +2461,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 189,
-    "data": "2025-11-07",
+    "dataEnvio": "2025-11-07",
     "placa": "QTN7A85",
     "contrato": "A&L SLB",
     "status": "CONCLUIDO",
@@ -2474,7 +2474,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 190,
-    "data": "2025-11-07",
+    "dataEnvio": "2025-11-07",
     "placa": "RBM6F01",
     "contrato": "PCP BARBOSA",
     "status": "CONCLUIDO",
@@ -2487,7 +2487,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 191,
-    "data": "2025-11-07",
+    "dataEnvio": "2025-11-07",
     "placa": "RBM6F01",
     "contrato": "PCP BARBOSA",
     "status": "CONCLUIDO",
@@ -2500,7 +2500,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 192,
-    "data": "2025-11-06",
+    "dataEnvio": "2025-11-06",
     "placa": "QYN4A09/QVW3I07",
     "contrato": "CIVIL MASTER",
     "status": "CONCLUIDO",
@@ -2513,7 +2513,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 193,
-    "data": "2025-11-10",
+    "dataEnvio": "2025-11-10",
     "placa": "TWA2H25",
     "contrato": "APIA CKS",
     "status": "FECHADO",
@@ -2526,7 +2526,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 194,
-    "data": "2025-11-10",
+    "dataEnvio": "2025-11-10",
     "placa": "TWA2G95",
     "contrato": "APIA CKS",
     "status": "FECHADO",
@@ -2539,7 +2539,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 195,
-    "data": "2025-11-10",
+    "dataEnvio": "2025-11-10",
     "placa": "TWA2G75",
     "contrato": "APIA CKS",
     "status": "FECHADO",
@@ -2552,7 +2552,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 196,
-    "data": "2025-11-10",
+    "dataEnvio": "2025-11-10",
     "placa": "TVU0B16",
     "contrato": "APIA CKS",
     "status": "FECHADO",
@@ -2565,7 +2565,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 197,
-    "data": "2025-11-10",
+    "dataEnvio": "2025-11-10",
     "placa": "SZD9E48",
     "contrato": "APIA CKS",
     "status": "FECHADO",
@@ -2578,7 +2578,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 198,
-    "data": "2025-11-10",
+    "dataEnvio": "2025-11-10",
     "placa": "SZD9A68",
     "contrato": "APIA CKS",
     "status": "FECHADO",
@@ -2591,7 +2591,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 199,
-    "data": "2025-11-10",
+    "dataEnvio": "2025-11-10",
     "placa": "SZB3H50",
     "contrato": "APIA CKS",
     "status": "FECHADO",
@@ -2604,7 +2604,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 200,
-    "data": "2025-11-04",
+    "dataEnvio": "2025-11-04",
     "placa": "QVK9E74",
     "contrato": "TECNOSONDA",
     "status": "CONCLUIDO",
@@ -2617,7 +2617,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 201,
-    "data": "2025-11-10",
+    "dataEnvio": "2025-11-10",
     "placa": "QVO8F44",
     "contrato": "APIA CKS",
     "status": "FECHADO",
@@ -2630,7 +2630,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 202,
-    "data": "2025-11-10",
+    "dataEnvio": "2025-11-10",
     "placa": "QVO8F44",
     "contrato": "APIA CKS",
     "status": "FECHADO",
@@ -2643,7 +2643,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 203,
-    "data": "2025-11-10",
+    "dataEnvio": "2025-11-10",
     "placa": "QVL9A93",
     "contrato": "APIA CKS",
     "status": "FECHADO",
@@ -2656,7 +2656,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 204,
-    "data": "2025-11-10",
+    "dataEnvio": "2025-11-10",
     "placa": "QVL9A93",
     "contrato": "APIA CKS",
     "status": "FECHADO",
@@ -2669,7 +2669,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 205,
-    "data": "2025-11-10",
+    "dataEnvio": "2025-11-10",
     "placa": "RBM9E80",
     "contrato": "ÁPIA SALOBO",
     "status": "FECHADO",
@@ -2682,7 +2682,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 206,
-    "data": "2025-11-10",
+    "dataEnvio": "2025-11-10",
     "placa": "QVO3H29",
     "contrato": "ÁPIA SALOBO",
     "status": "FECHADO",
@@ -2695,7 +2695,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 207,
-    "data": "2025-11-05",
+    "dataEnvio": "2025-11-05",
     "placa": "QDW5274",
     "contrato": "ORMEC",
     "status": "CONCLUIDO",
@@ -2708,7 +2708,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 208,
-    "data": "2025-11-05",
+    "dataEnvio": "2025-11-05",
     "placa": "QDW5274",
     "contrato": "ORMEC",
     "status": "CONCLUIDO",
@@ -2721,7 +2721,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 209,
-    "data": "2025-11-05",
+    "dataEnvio": "2025-11-05",
     "placa": "QDW5274",
     "contrato": "ORMEC",
     "status": "CONCLUIDO",
@@ -2734,7 +2734,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 210,
-    "data": "2025-11-05",
+    "dataEnvio": "2025-11-05",
     "placa": "QDW5274",
     "contrato": "ORMEC",
     "status": "CONCLUIDO",
@@ -2747,7 +2747,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 211,
-    "data": "2025-11-05",
+    "dataEnvio": "2025-11-05",
     "placa": "QDW5274",
     "contrato": "ORMEC",
     "status": "CONCLUIDO",
@@ -2760,7 +2760,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 212,
-    "data": "2025-11-05",
+    "dataEnvio": "2025-11-05",
     "placa": "QDW5274",
     "contrato": "ORMEC",
     "status": "CONCLUIDO",
@@ -2773,7 +2773,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 213,
-    "data": "2025-11-05",
+    "dataEnvio": "2025-11-05",
     "placa": "QDW5274",
     "contrato": "ORMEC",
     "status": "CONCLUIDO",
@@ -2786,7 +2786,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 214,
-    "data": "2025-11-05",
+    "dataEnvio": "2025-11-05",
     "placa": "QDW5274",
     "contrato": "ORMEC",
     "status": "CONCLUIDO",
@@ -2799,7 +2799,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 215,
-    "data": "2025-11-05",
+    "dataEnvio": "2025-11-05",
     "placa": "QDW5274",
     "contrato": "ORMEC",
     "status": "CONCLUIDO",
@@ -2812,7 +2812,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 216,
-    "data": "2025-11-05",
+    "dataEnvio": "2025-11-05",
     "placa": "QDW5274",
     "contrato": "ORMEC",
     "status": "CONCLUIDO",
@@ -2825,7 +2825,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 217,
-    "data": "2025-11-05",
+    "dataEnvio": "2025-11-05",
     "placa": "QDW5274",
     "contrato": "ORMEC",
     "status": "CONCLUIDO",
@@ -2838,7 +2838,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 218,
-    "data": "2025-11-05",
+    "dataEnvio": "2025-11-05",
     "placa": "QDW5274",
     "contrato": "ORMEC",
     "status": "CONCLUIDO",
@@ -2851,7 +2851,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 219,
-    "data": "2025-11-05",
+    "dataEnvio": "2025-11-05",
     "placa": "QDW5274",
     "contrato": "ORMEC",
     "status": "CONCLUIDO",
@@ -2864,7 +2864,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 220,
-    "data": "2025-11-05",
+    "dataEnvio": "2025-11-05",
     "placa": "QDW5274",
     "contrato": "ORMEC",
     "status": "CONCLUIDO",
@@ -2877,7 +2877,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 221,
-    "data": "2025-11-05",
+    "dataEnvio": "2025-11-05",
     "placa": "QDW5274",
     "contrato": "ORMEC",
     "status": "CONCLUIDO",
@@ -2890,7 +2890,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 222,
-    "data": "2025-11-06",
+    "dataEnvio": "2025-11-06",
     "placa": "RWP9G18",
     "contrato": "CIVIL MASTER",
     "status": "CONCLUIDO",
@@ -2903,7 +2903,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 223,
-    "data": "2025-11-06",
+    "dataEnvio": "2025-11-06",
     "placa": "QYN4A09",
     "contrato": "CIVIL MASTER",
     "status": "CONCLUIDO",
@@ -2916,7 +2916,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 224,
-    "data": "2025-11-06",
+    "dataEnvio": "2025-11-06",
     "placa": "SDG9D24",
     "contrato": "CIVIL MASTER",
     "status": "CONCLUIDO",
@@ -2929,7 +2929,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 225,
-    "data": "2025-11-06",
+    "dataEnvio": "2025-11-06",
     "placa": "RCJ5D41",
     "contrato": "CIVIL MASTER",
     "status": "CONCLUIDO",
@@ -2942,7 +2942,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 226,
-    "data": "2025-11-06",
+    "dataEnvio": "2025-11-06",
     "placa": "RWP9G18",
     "contrato": "CIVIL MASTER",
     "status": "CONCLUIDO",
@@ -2955,7 +2955,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 227,
-    "data": "2025-11-06",
+    "dataEnvio": "2025-11-06",
     "placa": "EC246739",
     "contrato": "CIVIL MASTER",
     "status": "CONCLUIDO",
@@ -2968,7 +2968,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 228,
-    "data": "2025-11-06",
+    "dataEnvio": "2025-11-06",
     "placa": "QVE3B37",
     "contrato": "CIVIL MASTER",
     "status": "CONCLUIDO",
@@ -2981,7 +2981,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 229,
-    "data": "2025-11-06",
+    "dataEnvio": "2025-11-06",
     "placa": "QVY0I49",
     "contrato": "CIVIL MASTER",
     "status": "CONCLUIDO",
@@ -2994,7 +2994,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 230,
-    "data": "2025-11-06",
+    "dataEnvio": "2025-11-06",
     "placa": "JZW00801",
     "contrato": "CIVIL MASTER",
     "status": "CONCLUIDO",
@@ -3007,7 +3007,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 231,
-    "data": "2025-11-06",
+    "dataEnvio": "2025-11-06",
     "placa": "RWU0F11",
     "contrato": "ORMEC",
     "status": "CONCLUIDO",
@@ -3020,7 +3020,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 232,
-    "data": "2025-11-07",
+    "dataEnvio": "2025-11-07",
     "placa": "SZL6J43",
     "contrato": "A&L ORILANDIA",
     "status": "CONCLUIDO",
@@ -3033,7 +3033,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 233,
-    "data": "2025-11-07",
+    "dataEnvio": "2025-11-07",
     "placa": "QVK3J73",
     "contrato": "A&L SLB",
     "status": "CONCLUIDO",
@@ -3046,7 +3046,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 234,
-    "data": "2025-11-07",
+    "dataEnvio": "2025-11-07",
     "placa": "QVO3I09",
     "contrato": "A&L SLB",
     "status": "CONCLUIDO",
@@ -3059,7 +3059,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 235,
-    "data": "2025-11-07",
+    "dataEnvio": "2025-11-07",
     "placa": "QTN7A85",
     "contrato": "A&L SLB",
     "status": "CONCLUIDO",
@@ -3072,7 +3072,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 236,
-    "data": "2025-11-07",
+    "dataEnvio": "2025-11-07",
     "placa": "QVK3J73",
     "contrato": "A&L SLB",
     "status": "CONCLUIDO",
@@ -3085,7 +3085,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 237,
-    "data": "2025-11-07",
+    "dataEnvio": "2025-11-07",
     "placa": "RBM6F01",
     "contrato": "PCP BARBOSA",
     "status": "CONCLUIDO",
@@ -3098,7 +3098,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 238,
-    "data": "2025-11-07",
+    "dataEnvio": "2025-11-07",
     "placa": "RBM6F01",
     "contrato": "PCP BARBOSA",
     "status": "CONCLUIDO",
@@ -3111,7 +3111,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 239,
-    "data": "2025-11-10",
+    "dataEnvio": "2025-11-10",
     "placa": "SZD9E08",
     "contrato": "APIA CKS",
     "status": "FECHADO",
@@ -3124,7 +3124,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 240,
-    "data": "2025-11-10",
+    "dataEnvio": "2025-11-10",
     "placa": "SZD9D98",
     "contrato": "APIA CKS",
     "status": "FECHADO",
@@ -3137,7 +3137,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 241,
-    "data": "2025-11-10",
+    "dataEnvio": "2025-11-10",
     "placa": "RBN4E40",
     "contrato": "ÁPIA SALOBO",
     "status": "FECHADO",
@@ -3150,7 +3150,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 242,
-    "data": "2025-11-10",
+    "dataEnvio": "2025-11-10",
     "placa": "SZD9A58",
     "contrato": "APIA CKS",
     "status": "FECHADO",
@@ -3163,7 +3163,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 243,
-    "data": "2025-11-07",
+    "dataEnvio": "2025-11-07",
     "placa": "QVA1J26",
     "contrato": "FGS",
     "status": "CONCLUIDO",
@@ -3176,7 +3176,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 244,
-    "data": "2025-11-07",
+    "dataEnvio": "2025-11-07",
     "placa": "QVA1J26",
     "contrato": "FGS",
     "status": "CONCLUIDO",
@@ -3189,7 +3189,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 245,
-    "data": "2025-11-07",
+    "dataEnvio": "2025-11-07",
     "placa": "RWV7F01",
     "contrato": "MARRUÁ",
     "status": "FECHADO",
@@ -3202,7 +3202,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 246,
-    "data": "2025-11-07",
+    "dataEnvio": "2025-11-07",
     "placa": "QTN6A80",
     "contrato": "SODEXO",
     "status": "FECHADO",
@@ -3215,7 +3215,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 247,
-    "data": "2025-11-10",
+    "dataEnvio": "2025-11-10",
     "placa": "TVU0B16",
     "contrato": "APIA CKS",
     "status": "FECHADO",
@@ -3228,7 +3228,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 248,
-    "data": "2025-11-10",
+    "dataEnvio": "2025-11-10",
     "placa": "QVQ6G52",
     "contrato": "APIA CKS",
     "status": "FECHADO",
@@ -3241,7 +3241,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 249,
-    "data": "2025-11-10",
+    "dataEnvio": "2025-11-10",
     "placa": "QVQ6G52",
     "contrato": "APIA CKS",
     "status": "FECHADO",
@@ -3254,7 +3254,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 250,
-    "data": "2025-11-10",
+    "dataEnvio": "2025-11-10",
     "placa": "QVQ6G52",
     "contrato": "APIA CKS",
     "status": "FECHADO",
@@ -3267,7 +3267,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 251,
-    "data": "2025-11-10",
+    "dataEnvio": "2025-11-10",
     "placa": "SZD9E58",
     "contrato": "APIA CKS",
     "status": "FECHADO",
@@ -3280,7 +3280,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 252,
-    "data": "2025-11-10",
+    "dataEnvio": "2025-11-10",
     "placa": "SZD9E58",
     "contrato": "APIA CKS",
     "status": "FECHADO",
@@ -3293,7 +3293,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 253,
-    "data": "2025-11-10",
+    "dataEnvio": "2025-11-10",
     "placa": "SZD9E28",
     "contrato": "APIA CKS",
     "status": "FECHADO",
@@ -3306,7 +3306,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 254,
-    "data": "2025-11-10",
+    "dataEnvio": "2025-11-10",
     "placa": "SZD9E28",
     "contrato": "APIA CKS",
     "status": "FECHADO",
@@ -3319,7 +3319,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 255,
-    "data": "2025-11-10",
+    "dataEnvio": "2025-11-10",
     "placa": "SZD9E28",
     "contrato": "APIA CKS",
     "status": "FECHADO",
@@ -3332,7 +3332,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 256,
-    "data": "2025-11-10",
+    "dataEnvio": "2025-11-10",
     "placa": "SZD9A48",
     "contrato": "APIA CKS",
     "status": "FECHADO",
@@ -3345,7 +3345,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 257,
-    "data": "2025-11-10",
+    "dataEnvio": "2025-11-10",
     "placa": "SZD9A48",
     "contrato": "APIA CKS",
     "status": "FECHADO",
@@ -3358,7 +3358,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 258,
-    "data": "2025-11-10",
+    "dataEnvio": "2025-11-10",
     "placa": "RWV7F01",
     "contrato": "MARRUÁ",
     "status": "CONCLUIDO",
@@ -3371,7 +3371,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 259,
-    "data": "2025-11-12",
+    "dataEnvio": "2025-11-12",
     "placa": "EC281019",
     "contrato": "APIA FICO",
     "status": "NEGOCIAÇÃO",
@@ -3384,7 +3384,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 260,
-    "data": "2025-11-12",
+    "dataEnvio": "2025-11-12",
     "placa": "P07365",
     "contrato": "APIA FICO",
     "status": "NEGOCIAÇÃO",
@@ -3397,7 +3397,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 261,
-    "data": "2025-11-14",
+    "dataEnvio": "2025-11-14",
     "placa": "QYN4A09",
     "contrato": "CIVIL MASTER",
     "status": "CONCLUIDO",
@@ -3410,7 +3410,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 262,
-    "data": "2025-11-14",
+    "dataEnvio": "2025-11-14",
     "placa": "QYN4A09",
     "contrato": "CIVIL MASTER",
     "status": "CONCLUIDO",
@@ -3423,7 +3423,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 263,
-    "data": "2025-11-14",
+    "dataEnvio": "2025-11-14",
     "placa": "QYN4A09",
     "contrato": "CIVIL MASTER",
     "status": "CONCLUIDO",
@@ -3436,7 +3436,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 264,
-    "data": "2025-11-14",
+    "dataEnvio": "2025-11-14",
     "placa": "QYN4A09",
     "contrato": "CIVIL MASTER",
     "status": "CONCLUIDO",
@@ -3449,7 +3449,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 265,
-    "data": "2025-11-14",
+    "dataEnvio": "2025-11-14",
     "placa": "QYN4A09",
     "contrato": "CIVIL MASTER",
     "status": "CONCLUIDO",
@@ -3462,7 +3462,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 266,
-    "data": "2025-11-14",
+    "dataEnvio": "2025-11-14",
     "placa": "QYN4A09",
     "contrato": "CIVIL MASTER",
     "status": "CONCLUIDO",
@@ -3475,7 +3475,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 267,
-    "data": "2025-11-17",
+    "dataEnvio": "2025-11-17",
     "placa": "SZD9E48",
     "contrato": "APIA CKS",
     "status": "FECHADO",
@@ -3488,7 +3488,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 268,
-    "data": "2025-11-17",
+    "dataEnvio": "2025-11-17",
     "placa": "QVY0H79",
     "contrato": "ÁPIA SALOBO",
     "status": "FECHADO",
@@ -3501,7 +3501,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 269,
-    "data": "2025-11-17",
+    "dataEnvio": "2025-11-17",
     "placa": "QVY0H79",
     "contrato": "ÁPIA SALOBO",
     "status": "FECHADO",
@@ -3514,7 +3514,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 270,
-    "data": "2025-11-17",
+    "dataEnvio": "2025-11-17",
     "placa": "QEZ7B45",
     "contrato": "APIA CKS",
     "status": "FECHADO",
@@ -3527,7 +3527,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 271,
-    "data": "2025-11-07",
+    "dataEnvio": "2025-11-07",
     "placa": "RBM6F01",
     "contrato": "PCP BARBOSA",
     "status": "CONCLUIDO",
@@ -3540,7 +3540,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 272,
-    "data": "2025-11-26",
+    "dataEnvio": "2025-11-26",
     "placa": "EC246739",
     "contrato": "CIVIL MASTER",
     "status": "CONCLUIDO",
@@ -3553,7 +3553,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 273,
-    "data": "2025-11-26",
+    "dataEnvio": "2025-11-26",
     "placa": "QYN4A09",
     "contrato": "CIVIL MASTER",
     "status": "CONCLUIDO",
@@ -3566,7 +3566,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 274,
-    "data": "2025-11-24",
+    "dataEnvio": "2025-11-24",
     "placa": "EC245982",
     "contrato": "ÁPIA SALOBO",
     "status": "FECHADO",
@@ -3579,7 +3579,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 275,
-    "data": "2025-11-26",
+    "dataEnvio": "2025-11-26",
     "placa": "QVQ6G52",
     "contrato": "APIA CKS",
     "status": "FECHADO",
@@ -3592,7 +3592,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 276,
-    "data": "2025-11-28",
+    "dataEnvio": "2025-11-28",
     "placa": "QVT3B54",
     "contrato": "CIVIL MASTER",
     "status": "CONCLUIDO",
@@ -3605,7 +3605,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 277,
-    "data": "2025-12-01",
+    "dataEnvio": "2025-12-01",
     "placa": "EC281164",
     "contrato": "ITERCELER",
     "status": "CONCLUIDO",
@@ -3618,7 +3618,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 278,
-    "data": "2025-12-01",
+    "dataEnvio": "2025-12-01",
     "placa": "EC281164",
     "contrato": "ITERCELER",
     "status": "CONCLUIDO",
@@ -3631,7 +3631,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 279,
-    "data": "2025-12-01",
+    "dataEnvio": "2025-12-01",
     "placa": "EC281164",
     "contrato": "ITERCELER",
     "status": "CONCLUIDO",
@@ -3644,7 +3644,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 280,
-    "data": "2025-12-01",
+    "dataEnvio": "2025-12-01",
     "placa": "EC281164",
     "contrato": "ITERCELER",
     "status": "CONCLUIDO",
@@ -3657,7 +3657,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 281,
-    "data": "2025-12-01",
+    "dataEnvio": "2025-12-01",
     "placa": "EC281164",
     "contrato": "ITERCELER",
     "status": "CONCLUIDO",
@@ -3670,7 +3670,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 282,
-    "data": "2025-12-01",
+    "dataEnvio": "2025-12-01",
     "placa": "EC281164",
     "contrato": "ITERCELER",
     "status": "CONCLUIDO",
@@ -3683,7 +3683,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 283,
-    "data": "2025-12-01",
+    "dataEnvio": "2025-12-01",
     "placa": "EC281164",
     "contrato": "ITERCELER",
     "status": "CONCLUIDO",
@@ -3696,7 +3696,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 284,
-    "data": "2025-12-01",
+    "dataEnvio": "2025-12-01",
     "placa": "EC281164",
     "contrato": "ITERCELER",
     "status": "CONCLUIDO",
@@ -3709,7 +3709,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 285,
-    "data": "2025-12-01",
+    "dataEnvio": "2025-12-01",
     "placa": "EC281164",
     "contrato": "ITERCELER",
     "status": "CONCLUIDO",
@@ -3722,7 +3722,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 286,
-    "data": "2025-12-01",
+    "dataEnvio": "2025-12-01",
     "placa": "EC281164",
     "contrato": "ITERCELER",
     "status": "CONCLUIDO",
@@ -3735,7 +3735,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 287,
-    "data": "2025-12-01",
+    "dataEnvio": "2025-12-01",
     "placa": "EC281164",
     "contrato": "ITERCELER",
     "status": "CONCLUIDO",
@@ -3748,7 +3748,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 288,
-    "data": "2025-12-01",
+    "dataEnvio": "2025-12-01",
     "placa": "EC281164",
     "contrato": "ITERCELER",
     "status": "CONCLUIDO",
@@ -3761,7 +3761,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 289,
-    "data": "2025-12-01",
+    "dataEnvio": "2025-12-01",
     "placa": "EC281164",
     "contrato": "ITERCELER",
     "status": "CONCLUIDO",
@@ -3774,7 +3774,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 290,
-    "data": "2025-12-02",
+    "dataEnvio": "2025-12-02",
     "placa": "QVO3I09",
     "contrato": "A&L SLB",
     "status": "CONCLUIDO",
@@ -3787,7 +3787,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 291,
-    "data": "2025-12-01",
+    "dataEnvio": "2025-12-01",
     "placa": "TE51464",
     "contrato": "CIVIL MASTER",
     "status": "CONCLUIDO",
@@ -3800,7 +3800,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 292,
-    "data": "2025-12-01",
+    "dataEnvio": "2025-12-01",
     "placa": "TE51464",
     "contrato": "CIVIL MASTER",
     "status": "CONCLUIDO",
@@ -3813,7 +3813,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 293,
-    "data": "2025-12-01",
+    "dataEnvio": "2025-12-01",
     "placa": "TE51464",
     "contrato": "CIVIL MASTER",
     "status": "CONCLUIDO",
@@ -3826,7 +3826,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 294,
-    "data": "2025-12-01",
+    "dataEnvio": "2025-12-01",
     "placa": "TE51464",
     "contrato": "CIVIL MASTER",
     "status": "CONCLUIDO",
@@ -3839,7 +3839,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 295,
-    "data": "2025-12-01",
+    "dataEnvio": "2025-12-01",
     "placa": "TE51464",
     "contrato": "CIVIL MASTER",
     "status": "CONCLUIDO",
@@ -3852,7 +3852,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 296,
-    "data": "2025-12-01",
+    "dataEnvio": "2025-12-01",
     "placa": "TE51464",
     "contrato": "CIVIL MASTER",
     "status": "CONCLUIDO",
@@ -3865,7 +3865,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 297,
-    "data": "2025-12-02",
+    "dataEnvio": "2025-12-02",
     "placa": "OFO5328",
     "contrato": "SODEXO",
     "status": "FECHADO",
@@ -3878,7 +3878,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 298,
-    "data": "2025-12-05",
+    "dataEnvio": "2025-12-05",
     "placa": "EC245532",
     "contrato": "ÁPIA SALOBO",
     "status": "FECHADO",
@@ -3891,7 +3891,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 299,
-    "data": "2025-12-05",
+    "dataEnvio": "2025-12-05",
     "placa": "EC245532",
     "contrato": "ÁPIA SALOBO",
     "status": "FECHADO",
@@ -3904,7 +3904,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 300,
-    "data": "2025-12-05",
+    "dataEnvio": "2025-12-05",
     "placa": "EC245532",
     "contrato": "ÁPIA SALOBO",
     "status": "FECHADO",
@@ -3917,7 +3917,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 301,
-    "data": "2025-12-05",
+    "dataEnvio": "2025-12-05",
     "placa": "EC245532",
     "contrato": "ÁPIA SALOBO",
     "status": "FECHADO",
@@ -3930,7 +3930,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 302,
-    "data": "2025-12-05",
+    "dataEnvio": "2025-12-05",
     "placa": "EC245532",
     "contrato": "ÁPIA SALOBO",
     "status": "FECHADO",
@@ -3943,7 +3943,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 303,
-    "data": "2025-12-03",
+    "dataEnvio": "2025-12-03",
     "placa": "JZW00801",
     "contrato": "CIVIL MASTER",
     "status": "CONCLUIDO",
@@ -3956,7 +3956,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 304,
-    "data": "2025-12-03",
+    "dataEnvio": "2025-12-03",
     "placa": "JZW00801",
     "contrato": "CIVIL MASTER",
     "status": "CONCLUIDO",
@@ -3969,7 +3969,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 305,
-    "data": "2025-12-05",
+    "dataEnvio": "2025-12-05",
     "placa": "QDW5274",
     "contrato": "ORMEC",
     "status": "CONCLUIDO",
@@ -3982,7 +3982,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 306,
-    "data": "2025-12-05",
+    "dataEnvio": "2025-12-05",
     "placa": "QVO3I09",
     "contrato": "A&L SLB",
     "status": "CONCLUIDO",
@@ -3995,7 +3995,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 307,
-    "data": "2025-12-05",
+    "dataEnvio": "2025-12-05",
     "placa": "QTN7A95",
     "contrato": "CIVIL MASTER",
     "status": "CONCLUIDO",
@@ -4008,7 +4008,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 308,
-    "data": "2025-12-05",
+    "dataEnvio": "2025-12-05",
     "placa": "QVO3J59",
     "contrato": "CIVIL MASTER",
     "status": "CONCLUIDO",
@@ -4021,7 +4021,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 309,
-    "data": "2025-12-05",
+    "dataEnvio": "2025-12-05",
     "placa": "QYN4A09",
     "contrato": "CIVIL MASTER",
     "status": "CONCLUIDO",
@@ -4034,7 +4034,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 310,
-    "data": "2025-12-05",
+    "dataEnvio": "2025-12-05",
     "placa": "QVT3B54",
     "contrato": "CIVIL MASTER",
     "status": "CONCLUIDO",
@@ -4047,7 +4047,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 311,
-    "data": "2025-12-05",
+    "dataEnvio": "2025-12-05",
     "placa": "SDU4J24",
     "contrato": "CIVIL MASTER",
     "status": "CONCLUIDO",
@@ -4060,7 +4060,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 312,
-    "data": "2025-12-05",
+    "dataEnvio": "2025-12-05",
     "placa": "TE51464",
     "contrato": "CIVIL MASTER",
     "status": "CONCLUIDO",
@@ -4073,7 +4073,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 313,
-    "data": "2025-12-05",
+    "dataEnvio": "2025-12-05",
     "placa": "EC246830",
     "contrato": "CIVIL MASTER",
     "status": "CONCLUIDO",
@@ -4086,7 +4086,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 314,
-    "data": "2025-12-11",
+    "dataEnvio": "2025-12-11",
     "placa": "QVC1C22",
     "contrato": "TECNOSONDA",
     "status": "CONCLUIDO",
@@ -4099,7 +4099,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 315,
-    "data": "2025-12-11",
+    "dataEnvio": "2025-12-11",
     "placa": "QVC1C22",
     "contrato": "TECNOSONDA",
     "status": "CONCLUIDO",
@@ -4112,7 +4112,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 316,
-    "data": "2025-12-11",
+    "dataEnvio": "2025-12-11",
     "placa": "QVC1C22",
     "contrato": "TECNOSONDA",
     "status": "CONCLUIDO",
@@ -4125,7 +4125,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 317,
-    "data": "2025-12-11",
+    "dataEnvio": "2025-12-11",
     "placa": "QVC1C22",
     "contrato": "TECNOSONDA",
     "status": "CONCLUIDO",
@@ -4138,7 +4138,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 318,
-    "data": "2025-12-11",
+    "dataEnvio": "2025-12-11",
     "placa": "QVC1C22",
     "contrato": "TECNOSONDA",
     "status": "CONCLUIDO",
@@ -4151,7 +4151,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 319,
-    "data": "2025-12-20",
+    "dataEnvio": "2025-12-20",
     "placa": "EC281828",
     "contrato": "APIA CKS",
     "status": "FECHADO",
@@ -4164,7 +4164,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 320,
-    "data": "2025-12-20",
+    "dataEnvio": "2025-12-20",
     "placa": "TVU0B26",
     "contrato": "APIA CKS",
     "status": "FECHADO",
@@ -4177,7 +4177,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 321,
-    "data": "2025-12-20",
+    "dataEnvio": "2025-12-20",
     "placa": "SZB3H50",
     "contrato": "APIA CKS",
     "status": "FECHADO",
@@ -4190,7 +4190,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 322,
-    "data": "2025-12-20",
+    "dataEnvio": "2025-12-20",
     "placa": "QVQ6G52",
     "contrato": "APIA CKS",
     "status": "FECHADO",
@@ -4203,7 +4203,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 323,
-    "data": "2025-12-22",
+    "dataEnvio": "2025-12-22",
     "placa": "RWP9G18",
     "contrato": "CIVIL MASTER",
     "status": "CONCLUIDO",
@@ -4216,7 +4216,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 324,
-    "data": "2025-12-22",
+    "dataEnvio": "2025-12-22",
     "placa": "RWP9G18",
     "contrato": "CIVIL MASTER",
     "status": "CONCLUIDO",
@@ -4229,7 +4229,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 325,
-    "data": "2025-12-22",
+    "dataEnvio": "2025-12-22",
     "placa": "RWP9G18",
     "contrato": "CIVIL MASTER",
     "status": "CONCLUIDO",
@@ -4242,7 +4242,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 326,
-    "data": "2025-12-22",
+    "dataEnvio": "2025-12-22",
     "placa": "RWP9G18",
     "contrato": "CIVIL MASTER",
     "status": "CONCLUIDO",
@@ -4255,7 +4255,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 327,
-    "data": "2025-12-22",
+    "dataEnvio": "2025-12-22",
     "placa": "RWP9G18",
     "contrato": "CIVIL MASTER",
     "status": "CONCLUIDO",
@@ -4268,7 +4268,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 328,
-    "data": "2025-12-22",
+    "dataEnvio": "2025-12-22",
     "placa": "RWP9G18",
     "contrato": "CIVIL MASTER",
     "status": "CONCLUIDO",
@@ -4281,7 +4281,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 329,
-    "data": "2025-12-22",
+    "dataEnvio": "2025-12-22",
     "placa": "RWP9G18",
     "contrato": "CIVIL MASTER",
     "status": "CONCLUIDO",
@@ -4294,7 +4294,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 330,
-    "data": "2025-12-22",
+    "dataEnvio": "2025-12-22",
     "placa": "RWP9G18",
     "contrato": "CIVIL MASTER",
     "status": "CONCLUIDO",
@@ -4307,7 +4307,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 331,
-    "data": "2025-12-22",
+    "dataEnvio": "2025-12-22",
     "placa": "RWP9G18",
     "contrato": "CIVIL MASTER",
     "status": "CONCLUIDO",
@@ -4320,7 +4320,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 332,
-    "data": "2025-12-22",
+    "dataEnvio": "2025-12-22",
     "placa": "RWP9G18",
     "contrato": "CIVIL MASTER",
     "status": "CONCLUIDO",
@@ -4333,7 +4333,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 333,
-    "data": "2025-12-22",
+    "dataEnvio": "2025-12-22",
     "placa": "RWP9G18",
     "contrato": "CIVIL MASTER",
     "status": "CONCLUIDO",
@@ -4346,7 +4346,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 334,
-    "data": "2025-12-22",
+    "dataEnvio": "2025-12-22",
     "placa": "RWP9G18",
     "contrato": "CIVIL MASTER",
     "status": "CONCLUIDO",
@@ -4359,7 +4359,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 335,
-    "data": "2025-12-22",
+    "dataEnvio": "2025-12-22",
     "placa": "RWP9G18",
     "contrato": "CIVIL MASTER",
     "status": "CONCLUIDO",
@@ -4372,7 +4372,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 336,
-    "data": "2025-12-22",
+    "dataEnvio": "2025-12-22",
     "placa": "RWP9G18",
     "contrato": "CIVIL MASTER",
     "status": "CONCLUIDO",
@@ -4385,7 +4385,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 337,
-    "data": "2025-12-22",
+    "dataEnvio": "2025-12-22",
     "placa": "RWP9G38",
     "contrato": "CIVIL MASTER",
     "status": "CONCLUIDO",
@@ -4398,7 +4398,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 338,
-    "data": "2025-12-22",
+    "dataEnvio": "2025-12-22",
     "placa": "RWP9G38",
     "contrato": "CIVIL MASTER",
     "status": "CONCLUIDO",
@@ -4411,7 +4411,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 339,
-    "data": "2025-12-22",
+    "dataEnvio": "2025-12-22",
     "placa": "RWP9G38",
     "contrato": "CIVIL MASTER",
     "status": "CONCLUIDO",
@@ -4424,7 +4424,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 340,
-    "data": "2025-12-22",
+    "dataEnvio": "2025-12-22",
     "placa": "RWP9G38",
     "contrato": "CIVIL MASTER",
     "status": "CONCLUIDO",
@@ -4437,7 +4437,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 341,
-    "data": "2025-12-22",
+    "dataEnvio": "2025-12-22",
     "placa": "RWP9G38",
     "contrato": "CIVIL MASTER",
     "status": "CONCLUIDO",
@@ -4450,7 +4450,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 342,
-    "data": "2025-12-22",
+    "dataEnvio": "2025-12-22",
     "placa": "RWP9G38",
     "contrato": "CIVIL MASTER",
     "status": "CONCLUIDO",
@@ -4463,7 +4463,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 343,
-    "data": "2025-12-22",
+    "dataEnvio": "2025-12-22",
     "placa": "RWP9G38",
     "contrato": "CIVIL MASTER",
     "status": "CONCLUIDO",
@@ -4476,7 +4476,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 344,
-    "data": "2025-12-22",
+    "dataEnvio": "2025-12-22",
     "placa": "RWW2H30",
     "contrato": "CIVIL MASTER",
     "status": "CONCLUIDO",
@@ -4489,7 +4489,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 345,
-    "data": "2025-12-22",
+    "dataEnvio": "2025-12-22",
     "placa": "RWW2H30",
     "contrato": "CIVIL MASTER",
     "status": "CONCLUIDO",
@@ -4502,7 +4502,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 346,
-    "data": "2025-12-22",
+    "dataEnvio": "2025-12-22",
     "placa": "QYN4A09",
     "contrato": "CIVIL MASTER",
     "status": "CONCLUIDO",
@@ -4515,7 +4515,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 347,
-    "data": "2025-12-22",
+    "dataEnvio": "2025-12-22",
     "placa": "QYN4A09",
     "contrato": "CIVIL MASTER",
     "status": "CONCLUIDO",
@@ -4528,7 +4528,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 348,
-    "data": "2025-12-22",
+    "dataEnvio": "2025-12-22",
     "placa": "QYN4A09",
     "contrato": "CIVIL MASTER",
     "status": "CONCLUIDO",
@@ -4541,7 +4541,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 349,
-    "data": "2025-12-22",
+    "dataEnvio": "2025-12-22",
     "placa": "QYN4A09",
     "contrato": "CIVIL MASTER",
     "status": "CONCLUIDO",
@@ -4554,7 +4554,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 350,
-    "data": "2025-12-22",
+    "dataEnvio": "2025-12-22",
     "placa": "QYN4A09",
     "contrato": "CIVIL MASTER",
     "status": "CONCLUIDO",
@@ -4567,7 +4567,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 351,
-    "data": "2025-12-22",
+    "dataEnvio": "2025-12-22",
     "placa": "QYN4A09",
     "contrato": "CIVIL MASTER",
     "status": "CONCLUIDO",
@@ -4580,7 +4580,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 352,
-    "data": "2025-12-22",
+    "dataEnvio": "2025-12-22",
     "placa": "QYN4A09",
     "contrato": "CIVIL MASTER",
     "status": "CONCLUIDO",
@@ -4593,7 +4593,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 353,
-    "data": "2025-12-22",
+    "dataEnvio": "2025-12-22",
     "placa": "QYN4A09",
     "contrato": "CIVIL MASTER",
     "status": "CONCLUIDO",
@@ -4606,7 +4606,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 354,
-    "data": "2025-12-22",
+    "dataEnvio": "2025-12-22",
     "placa": "EC245544",
     "contrato": "CKTR",
     "status": "NEGOCIAÇÃO",
@@ -4619,7 +4619,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 355,
-    "data": "2025-12-22",
+    "dataEnvio": "2025-12-22",
     "placa": "EC245544",
     "contrato": "CKTR",
     "status": "NEGOCIAÇÃO",
@@ -4632,7 +4632,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 356,
-    "data": "2025-12-22",
+    "dataEnvio": "2025-12-22",
     "placa": "EC245544",
     "contrato": "CKTR",
     "status": "NEGOCIAÇÃO",
@@ -4645,7 +4645,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 357,
-    "data": "2025-12-22",
+    "dataEnvio": "2025-12-22",
     "placa": "EC245544",
     "contrato": "CKTR",
     "status": "NEGOCIAÇÃO",
@@ -4658,7 +4658,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 358,
-    "data": "2025-12-22",
+    "dataEnvio": "2025-12-22",
     "placa": "EC245544",
     "contrato": "CKTR",
     "status": "NEGOCIAÇÃO",
@@ -4671,7 +4671,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 359,
-    "data": "2025-12-23",
+    "dataEnvio": "2025-12-23",
     "placa": "RBM6E91",
     "contrato": "PCP BARBOSA",
     "status": "CONCLUIDO",
@@ -4684,7 +4684,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 360,
-    "data": "2025-12-23",
+    "dataEnvio": "2025-12-23",
     "placa": "RBM6E91",
     "contrato": "PCP BARBOSA",
     "status": "CONCLUIDO",
@@ -4697,7 +4697,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 361,
-    "data": "2025-12-23",
+    "dataEnvio": "2025-12-23",
     "placa": "RBM6E91",
     "contrato": "PCP BARBOSA",
     "status": "CONCLUIDO",
@@ -4710,7 +4710,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 362,
-    "data": "2025-12-23",
+    "dataEnvio": "2025-12-23",
     "placa": "RBM6E91",
     "contrato": "PCP BARBOSA",
     "status": "CONCLUIDO",
@@ -4723,7 +4723,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 363,
-    "data": "2025-12-23",
+    "dataEnvio": "2025-12-23",
     "placa": "RBM6E91",
     "contrato": "PCP BARBOSA",
     "status": "CONCLUIDO",
@@ -4736,7 +4736,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 364,
-    "data": "2025-12-23",
+    "dataEnvio": "2025-12-23",
     "placa": "RBM6E91",
     "contrato": "PCP BARBOSA",
     "status": "CONCLUIDO",
@@ -4749,7 +4749,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 365,
-    "data": "2025-12-23",
+    "dataEnvio": "2025-12-23",
     "placa": "RBM6E91",
     "contrato": "PCP BARBOSA",
     "status": "CONCLUIDO",
@@ -4762,7 +4762,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 366,
-    "data": "2025-12-23",
+    "dataEnvio": "2025-12-23",
     "placa": "RBM6E91",
     "contrato": "PCP BARBOSA",
     "status": "CONCLUIDO",
@@ -4775,7 +4775,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 367,
-    "data": "2025-12-23",
+    "dataEnvio": "2025-12-23",
     "placa": "EC245255",
     "contrato": "APIA SLB",
     "status": "FECHADO",
@@ -4788,7 +4788,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 368,
-    "data": "2025-12-23",
+    "dataEnvio": "2025-12-23",
     "placa": "EC245255",
     "contrato": "APIA SLB",
     "status": "FECHADO",
@@ -4801,7 +4801,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 369,
-    "data": "2025-12-23",
+    "dataEnvio": "2025-12-23",
     "placa": "EC245255",
     "contrato": "APIA SLB",
     "status": "FECHADO",
@@ -4814,7 +4814,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 370,
-    "data": "2025-12-23",
+    "dataEnvio": "2025-12-23",
     "placa": "EC245255",
     "contrato": "APIA SLB",
     "status": "FECHADO",
@@ -4827,7 +4827,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 371,
-    "data": "2025-12-23",
+    "dataEnvio": "2025-12-23",
     "placa": "EC245255",
     "contrato": "APIA SLB",
     "status": "FECHADO",
@@ -4840,7 +4840,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 372,
-    "data": "2025-12-23",
+    "dataEnvio": "2025-12-23",
     "placa": "QWB3C06",
     "contrato": "A&L SLB",
     "status": "CONCLUIDO",
@@ -4853,7 +4853,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 373,
-    "data": "2025-12-23",
+    "dataEnvio": "2025-12-23",
     "placa": "QWB3C06",
     "contrato": "A&L SLB",
     "status": "CONCLUIDO",
@@ -4866,7 +4866,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 374,
-    "data": "2025-12-23",
+    "dataEnvio": "2025-12-23",
     "placa": "QWB3C06",
     "contrato": "A&L SLB",
     "status": "CONCLUIDO",
@@ -4879,7 +4879,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 375,
-    "data": "2025-12-23",
+    "dataEnvio": "2025-12-23",
     "placa": "QWB3C06",
     "contrato": "A&L SLB",
     "status": "CONCLUIDO",
@@ -4892,7 +4892,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 376,
-    "data": "2025-12-23",
+    "dataEnvio": "2025-12-23",
     "placa": "QWB3C06",
     "contrato": "A&L SLB",
     "status": "CONCLUIDO",
@@ -4905,7 +4905,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 377,
-    "data": "2026-01-06",
+    "dataEnvio": "2026-01-06",
     "placa": "QVG5J81",
     "contrato": "ÁPIA SALOBO",
     "status": "FECHADO",
@@ -4918,7 +4918,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 378,
-    "data": "2026-01-06",
+    "dataEnvio": "2026-01-06",
     "placa": "QVG5J81",
     "contrato": "ÁPIA SALOBO",
     "status": "FECHADO",
@@ -4931,7 +4931,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 379,
-    "data": "2026-01-06",
+    "dataEnvio": "2026-01-06",
     "placa": "QVG5J81",
     "contrato": "ÁPIA SALOBO",
     "status": "FECHADO",
@@ -4944,7 +4944,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 380,
-    "data": "2026-01-06",
+    "dataEnvio": "2026-01-06",
     "placa": "QVG5J81",
     "contrato": "ÁPIA SALOBO",
     "status": "FECHADO",
@@ -4957,7 +4957,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 381,
-    "data": "2026-01-06",
+    "dataEnvio": "2026-01-06",
     "placa": "QVG5J81",
     "contrato": "ÁPIA SALOBO",
     "status": "FECHADO",
@@ -4970,7 +4970,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 382,
-    "data": "2026-01-06",
+    "dataEnvio": "2026-01-06",
     "placa": "QEZ7B45/RCJ5B85",
     "contrato": "APIA CKS",
     "status": "FECHADO",
@@ -4983,7 +4983,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 383,
-    "data": "2026-01-06",
+    "dataEnvio": "2026-01-06",
     "placa": "QEZ7B45/RCJ5B85",
     "contrato": "APIA CKS",
     "status": "FECHADO",
@@ -4996,7 +4996,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 384,
-    "data": "2026-01-06",
+    "dataEnvio": "2026-01-06",
     "placa": "QEZ7B45/RCJ5B85",
     "contrato": "APIA CKS",
     "status": "FECHADO",
@@ -5009,7 +5009,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 385,
-    "data": "2026-01-09",
+    "dataEnvio": "2026-01-09",
     "placa": "RWV7F01",
     "contrato": "MARRUÁ",
     "status": "FECHADO",
@@ -5022,7 +5022,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 386,
-    "data": "2026-01-09",
+    "dataEnvio": "2026-01-09",
     "placa": "RWV7F01",
     "contrato": "MARRUÁ",
     "status": "FECHADO",
@@ -5035,7 +5035,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 387,
-    "data": "2026-01-09",
+    "dataEnvio": "2026-01-09",
     "placa": "RWV7F01",
     "contrato": "MARRUÁ",
     "status": "FECHADO",
@@ -5048,7 +5048,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 388,
-    "data": "2026-01-09",
+    "dataEnvio": "2026-01-09",
     "placa": "RWV7F01",
     "contrato": "MARRUÁ",
     "status": "FECHADO",
@@ -5061,7 +5061,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 389,
-    "data": "2026-01-09",
+    "dataEnvio": "2026-01-09",
     "placa": "EC246739",
     "contrato": "CIVIL MASTER",
     "status": "CONCLUIDO",
@@ -5074,7 +5074,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 390,
-    "data": "2026-01-09",
+    "dataEnvio": "2026-01-09",
     "placa": "RWP9G18",
     "contrato": "CIVIL MASTER",
     "status": "CONCLUIDO",
@@ -5087,7 +5087,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 391,
-    "data": "2026-01-09",
+    "dataEnvio": "2026-01-09",
     "placa": "RWP9G38",
     "contrato": "CIVIL MASTER",
     "status": "CONCLUIDO",
@@ -5100,7 +5100,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 392,
-    "data": "2026-01-09",
+    "dataEnvio": "2026-01-09",
     "placa": "RWW2H30",
     "contrato": "CIVIL MASTER",
     "status": "CONCLUIDO",
@@ -5113,7 +5113,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 393,
-    "data": "2026-01-09",
+    "dataEnvio": "2026-01-09",
     "placa": "QWB3C11",
     "contrato": "CIVIL MASTER",
     "status": "CONCLUIDO",
@@ -5126,7 +5126,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 394,
-    "data": "2026-01-09",
+    "dataEnvio": "2026-01-09",
     "placa": "RBM6F01",
     "contrato": "PCP BARBOSA",
     "status": "CONCLUIDO",
@@ -5139,7 +5139,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 395,
-    "data": "2026-01-09",
+    "dataEnvio": "2026-01-09",
     "placa": "RBM6E91",
     "contrato": "PCP BARBOSA",
     "status": "CONCLUIDO",
@@ -5152,7 +5152,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 396,
-    "data": "2026-01-13",
+    "dataEnvio": "2026-01-13",
     "placa": "QWB3C06",
     "contrato": "A&L SLB",
     "status": "CONCLUIDO",
@@ -5165,7 +5165,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 397,
-    "data": "2026-01-13",
+    "dataEnvio": "2026-01-13",
     "placa": "EC245259",
     "contrato": "ÁPIA SALOBO",
     "status": "FECHADO",
@@ -5178,7 +5178,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 398,
-    "data": "2026-01-13",
+    "dataEnvio": "2026-01-13",
     "placa": "EC245259",
     "contrato": "ÁPIA SALOBO",
     "status": "FECHADO",
@@ -5191,7 +5191,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 399,
-    "data": "2026-01-13",
+    "dataEnvio": "2026-01-13",
     "placa": "QVS5C51",
     "contrato": "ÁPIA SALOBO",
     "status": "FECHADO",
@@ -5204,7 +5204,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 400,
-    "data": "2026-01-13",
+    "dataEnvio": "2026-01-13",
     "placa": "QVS5C51",
     "contrato": "ÁPIA SALOBO",
     "status": "FECHADO",
@@ -5217,7 +5217,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 401,
-    "data": "2026-01-13",
+    "dataEnvio": "2026-01-13",
     "placa": "QVK4J58",
     "contrato": "ÁPIA SALOBO",
     "status": "FECHADO",
@@ -5230,7 +5230,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 402,
-    "data": "2026-01-13",
+    "dataEnvio": "2026-01-13",
     "placa": "QVK4J58",
     "contrato": "ÁPIA SALOBO",
     "status": "FECHADO",
@@ -5243,7 +5243,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 403,
-    "data": "2026-01-13",
+    "dataEnvio": "2026-01-13",
     "placa": "QVZ1F07",
     "contrato": "TECNOSONDA",
     "status": "CONCLUIDO",
@@ -5256,7 +5256,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 404,
-    "data": "2026-01-13",
+    "dataEnvio": "2026-01-13",
     "placa": "QVZ1F07",
     "contrato": "TECNOSONDA",
     "status": "CONCLUIDO",
@@ -5269,7 +5269,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 405,
-    "data": "2026-01-13",
+    "dataEnvio": "2026-01-13",
     "placa": "QVZ1F07",
     "contrato": "TECNOSONDA",
     "status": "CONCLUIDO",
@@ -5282,7 +5282,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 406,
-    "data": "2026-01-13",
+    "dataEnvio": "2026-01-13",
     "placa": "QVZ1F07",
     "contrato": "TECNOSONDA",
     "status": "CONCLUIDO",
@@ -5295,7 +5295,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 407,
-    "data": "2026-01-13",
+    "dataEnvio": "2026-01-13",
     "placa": "QVC1C12",
     "contrato": "TECNOSONDA",
     "status": "CONCLUIDO",
@@ -5308,7 +5308,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 408,
-    "data": "2026-01-13",
+    "dataEnvio": "2026-01-13",
     "placa": "QVC1C12",
     "contrato": "TECNOSONDA",
     "status": "CONCLUIDO",
@@ -5321,7 +5321,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 409,
-    "data": "2026-01-15",
+    "dataEnvio": "2026-01-15",
     "placa": "RCD8F91",
     "contrato": "CIVIL MASTER",
     "status": "CONCLUIDO",
@@ -5334,7 +5334,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 410,
-    "data": "2026-01-15",
+    "dataEnvio": "2026-01-15",
     "placa": "RCD8F91",
     "contrato": "CIVIL MASTER",
     "status": "CONCLUIDO",
@@ -5347,7 +5347,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 411,
-    "data": "2026-01-15",
+    "dataEnvio": "2026-01-15",
     "placa": "RCD8F91",
     "contrato": "CIVIL MASTER",
     "status": "CONCLUIDO",
@@ -5360,7 +5360,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 412,
-    "data": "2026-01-15",
+    "dataEnvio": "2026-01-15",
     "placa": "RCD8F91",
     "contrato": "CIVIL MASTER",
     "status": "CONCLUIDO",
@@ -5373,7 +5373,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 413,
-    "data": "2026-01-15",
+    "dataEnvio": "2026-01-15",
     "placa": "RCD8F91",
     "contrato": "CIVIL MASTER",
     "status": "CONCLUIDO",
@@ -5386,7 +5386,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 414,
-    "data": "2026-01-15",
+    "dataEnvio": "2026-01-15",
     "placa": "QVT3B54",
     "contrato": "CIVIL MASTER",
     "status": "CONCLUIDO",
@@ -5399,7 +5399,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 415,
-    "data": "2026-01-15",
+    "dataEnvio": "2026-01-15",
     "placa": "QVT3B54",
     "contrato": "CIVIL MASTER",
     "status": "CONCLUIDO",
@@ -5412,7 +5412,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 416,
-    "data": "2026-01-19",
+    "dataEnvio": "2026-01-19",
     "placa": "EC245375",
     "contrato": "APIA CKS",
     "status": "FECHADO",
@@ -5425,7 +5425,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 417,
-    "data": "2026-01-19",
+    "dataEnvio": "2026-01-19",
     "placa": "EC245375",
     "contrato": "APIA CKS",
     "status": "FECHADO",
@@ -5438,7 +5438,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 418,
-    "data": "2026-01-19",
+    "dataEnvio": "2026-01-19",
     "placa": "SZD9A48",
     "contrato": "APIA CKS",
     "status": "FECHADO",
@@ -5451,7 +5451,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 419,
-    "data": "2026-01-27",
+    "dataEnvio": "2026-01-27",
     "placa": "SZQ9D09",
     "contrato": "A&L SLB",
     "status": "CONCLUIDO",
@@ -5464,7 +5464,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 420,
-    "data": "2026-01-27",
+    "dataEnvio": "2026-01-27",
     "placa": "SZQ9D09",
     "contrato": "A&L SLB",
     "status": "CONCLUIDO",
@@ -5477,7 +5477,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 421,
-    "data": "2026-01-27",
+    "dataEnvio": "2026-01-27",
     "placa": "RWP9G08",
     "contrato": "ÁPIA SALOBO",
     "status": "FECHADO",
@@ -5490,7 +5490,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 422,
-    "data": "2026-01-27",
+    "dataEnvio": "2026-01-27",
     "placa": "RBN4E40",
     "contrato": "ÁPIA SALOBO",
     "status": "FECHADO",
@@ -5503,7 +5503,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 423,
-    "data": "2026-01-27",
+    "dataEnvio": "2026-01-27",
     "placa": "RBN4E40",
     "contrato": "ÁPIA SALOBO",
     "status": "FECHADO",
@@ -5516,7 +5516,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 424,
-    "data": "2026-01-21",
+    "dataEnvio": "2026-01-21",
     "placa": "JZW00801",
     "contrato": "CIVIL MASTER",
     "status": "CONCLUIDO",
@@ -5529,7 +5529,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 425,
-    "data": "2026-01-27",
+    "dataEnvio": "2026-01-27",
     "placa": "QVK3J73",
     "contrato": "A&L SLB",
     "status": "CONCLUIDO",
@@ -5542,7 +5542,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 426,
-    "data": "2026-01-27",
+    "dataEnvio": "2026-01-27",
     "placa": "QVK3J73",
     "contrato": "A&L SLB",
     "status": "CONCLUIDO",
@@ -5555,7 +5555,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 427,
-    "data": "2026-01-27",
+    "dataEnvio": "2026-01-27",
     "placa": "QVK3J73",
     "contrato": "A&L SLB",
     "status": "CONCLUIDO",
@@ -5568,7 +5568,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 428,
-    "data": "2026-01-27",
+    "dataEnvio": "2026-01-27",
     "placa": "QVK3J73",
     "contrato": "A&L SLB",
     "status": "CONCLUIDO",
@@ -5581,7 +5581,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 429,
-    "data": "2026-01-27",
+    "dataEnvio": "2026-01-27",
     "placa": "QVK3J73",
     "contrato": "A&L SLB",
     "status": "CONCLUIDO",
@@ -5594,7 +5594,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 430,
-    "data": "2026-01-27",
+    "dataEnvio": "2026-01-27",
     "placa": "OFO5328",
     "contrato": "SODEXO",
     "status": "CONCLUIDO",
@@ -5607,7 +5607,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 431,
-    "data": "2026-01-27",
+    "dataEnvio": "2026-01-27",
     "placa": "OFO5328",
     "contrato": "SODEXO",
     "status": "CONCLUIDO",
@@ -5620,7 +5620,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 432,
-    "data": "2026-01-27",
+    "dataEnvio": "2026-01-27",
     "placa": "OFO5328",
     "contrato": "SODEXO",
     "status": "CONCLUIDO",
@@ -5633,7 +5633,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 433,
-    "data": "2026-01-27",
+    "dataEnvio": "2026-01-27",
     "placa": "OFO5328",
     "contrato": "SODEXO",
     "status": "CONCLUIDO",
@@ -5646,7 +5646,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 434,
-    "data": "2026-01-27",
+    "dataEnvio": "2026-01-27",
     "placa": "OFO5328",
     "contrato": "SODEXO",
     "status": "CONCLUIDO",
@@ -5659,7 +5659,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 435,
-    "data": "2026-01-27",
+    "dataEnvio": "2026-01-27",
     "placa": "OFO5328",
     "contrato": "SODEXO",
     "status": "CONCLUIDO",
@@ -5672,7 +5672,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 436,
-    "data": "2026-01-27",
+    "dataEnvio": "2026-01-27",
     "placa": "OFO5328",
     "contrato": "SODEXO",
     "status": "CONCLUIDO",
@@ -5685,7 +5685,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 437,
-    "data": "2026-01-27",
+    "dataEnvio": "2026-01-27",
     "placa": "OFO5328",
     "contrato": "SODEXO",
     "status": "CONCLUIDO",
@@ -5698,7 +5698,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 438,
-    "data": "2026-01-26",
+    "dataEnvio": "2026-01-26",
     "placa": "TEM0B50",
     "contrato": "APIA FICO",
     "status": "NEGOCIAÇÃO",
@@ -5711,7 +5711,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 439,
-    "data": "2026-01-26",
+    "dataEnvio": "2026-01-26",
     "placa": "TEM0B50",
     "contrato": "APIA FICO",
     "status": "NEGOCIAÇÃO",
@@ -5724,7 +5724,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 440,
-    "data": "2026-01-28",
+    "dataEnvio": "2026-01-28",
     "placa": "QDW5404",
     "contrato": "MGA",
     "status": "CONCLUIDO",
@@ -5737,7 +5737,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 441,
-    "data": "2026-01-28",
+    "dataEnvio": "2026-01-28",
     "placa": "QDW5404",
     "contrato": "MGA",
     "status": "CONCLUIDO",
@@ -5750,7 +5750,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 442,
-    "data": "2026-01-28",
+    "dataEnvio": "2026-01-28",
     "placa": "QDW5404",
     "contrato": "MGA",
     "status": "CONCLUIDO",
@@ -5763,7 +5763,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 443,
-    "data": "2026-01-28",
+    "dataEnvio": "2026-01-28",
     "placa": "QDW5404",
     "contrato": "MGA",
     "status": "CONCLUIDO",
@@ -5776,7 +5776,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 444,
-    "data": "2026-01-28",
+    "dataEnvio": "2026-01-28",
     "placa": "QDW5404",
     "contrato": "MGA",
     "status": "CONCLUIDO",
@@ -5789,7 +5789,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 445,
-    "data": "2026-01-28",
+    "dataEnvio": "2026-01-28",
     "placa": "QDW5404",
     "contrato": "MGA",
     "status": "CONCLUIDO",
@@ -5802,7 +5802,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 446,
-    "data": "2026-01-28",
+    "dataEnvio": "2026-01-28",
     "placa": "QDW5404",
     "contrato": "MGA",
     "status": "CONCLUIDO",
@@ -5815,7 +5815,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 447,
-    "data": "2026-01-28",
+    "dataEnvio": "2026-01-28",
     "placa": "QDW5404",
     "contrato": "MGA",
     "status": "CONCLUIDO",
@@ -5828,7 +5828,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 448,
-    "data": "2026-01-28",
+    "dataEnvio": "2026-01-28",
     "placa": "QVA1J26",
     "contrato": "MGA",
     "status": "CONCLUIDO",
@@ -5841,7 +5841,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 449,
-    "data": "2026-01-28",
+    "dataEnvio": "2026-01-28",
     "placa": "QVA1J27",
     "contrato": "MGA",
     "status": "CONCLUIDO",
@@ -5854,7 +5854,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 450,
-    "data": "2026-01-29",
+    "dataEnvio": "2026-01-29",
     "placa": "TWA2G85",
     "contrato": "APIA CKS",
     "status": "FECHADO",
@@ -5867,7 +5867,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 451,
-    "data": "2026-01-29",
+    "dataEnvio": "2026-01-29",
     "placa": "TWA2H15",
     "contrato": "APIA CKS",
     "status": "FECHADO",
@@ -5880,7 +5880,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 452,
-    "data": "2026-01-29",
+    "dataEnvio": "2026-01-29",
     "placa": "TWA2H15",
     "contrato": "APIA CKS",
     "status": "FECHADO",
@@ -5893,7 +5893,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 453,
-    "data": "2026-01-29",
+    "dataEnvio": "2026-01-29",
     "placa": "QVY8I61",
     "contrato": "ÁPIA SALOBO",
     "status": "FECHADO",
@@ -5906,7 +5906,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 454,
-    "data": "2026-02-02",
+    "dataEnvio": "2026-02-02",
     "placa": "QYN4A90",
     "contrato": "CIVIL MASTER",
     "status": "CONCLUIDO",
@@ -5919,7 +5919,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 455,
-    "data": "2026-02-02",
+    "dataEnvio": "2026-02-02",
     "placa": "QYN4A90",
     "contrato": "CIVIL MASTER",
     "status": "CONCLUIDO",
@@ -5932,7 +5932,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 456,
-    "data": "2026-02-03",
+    "dataEnvio": "2026-02-03",
     "placa": "QWB3C06",
     "contrato": "CIVIL MASTER",
     "status": "CONCLUIDO",
@@ -5945,7 +5945,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 457,
-    "data": "2026-02-03",
+    "dataEnvio": "2026-02-03",
     "placa": "RWP9G28",
     "contrato": "CIVIL MASTER",
     "status": "CONCLUIDO",
@@ -5958,7 +5958,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 458,
-    "data": "2026-02-03",
+    "dataEnvio": "2026-02-03",
     "placa": "QVK4J78",
     "contrato": "CIVIL MASTER",
     "status": "CONCLUIDO",
@@ -5971,7 +5971,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 459,
-    "data": "2026-02-03",
+    "dataEnvio": "2026-02-03",
     "placa": "RCL3H46",
     "contrato": "CIVIL MASTER",
     "status": "CONCLUIDO",
@@ -5984,7 +5984,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 460,
-    "data": "2026-02-03",
+    "dataEnvio": "2026-02-03",
     "placa": "QYN4A09",
     "contrato": "CIVIL MASTER",
     "status": "CONCLUIDO",
@@ -5997,7 +5997,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 461,
-    "data": "2026-02-03",
+    "dataEnvio": "2026-02-03",
     "placa": "JZW00801",
     "contrato": "CIVIL MASTER",
     "status": "CONCLUIDO",
@@ -6010,7 +6010,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 462,
-    "data": "2026-02-03",
+    "dataEnvio": "2026-02-03",
     "placa": "JZW00801",
     "contrato": "CIVIL MASTER",
     "status": "CONCLUIDO",
@@ -6023,7 +6023,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 463,
-    "data": "2026-02-04",
+    "dataEnvio": "2026-02-04",
     "placa": "QEP7543",
     "contrato": "MGA",
     "status": "CONCLUIDO",
@@ -6036,7 +6036,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 464,
-    "data": "2026-02-04",
+    "dataEnvio": "2026-02-04",
     "placa": "QVA1J26",
     "contrato": "MGA",
     "status": "CONCLUIDO",
@@ -6049,7 +6049,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 465,
-    "data": "2026-02-04",
+    "dataEnvio": "2026-02-04",
     "placa": "QEP7543",
     "contrato": "MGA",
     "status": "CONCLUIDO",
@@ -6062,7 +6062,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 466,
-    "data": "2026-02-04",
+    "dataEnvio": "2026-02-04",
     "placa": "QVC1C22",
     "contrato": "GEOTERRA",
     "status": "CONCLUIDO",
@@ -6075,7 +6075,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 467,
-    "data": "2026-02-04",
+    "dataEnvio": "2026-02-04",
     "placa": "QVK3J73",
     "contrato": "A&L SLB",
     "status": "CONCLUIDO",
@@ -6088,7 +6088,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 468,
-    "data": "2026-02-04",
+    "dataEnvio": "2026-02-04",
     "placa": "SZL6J43",
     "contrato": "A&L ORILANDIA",
     "status": "CONCLUIDO",
@@ -6101,7 +6101,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 469,
-    "data": "2026-02-04",
+    "dataEnvio": "2026-02-04",
     "placa": "RCK1J15/SCC5D73",
     "contrato": "A&L ORILANDIA",
     "status": "CONCLUIDO",
@@ -6114,7 +6114,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 470,
-    "data": "2026-02-04",
+    "dataEnvio": "2026-02-04",
     "placa": "RCK1J15",
     "contrato": "A&L ORILANDIA",
     "status": "CONCLUIDO",
@@ -6127,7 +6127,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 471,
-    "data": "2026-02-04",
+    "dataEnvio": "2026-02-04",
     "placa": "SZL6J43",
     "contrato": "A&L ORILANDIA",
     "status": "CONCLUIDO",
@@ -6140,7 +6140,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 472,
-    "data": "2026-02-04",
+    "dataEnvio": "2026-02-04",
     "placa": "SZL6J43",
     "contrato": "A&L ORILANDIA",
     "status": "CONCLUIDO",
@@ -6153,7 +6153,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 473,
-    "data": "2026-02-04",
+    "dataEnvio": "2026-02-04",
     "placa": "SZL6J43",
     "contrato": "A&L ORILANDIA",
     "status": "CONCLUIDO",
@@ -6166,7 +6166,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 474,
-    "data": "2026-02-13",
+    "dataEnvio": "2026-02-13",
     "placa": "PO7365",
     "contrato": "APIA FICO",
     "status": "NEGOCIAÇÃO",
@@ -6179,7 +6179,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 475,
-    "data": "2026-02-13",
+    "dataEnvio": "2026-02-13",
     "placa": "PO7365",
     "contrato": "APIA FICO",
     "status": "NEGOCIAÇÃO",
@@ -6192,7 +6192,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 476,
-    "data": "2026-02-13",
+    "dataEnvio": "2026-02-13",
     "placa": "PO7365",
     "contrato": "APIA FICO",
     "status": "NEGOCIAÇÃO",
@@ -6205,7 +6205,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 477,
-    "data": "2026-02-13",
+    "dataEnvio": "2026-02-13",
     "placa": "PO7365",
     "contrato": "APIA FICO",
     "status": "NEGOCIAÇÃO",
@@ -6218,7 +6218,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 478,
-    "data": "2026-02-13",
+    "dataEnvio": "2026-02-13",
     "placa": "PO7365",
     "contrato": "APIA FICO",
     "status": "NEGOCIAÇÃO",
@@ -6231,7 +6231,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 479,
-    "data": "2026-02-13",
+    "dataEnvio": "2026-02-13",
     "placa": "PO7365",
     "contrato": "APIA FICO",
     "status": "NEGOCIAÇÃO",
@@ -6244,7 +6244,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 480,
-    "data": "2026-02-13",
+    "dataEnvio": "2026-02-13",
     "placa": "PO7365",
     "contrato": "APIA FICO",
     "status": "NEGOCIAÇÃO",
@@ -6257,7 +6257,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 481,
-    "data": "2026-02-10",
+    "dataEnvio": "2026-02-10",
     "placa": "RCL3H46",
     "contrato": "CIVIL MASTER",
     "status": "CONCLUIDO",
@@ -6270,7 +6270,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 482,
-    "data": "2026-02-11",
+    "dataEnvio": "2026-02-11",
     "placa": "QVK3J83",
     "contrato": "CIVIL MASTER",
     "status": "CONCLUIDO",
@@ -6283,7 +6283,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 483,
-    "data": "2026-02-11",
+    "dataEnvio": "2026-02-11",
     "placa": "QVK3J83",
     "contrato": "CIVIL MASTER",
     "status": "CONCLUIDO",
@@ -6296,7 +6296,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 484,
-    "data": "2026-02-11",
+    "dataEnvio": "2026-02-11",
     "placa": "QVK3J83",
     "contrato": "CIVIL MASTER",
     "status": "CONCLUIDO",
@@ -6309,7 +6309,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 485,
-    "data": "2026-02-12",
+    "dataEnvio": "2026-02-12",
     "placa": "EC246739",
     "contrato": "CIVIL MASTER",
     "status": "CONCLUIDO",
@@ -6322,7 +6322,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 486,
-    "data": "2026-02-12",
+    "dataEnvio": "2026-02-12",
     "placa": "EC246739",
     "contrato": "CIVIL MASTER",
     "status": "CONCLUIDO",
@@ -6335,7 +6335,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 487,
-    "data": "2026-02-19",
+    "dataEnvio": "2026-02-19",
     "placa": "JZW00801",
     "contrato": "CIVIL MASTER",
     "status": "CONCLUIDO",
@@ -6348,7 +6348,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 488,
-    "data": "2026-02-19",
+    "dataEnvio": "2026-02-19",
     "placa": "QVE3B37",
     "contrato": "CIVIL MASTER",
     "status": "CONCLUIDO",
@@ -6361,7 +6361,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 489,
-    "data": "2026-02-12",
+    "dataEnvio": "2026-02-12",
     "placa": "EC245711",
     "contrato": "APIA CKS",
     "status": "FECHADO",
@@ -6374,7 +6374,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 490,
-    "data": "2026-02-23",
+    "dataEnvio": "2026-02-23",
     "placa": "JZW00801",
     "contrato": "CIVIL MASTER",
     "status": "CONCLUIDO",
@@ -6387,7 +6387,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 491,
-    "data": "2026-02-24",
+    "dataEnvio": "2026-02-24",
     "placa": "QVC1C22",
     "contrato": "A&L LIGGA",
     "status": "CONCLUIDO",
@@ -6400,7 +6400,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 492,
-    "data": "2026-02-24",
+    "dataEnvio": "2026-02-24",
     "placa": "QVC1C22",
     "contrato": "A&L LIGGA",
     "status": "CONCLUIDO",
@@ -6413,7 +6413,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 493,
-    "data": "2026-02-24",
+    "dataEnvio": "2026-02-24",
     "placa": "QVC1C12",
     "contrato": "A&L LIGGA",
     "status": "CONCLUIDO",
@@ -6426,7 +6426,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 494,
-    "data": "2026-02-24",
+    "dataEnvio": "2026-02-24",
     "placa": "QVC1C12",
     "contrato": "A&L LIGGA",
     "status": "CONCLUIDO",
@@ -6439,7 +6439,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 495,
-    "data": "2026-03-03",
+    "dataEnvio": "2026-03-03",
     "placa": "EC281164",
     "contrato": "ITERCELER",
     "status": "CONCLUIDO",
@@ -6452,7 +6452,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 496,
-    "data": "2026-03-03",
+    "dataEnvio": "2026-03-03",
     "placa": "EC281164",
     "contrato": "ITERCELER",
     "status": "CONCLUIDO",
@@ -6465,7 +6465,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 497,
-    "data": "2026-03-03",
+    "dataEnvio": "2026-03-03",
     "placa": "EC281164",
     "contrato": "ITERCELER",
     "status": "CONCLUIDO",
@@ -6478,7 +6478,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 498,
-    "data": "2026-03-05",
+    "dataEnvio": "2026-03-05",
     "placa": "SDG9D24",
     "contrato": "CIVIL MASTER",
     "status": "CONCLUIDO",
@@ -6491,7 +6491,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 499,
-    "data": "2026-03-05",
+    "dataEnvio": "2026-03-05",
     "placa": "QVY0I49",
     "contrato": "CIVIL MASTER",
     "status": "CONCLUIDO",
@@ -6504,7 +6504,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 500,
-    "data": "2026-03-05",
+    "dataEnvio": "2026-03-05",
     "placa": "QTN7A95",
     "contrato": "CIVIL MASTER",
     "status": "CONCLUIDO",
@@ -6517,7 +6517,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 501,
-    "data": "2026-03-05",
+    "dataEnvio": "2026-03-05",
     "placa": "RCJ5D41",
     "contrato": "CIVIL MASTER",
     "status": "CONCLUIDO",
@@ -6530,7 +6530,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 502,
-    "data": "2026-03-05",
+    "dataEnvio": "2026-03-05",
     "placa": "JZW00801",
     "contrato": "CIVIL MASTER",
     "status": "CONCLUIDO",
@@ -6543,7 +6543,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 503,
-    "data": "2026-03-05",
+    "dataEnvio": "2026-03-05",
     "placa": "QVK3J83",
     "contrato": "CIVIL MASTER",
     "status": "CONCLUIDO",
@@ -6556,7 +6556,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 504,
-    "data": "2026-03-05",
+    "dataEnvio": "2026-03-05",
     "placa": "EC246739",
     "contrato": "CIVIL MASTER",
     "status": "CONCLUIDO",
@@ -6569,7 +6569,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 505,
-    "data": "2026-03-05",
+    "dataEnvio": "2026-03-05",
     "placa": "SDU4J24",
     "contrato": "CIVIL MASTER",
     "status": "CONCLUIDO",
@@ -6582,7 +6582,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 506,
-    "data": "2026-03-05",
+    "dataEnvio": "2026-03-05",
     "placa": "RWP9G28",
     "contrato": "CIVIL MASTER",
     "status": "CONCLUIDO",
@@ -6595,7 +6595,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 507,
-    "data": "2026-03-05",
+    "dataEnvio": "2026-03-05",
     "placa": "QVK3J83",
     "contrato": "CIVIL MASTER",
     "status": "CONCLUIDO",
@@ -6608,7 +6608,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 508,
-    "data": "2026-03-05",
+    "dataEnvio": "2026-03-05",
     "placa": "QVE3B37",
     "contrato": "CIVIL MASTER",
     "status": "CONCLUIDO",
@@ -6621,7 +6621,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 509,
-    "data": "2026-03-05",
+    "dataEnvio": "2026-03-05",
     "placa": "QVK4J88",
     "contrato": "CIVIL MASTER",
     "status": "CONCLUIDO",
@@ -6634,7 +6634,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 510,
-    "data": "2026-03-05",
+    "dataEnvio": "2026-03-05",
     "placa": "SZQ9D09",
     "contrato": "A&L SLB",
     "status": "CONCLUIDO",
@@ -6647,7 +6647,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 511,
-    "data": "2026-03-05",
+    "dataEnvio": "2026-03-05",
     "placa": "RCK1J15/SCC5D73",
     "contrato": "A&L ORILANDIA",
     "status": "CONCLUIDO",
@@ -6660,7 +6660,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 512,
-    "data": "2026-03-05",
+    "dataEnvio": "2026-03-05",
     "placa": "SZD9A28",
     "contrato": "APIA CKS",
     "status": "FECHADO",
@@ -6673,7 +6673,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 513,
-    "data": "2026-03-05",
+    "dataEnvio": "2026-03-05",
     "placa": "RXA6F50",
     "contrato": "APIA CKS",
     "status": "FECHADO",
@@ -6686,7 +6686,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 514,
-    "data": "2026-02-06",
+    "dataEnvio": "2026-02-06",
     "placa": "RNG3H31",
     "contrato": "G. DIAS",
     "status": "NEGOCIAÇÃO",
@@ -6699,7 +6699,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 515,
-    "data": "2026-02-06",
+    "dataEnvio": "2026-02-06",
     "placa": "QDW5274",
     "contrato": "G. DIAS",
     "status": "NEGOCIAÇÃO",
@@ -6712,7 +6712,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 516,
-    "data": "2026-03-06",
+    "dataEnvio": "2026-03-06",
     "placa": "QDW5404",
     "contrato": "MGA",
     "status": "NEGOCIAÇÃO",
@@ -6725,7 +6725,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 517,
-    "data": "2026-03-06",
+    "dataEnvio": "2026-03-06",
     "placa": "QYN4A09",
     "contrato": "CIVIL MASTER",
     "status": "CONCLUIDO",
@@ -6738,7 +6738,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 518,
-    "data": "2026-03-06",
+    "dataEnvio": "2026-03-06",
     "placa": "QYN4A09",
     "contrato": "CIVIL MASTER",
     "status": "CONCLUIDO",
@@ -6751,7 +6751,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 519,
-    "data": "2026-03-06",
+    "dataEnvio": "2026-03-06",
     "placa": "QYN4A09",
     "contrato": "CIVIL MASTER",
     "status": "CONCLUIDO",
@@ -6764,7 +6764,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 520,
-    "data": "2026-03-06",
+    "dataEnvio": "2026-03-06",
     "placa": "QYN4A09",
     "contrato": "CIVIL MASTER",
     "status": "CONCLUIDO",
@@ -6777,7 +6777,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 521,
-    "data": "2026-03-06",
+    "dataEnvio": "2026-03-06",
     "placa": "QYN4A09",
     "contrato": "CIVIL MASTER",
     "status": "CONCLUIDO",
@@ -6790,7 +6790,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 522,
-    "data": "2026-03-06",
+    "dataEnvio": "2026-03-06",
     "placa": "QVY0H79",
     "contrato": "APIA SLB",
     "status": "FECHADO",
@@ -6803,7 +6803,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 523,
-    "data": "2026-03-06",
+    "dataEnvio": "2026-03-06",
     "placa": "QVY0H79",
     "contrato": "APIA SLB",
     "status": "FECHADO",
@@ -6816,7 +6816,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 524,
-    "data": "2026-03-06",
+    "dataEnvio": "2026-03-06",
     "placa": "QVY0H79",
     "contrato": "APIA SLB",
     "status": "FECHADO",
@@ -6829,7 +6829,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 525,
-    "data": "2026-03-06",
+    "dataEnvio": "2026-03-06",
     "placa": "QVY0H79",
     "contrato": "APIA SLB",
     "status": "FECHADO",
@@ -6842,7 +6842,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 526,
-    "data": "2026-03-06",
+    "dataEnvio": "2026-03-06",
     "placa": "QVS3F00",
     "contrato": "APIA CKS",
     "status": "FECHADO",
@@ -6855,7 +6855,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 527,
-    "data": "2026-03-09",
+    "dataEnvio": "2026-03-09",
     "placa": "EC281164",
     "contrato": "ITERCELER",
     "status": "CONCLUIDO",
@@ -6868,7 +6868,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 528,
-    "data": "2026-03-09",
+    "dataEnvio": "2026-03-09",
     "placa": "EC280781",
     "contrato": "APIA FICO",
     "status": "NEGOCIAÇÃO",
@@ -6881,7 +6881,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 529,
-    "data": "2026-03-09",
+    "dataEnvio": "2026-03-09",
     "placa": "EC280781",
     "contrato": "APIA FICO",
     "status": "NEGOCIAÇÃO",
@@ -6894,7 +6894,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 530,
-    "data": "2026-03-09",
+    "dataEnvio": "2026-03-09",
     "placa": "EC280781",
     "contrato": "APIA FICO",
     "status": "NEGOCIAÇÃO",
@@ -6907,7 +6907,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 531,
-    "data": "2026-03-09",
+    "dataEnvio": "2026-03-09",
     "placa": "EC280814",
     "contrato": "APIA FICO",
     "status": "NEGOCIAÇÃO",
@@ -6920,7 +6920,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 532,
-    "data": "2026-03-09",
+    "dataEnvio": "2026-03-09",
     "placa": "EC280814",
     "contrato": "APIA FICO",
     "status": "NEGOCIAÇÃO",
@@ -6933,7 +6933,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 533,
-    "data": "2026-03-10",
+    "dataEnvio": "2026-03-10",
     "placa": "EC281383",
     "contrato": "APIA FICO",
     "status": "À ENVIAR",
@@ -6946,7 +6946,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 534,
-    "data": "2026-03-10",
+    "dataEnvio": "2026-03-10",
     "placa": "EC281383",
     "contrato": "APIA FICO",
     "status": "À ENVIAR",
@@ -6959,7 +6959,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 535,
-    "data": "2026-03-10",
+    "dataEnvio": "2026-03-10",
     "placa": "EC281383",
     "contrato": "APIA FICO",
     "status": "À ENVIAR",
@@ -6972,7 +6972,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 536,
-    "data": "2026-03-10",
+    "dataEnvio": "2026-03-10",
     "placa": "RWU0F11",
     "contrato": "CIVIL MASTER",
     "status": "NEGOCIAÇÃO",
@@ -6985,7 +6985,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 537,
-    "data": "2026-03-10",
+    "dataEnvio": "2026-03-10",
     "placa": "RWU0F11",
     "contrato": "CIVIL MASTER",
     "status": "NEGOCIAÇÃO",
@@ -6998,7 +6998,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 538,
-    "data": "2026-03-10",
+    "dataEnvio": "2026-03-10",
     "placa": "RWU0F11",
     "contrato": "CIVIL MASTER",
     "status": "NEGOCIAÇÃO",
@@ -7011,7 +7011,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 539,
-    "data": "2026-03-10",
+    "dataEnvio": "2026-03-10",
     "placa": "SCM6A17",
     "contrato": "APIA SLB",
     "status": "FECHADO",
@@ -7024,7 +7024,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 540,
-    "data": "2026-03-11",
+    "dataEnvio": "2026-03-11",
     "placa": "QWB3C11",
     "contrato": "CIVIL MASTER",
     "status": "CONCLUIDO",
@@ -7037,7 +7037,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 541,
-    "data": "2026-03-12",
+    "dataEnvio": "2026-03-12",
     "placa": "SZD9D98",
     "contrato": "APIA CKS",
     "status": "CONCLUIDO",
@@ -7050,7 +7050,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 542,
-    "data": "2026-03-12",
+    "dataEnvio": "2026-03-12",
     "placa": "SZD9D98",
     "contrato": "APIA CKS",
     "status": "CONCLUIDO",
@@ -7063,7 +7063,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 543,
-    "data": "2026-03-12",
+    "dataEnvio": "2026-03-12",
     "placa": "SZD9D98",
     "contrato": "APIA CKS",
     "status": "CONCLUIDO",
@@ -7076,7 +7076,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 544,
-    "data": "2026-03-12",
+    "dataEnvio": "2026-03-12",
     "placa": "SZD9D98",
     "contrato": "APIA CKS",
     "status": "CONCLUIDO",
@@ -7089,7 +7089,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 545,
-    "data": "2026-03-12",
+    "dataEnvio": "2026-03-12",
     "placa": "SZD9D98",
     "contrato": "APIA CKS",
     "status": "CONCLUIDO",
@@ -7102,7 +7102,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 546,
-    "data": "2026-03-12",
+    "dataEnvio": "2026-03-12",
     "placa": "SZD9D98",
     "contrato": "APIA CKS",
     "status": "CONCLUIDO",
@@ -7115,7 +7115,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 547,
-    "data": "2026-03-12",
+    "dataEnvio": "2026-03-12",
     "placa": "SZD9D98",
     "contrato": "APIA CKS",
     "status": "CONCLUIDO",
@@ -7128,7 +7128,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 548,
-    "data": "2026-03-12",
+    "dataEnvio": "2026-03-12",
     "placa": "SZD9D98",
     "contrato": "APIA CKS",
     "status": "CONCLUIDO",
@@ -7141,7 +7141,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 549,
-    "data": "2026-03-12",
+    "dataEnvio": "2026-03-12",
     "placa": "SZD9D106",
     "contrato": "APIA CKS",
     "status": "FECHADO",
@@ -7154,7 +7154,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 550,
-    "data": "2026-03-12",
+    "dataEnvio": "2026-03-12",
     "placa": "SZH8A08",
     "contrato": "APIA SLB",
     "status": "FECHADO",
@@ -7167,7 +7167,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 551,
-    "data": "2026-03-12",
+    "dataEnvio": "2026-03-12",
     "placa": "SZH8A08",
     "contrato": "APIA SLB",
     "status": "FECHADO",
@@ -7180,7 +7180,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 552,
-    "data": "2026-03-12",
+    "dataEnvio": "2026-03-12",
     "placa": "SZH8A08",
     "contrato": "APIA SLB",
     "status": "FECHADO",
@@ -7193,7 +7193,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 553,
-    "data": "2026-03-12",
+    "dataEnvio": "2026-03-12",
     "placa": "SZH8A08",
     "contrato": "APIA SLB",
     "status": "FECHADO",
@@ -7206,7 +7206,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 554,
-    "data": "2026-03-16",
+    "dataEnvio": "2026-03-16",
     "placa": "QVK4J78",
     "contrato": "CIVIL MASTER",
     "status": "NEGOCIAÇÃO",
@@ -7219,7 +7219,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 555,
-    "data": "2026-03-16",
+    "dataEnvio": "2026-03-16",
     "placa": "QVK4J78",
     "contrato": "CIVIL MASTER",
     "status": "NEGOCIAÇÃO",
@@ -7232,7 +7232,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 556,
-    "data": "2026-03-17",
+    "dataEnvio": "2026-03-17",
     "placa": "OFO5328",
     "contrato": "SODEXO",
     "status": "CONCLUIDO",
@@ -7245,7 +7245,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 557,
-    "data": "2026-03-17",
+    "dataEnvio": "2026-03-17",
     "placa": "OFO5328",
     "contrato": "SODEXO",
     "status": "CONCLUIDO",
@@ -7258,7 +7258,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 558,
-    "data": "2026-03-17",
+    "dataEnvio": "2026-03-17",
     "placa": "OFO5328",
     "contrato": "SODEXO",
     "status": "CONCLUIDO",
@@ -7271,7 +7271,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 559,
-    "data": "2026-03-17",
+    "dataEnvio": "2026-03-17",
     "placa": "OFO5328",
     "contrato": "SODEXO",
     "status": "CONCLUIDO",
@@ -7284,7 +7284,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 560,
-    "data": "2026-03-17",
+    "dataEnvio": "2026-03-17",
     "placa": "OFO5328",
     "contrato": "SODEXO",
     "status": "CONCLUIDO",
@@ -7297,7 +7297,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 561,
-    "data": "2026-03-17",
+    "dataEnvio": "2026-03-17",
     "placa": "OFO5328",
     "contrato": "SODEXO",
     "status": "CONCLUIDO",
@@ -7310,7 +7310,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 562,
-    "data": "2026-03-17",
+    "dataEnvio": "2026-03-17",
     "placa": "OFO5328",
     "contrato": "SODEXO",
     "status": "CONCLUIDO",
@@ -7323,7 +7323,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 563,
-    "data": "2026-03-17",
+    "dataEnvio": "2026-03-17",
     "placa": "OFO5328",
     "contrato": "SODEXO",
     "status": "CONCLUIDO",
@@ -7336,7 +7336,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 564,
-    "data": "2026-03-17",
+    "dataEnvio": "2026-03-17",
     "placa": "OFO5328",
     "contrato": "SODEXO",
     "status": "CONCLUIDO",
@@ -7349,7 +7349,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 565,
-    "data": "2026-03-17",
+    "dataEnvio": "2026-03-17",
     "placa": "OFO5328",
     "contrato": "SODEXO",
     "status": "CONCLUIDO",
@@ -7362,7 +7362,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 566,
-    "data": "2026-03-17",
+    "dataEnvio": "2026-03-17",
     "placa": "OFO5328",
     "contrato": "SODEXO",
     "status": "CONCLUIDO",
@@ -7375,7 +7375,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 567,
-    "data": "2026-03-19",
+    "dataEnvio": "2026-03-19",
     "placa": "SZD9E28",
     "contrato": "APIA CKS",
     "status": "FECHADO",
@@ -7388,7 +7388,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 568,
-    "data": "2026-03-19",
+    "dataEnvio": "2026-03-19",
     "placa": "RWP9G38",
     "contrato": "APIA CKS",
     "status": "FECHADO",
@@ -7401,7 +7401,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 569,
-    "data": "2026-03-19",
+    "dataEnvio": "2026-03-19",
     "placa": "TWA2G85",
     "contrato": "APIA CKS",
     "status": "FECHADO",
@@ -7414,7 +7414,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 570,
-    "data": "2026-03-19",
+    "dataEnvio": "2026-03-19",
     "placa": "TWA2G85",
     "contrato": "APIA CKS",
     "status": "FECHADO",
@@ -7427,7 +7427,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 571,
-    "data": "2026-03-19",
+    "dataEnvio": "2026-03-19",
     "placa": "SZD9D98",
     "contrato": "APIA CKS",
     "status": "FECHADO",
@@ -7440,7 +7440,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 572,
-    "data": "2026-03-19",
+    "dataEnvio": "2026-03-19",
     "placa": "SZD9D98",
     "contrato": "APIA CKS",
     "status": "FECHADO",
@@ -7453,7 +7453,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 573,
-    "data": "2026-03-23",
+    "dataEnvio": "2026-03-23",
     "placa": "RXA6F50",
     "contrato": "APIA CKS",
     "status": "FECHADO",
@@ -7466,7 +7466,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 574,
-    "data": "2026-03-23",
+    "dataEnvio": "2026-03-23",
     "placa": "RXA6F50",
     "contrato": "APIA CKS",
     "status": "FECHADO",
@@ -7479,7 +7479,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 575,
-    "data": "2026-03-23",
+    "dataEnvio": "2026-03-23",
     "placa": "QVO3I99",
     "contrato": "APIA SLB",
     "status": "FECHADO",
@@ -7492,7 +7492,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 576,
-    "data": "2026-03-24",
+    "dataEnvio": "2026-03-24",
     "placa": "QVC1C12",
     "contrato": "A&L S11D",
     "status": "CONCLUIDO",
@@ -7505,7 +7505,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 577,
-    "data": "2026-03-24",
+    "dataEnvio": "2026-03-24",
     "placa": "QVC1C12",
     "contrato": "A&L S11D",
     "status": "CONCLUIDO",
@@ -7518,7 +7518,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 578,
-    "data": "2026-03-24",
+    "dataEnvio": "2026-03-24",
     "placa": "QVC1C12",
     "contrato": "A&L S11D",
     "status": "CONCLUIDO",
@@ -7531,7 +7531,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 579,
-    "data": "2026-03-24",
+    "dataEnvio": "2026-03-24",
     "placa": "QVC1C12",
     "contrato": "A&L S11D",
     "status": "CONCLUIDO",
@@ -7544,7 +7544,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 580,
-    "data": "2026-03-24",
+    "dataEnvio": "2026-03-24",
     "placa": "QVK4J78",
     "contrato": "CIVIL MASTER",
     "status": "NEGOCIAÇÃO",
@@ -7557,7 +7557,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 581,
-    "data": "2026-03-24",
+    "dataEnvio": "2026-03-24",
     "placa": "QVK4J78",
     "contrato": "CIVIL MASTER",
     "status": "NEGOCIAÇÃO",
@@ -7570,7 +7570,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 582,
-    "data": "2026-03-25",
+    "dataEnvio": "2026-03-25",
     "placa": "QVY8I61",
     "contrato": "APIA SLB",
     "status": "FECHADO",
@@ -7583,7 +7583,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 583,
-    "data": "2026-03-25",
+    "dataEnvio": "2026-03-25",
     "placa": "SZM2F43",
     "contrato": "APIA CKS",
     "status": "FECHADO",
@@ -7596,7 +7596,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 584,
-    "data": "2026-03-25",
+    "dataEnvio": "2026-03-25",
     "placa": "SZM2F43",
     "contrato": "APIA CKS",
     "status": "FECHADO",
@@ -7609,7 +7609,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 585,
-    "data": "2026-03-25",
+    "dataEnvio": "2026-03-25",
     "placa": "SZM2F43",
     "contrato": "APIA CKS",
     "status": "FECHADO",
@@ -7622,7 +7622,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 586,
-    "data": "2026-03-25",
+    "dataEnvio": "2026-03-25",
     "placa": "SZM2F43",
     "contrato": "APIA CKS",
     "status": "FECHADO",
@@ -7635,7 +7635,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 587,
-    "data": "2026-03-25",
+    "dataEnvio": "2026-03-25",
     "placa": "QVS3F00",
     "contrato": "APIA CKS",
     "status": "FECHADO",
@@ -7648,7 +7648,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 588,
-    "data": "2026-03-26",
+    "dataEnvio": "2026-03-26",
     "placa": "EC245375",
     "contrato": "APIA CKS",
     "status": "FECHADO",
@@ -7661,7 +7661,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 589,
-    "data": "2026-03-26",
+    "dataEnvio": "2026-03-26",
     "placa": "EC245375",
     "contrato": "APIA CKS",
     "status": "FECHADO",
@@ -7674,7 +7674,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 590,
-    "data": "2026-03-26",
+    "dataEnvio": "2026-03-26",
     "placa": "EC245375",
     "contrato": "APIA CKS",
     "status": "FECHADO",
@@ -7687,7 +7687,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 591,
-    "data": "2026-03-26",
+    "dataEnvio": "2026-03-26",
     "placa": "EC245766",
     "contrato": "APIA CKS",
     "status": "FECHADO",
@@ -7700,7 +7700,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 592,
-    "data": "2026-03-26",
+    "dataEnvio": "2026-03-26",
     "placa": "EC245766",
     "contrato": "APIA CKS",
     "status": "FECHADO",
@@ -7713,7 +7713,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 593,
-    "data": "2026-03-27",
+    "dataEnvio": "2026-03-27",
     "placa": "SZB3H50",
     "contrato": "APIA CKS",
     "status": "FECHADO",
@@ -7726,7 +7726,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 594,
-    "data": "2026-03-27",
+    "dataEnvio": "2026-03-27",
     "placa": "QVS5C61",
     "contrato": "APIA SLB",
     "status": "FECHADO",
@@ -7739,7 +7739,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 595,
-    "data": "2026-03-27",
+    "dataEnvio": "2026-03-27",
     "placa": "QVO3J59",
     "contrato": "CIVIL MASTER",
     "status": "CONCLUIDO",
@@ -7752,7 +7752,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 596,
-    "data": "2026-03-30",
+    "dataEnvio": "2026-03-30",
     "placa": "RCK1J15",
     "contrato": "A&L ORILANDIA",
     "status": "CONCLUIDO",
@@ -7765,7 +7765,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 597,
-    "data": "2026-03-30",
+    "dataEnvio": "2026-03-30",
     "placa": "RCK1J15",
     "contrato": "A&L ORILANDIA",
     "status": "CONCLUIDO",
@@ -7778,7 +7778,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 598,
-    "data": "2026-03-30",
+    "dataEnvio": "2026-03-30",
     "placa": "QVL4A42",
     "contrato": "MGA",
     "status": "NEGOCIAÇÃO",
@@ -7791,7 +7791,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 599,
-    "data": "2026-03-30",
+    "dataEnvio": "2026-03-30",
     "placa": "QVL4A42",
     "contrato": "MGA",
     "status": "NEGOCIAÇÃO",
@@ -7804,7 +7804,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 600,
-    "data": "2026-03-30",
+    "dataEnvio": "2026-03-30",
     "placa": "QVL4A42",
     "contrato": "MGA",
     "status": "NEGOCIAÇÃO",
@@ -7817,7 +7817,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 601,
-    "data": "2026-03-30",
+    "dataEnvio": "2026-03-30",
     "placa": "QVL4A42",
     "contrato": "MGA",
     "status": "NEGOCIAÇÃO",
@@ -7830,7 +7830,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 602,
-    "data": "2026-03-30",
+    "dataEnvio": "2026-03-30",
     "placa": "QVL4A42",
     "contrato": "MGA",
     "status": "NEGOCIAÇÃO",
@@ -7843,7 +7843,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 603,
-    "data": "2026-03-30",
+    "dataEnvio": "2026-03-30",
     "placa": "TVL9J90",
     "contrato": "A&L S11D",
     "status": "CONCLUIDO",
@@ -7856,7 +7856,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 604,
-    "data": "2026-03-30",
+    "dataEnvio": "2026-03-30",
     "placa": "TVL9J90",
     "contrato": "A&L S11D",
     "status": "CONCLUIDO",
@@ -7869,7 +7869,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 605,
-    "data": "2026-03-30",
+    "dataEnvio": "2026-03-30",
     "placa": "TVL9J90",
     "contrato": "A&L S11D",
     "status": "CONCLUIDO",
@@ -7882,7 +7882,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 606,
-    "data": "2026-03-31",
+    "dataEnvio": "2026-03-31",
     "placa": "EC281164",
     "contrato": "ITERCELER",
     "status": "CONCLUIDO",
@@ -7895,7 +7895,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 607,
-    "data": "2026-03-31",
+    "dataEnvio": "2026-03-31",
     "placa": "EC281164",
     "contrato": "ITERCELER",
     "status": "CONCLUIDO",
@@ -7908,7 +7908,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 608,
-    "data": "2026-03-31",
+    "dataEnvio": "2026-03-31",
     "placa": "EC281164",
     "contrato": "ITERCELER",
     "status": "CONCLUIDO",
@@ -7921,7 +7921,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 609,
-    "data": "2026-03-31",
+    "dataEnvio": "2026-03-31",
     "placa": "EC281164",
     "contrato": "ITERCELER",
     "status": "CONCLUIDO",
@@ -7934,7 +7934,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 610,
-    "data": "2026-03-31",
+    "dataEnvio": "2026-03-31",
     "placa": "EC281164",
     "contrato": "ITERCELER",
     "status": "CONCLUIDO",
@@ -7947,7 +7947,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 611,
-    "data": "2026-03-31",
+    "dataEnvio": "2026-03-31",
     "placa": "EC281164",
     "contrato": "ITERCELER",
     "status": "CONCLUIDO",
@@ -7960,7 +7960,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 612,
-    "data": "2026-03-31",
+    "dataEnvio": "2026-03-31",
     "placa": "EC281164",
     "contrato": "ITERCELER",
     "status": "CONCLUIDO",
@@ -7973,7 +7973,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 613,
-    "data": "2026-03-31",
+    "dataEnvio": "2026-03-31",
     "placa": "RWW6C20",
     "contrato": "APIA CKS",
     "status": "FECHADO",
@@ -7986,7 +7986,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 614,
-    "data": "2026-03-31",
+    "dataEnvio": "2026-03-31",
     "placa": "RWW6C20",
     "contrato": "APIA CKS",
     "status": "FECHADO",
@@ -7999,7 +7999,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 615,
-    "data": "2026-03-31",
+    "dataEnvio": "2026-03-31",
     "placa": "QWB3C06",
     "contrato": "A&L S11D",
     "status": "CONCLUIDO",
@@ -8012,7 +8012,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 616,
-    "data": "2026-03-31",
+    "dataEnvio": "2026-03-31",
     "placa": "QWB3C06",
     "contrato": "A&L S11D",
     "status": "CONCLUIDO",
@@ -8025,7 +8025,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 617,
-    "data": "2026-04-01",
+    "dataEnvio": "2026-04-01",
     "placa": "RCL3H46",
     "contrato": "CIVIL MASTER",
     "status": "NEGOCIAÇÃO",
@@ -8038,7 +8038,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 618,
-    "data": "2026-04-02",
+    "dataEnvio": "2026-04-02",
     "placa": "EC245710",
     "contrato": "APIA CKS",
     "status": "FECHADO",
@@ -8051,7 +8051,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 619,
-    "data": "2026-04-02",
+    "dataEnvio": "2026-04-02",
     "placa": "EC245710",
     "contrato": "APIA CKS",
     "status": "FECHADO",
@@ -8064,7 +8064,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 620,
-    "data": "2026-04-02",
+    "dataEnvio": "2026-04-02",
     "placa": "EC245710",
     "contrato": "APIA CKS",
     "status": "FECHADO",
@@ -8077,7 +8077,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 621,
-    "data": "2026-04-02",
+    "dataEnvio": "2026-04-02",
     "placa": "EC245710",
     "contrato": "APIA CKS",
     "status": "FECHADO",
@@ -8090,7 +8090,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 622,
-    "data": "2026-04-07",
+    "dataEnvio": "2026-04-07",
     "placa": "EC245711",
     "contrato": "APIA CKS",
     "status": "FECHADO",
@@ -8103,7 +8103,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 623,
-    "data": "2026-04-07",
+    "dataEnvio": "2026-04-07",
     "placa": "QDW5404",
     "contrato": "G. DIAS",
     "status": "NEGOCIAÇÃO",
@@ -8116,7 +8116,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 624,
-    "data": "2026-04-07",
+    "dataEnvio": "2026-04-07",
     "placa": "RNG3H31",
     "contrato": "G. DIAS",
     "status": "NEGOCIAÇÃO",
@@ -8129,7 +8129,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 625,
-    "data": "2026-04-07",
+    "dataEnvio": "2026-04-07",
     "placa": "QDW5274",
     "contrato": "G. DIAS",
     "status": "NEGOCIAÇÃO",
@@ -8142,7 +8142,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 626,
-    "data": "2026-04-07",
+    "dataEnvio": "2026-04-07",
     "placa": "QDW5274",
     "contrato": "G. DIAS",
     "status": "NEGOCIAÇÃO",
@@ -8155,7 +8155,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 627,
-    "data": "2026-04-07",
+    "dataEnvio": "2026-04-07",
     "placa": "QDW5274",
     "contrato": "G. DIAS",
     "status": "NEGOCIAÇÃO",
@@ -8168,7 +8168,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 628,
-    "data": "2026-04-07",
+    "dataEnvio": "2026-04-07",
     "placa": "SDU4J24",
     "contrato": "CIVIL MASTER",
     "status": "NEGOCIAÇÃO",
@@ -8181,7 +8181,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 629,
-    "data": "2026-04-07",
+    "dataEnvio": "2026-04-07",
     "placa": "RWU0F11",
     "contrato": "CIVIL MASTER",
     "status": "NEGOCIAÇÃO",
@@ -8194,7 +8194,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 630,
-    "data": "2026-04-07",
+    "dataEnvio": "2026-04-07",
     "placa": "QWB3211",
     "contrato": "CIVIL MASTER",
     "status": "NEGOCIAÇÃO",
@@ -8207,7 +8207,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 631,
-    "data": "2026-04-07",
+    "dataEnvio": "2026-04-07",
     "placa": "QVK4J78",
     "contrato": "CIVIL MASTER",
     "status": "NEGOCIAÇÃO",
@@ -8220,7 +8220,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 632,
-    "data": "2026-04-07",
+    "dataEnvio": "2026-04-07",
     "placa": "QVY0I49",
     "contrato": "CIVIL MASTER",
     "status": "NEGOCIAÇÃO",
@@ -8233,7 +8233,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 633,
-    "data": "2026-04-07",
+    "dataEnvio": "2026-04-07",
     "placa": "SDG9D24",
     "contrato": "CIVIL MASTER",
     "status": "NEGOCIAÇÃO",
@@ -8246,7 +8246,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 634,
-    "data": "2026-04-07",
+    "dataEnvio": "2026-04-07",
     "placa": "RCL3H46",
     "contrato": "CIVIL MASTER",
     "status": "NEGOCIAÇÃO",
@@ -8259,7 +8259,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 635,
-    "data": "2026-04-07",
+    "dataEnvio": "2026-04-07",
     "placa": "QVK3J83",
     "contrato": "CIVIL MASTER",
     "status": "NEGOCIAÇÃO",
@@ -8272,7 +8272,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 636,
-    "data": "2026-04-07",
+    "dataEnvio": "2026-04-07",
     "placa": "RWU0F11",
     "contrato": "CIVIL MASTER",
     "status": "NEGOCIAÇÃO",
@@ -8285,7 +8285,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 637,
-    "data": "2026-04-07",
+    "dataEnvio": "2026-04-07",
     "placa": "QVO3J59",
     "contrato": "CIVIL MASTER",
     "status": "NEGOCIAÇÃO",
@@ -8298,7 +8298,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 638,
-    "data": "2026-04-08",
+    "dataEnvio": "2026-04-08",
     "placa": "OFO5328",
     "contrato": "SODEXO",
     "status": "NEGOCIAÇÃO",
@@ -8311,7 +8311,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 639,
-    "data": "2026-04-08",
+    "dataEnvio": "2026-04-08",
     "placa": "QWB3C06",
     "contrato": "A&L S11D",
     "status": "CONCLUIDO",
@@ -8324,7 +8324,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 640,
-    "data": "2026-04-08",
+    "dataEnvio": "2026-04-08",
     "placa": "SZQ9D09",
     "contrato": "A&L SLB",
     "status": "CONCLUIDO",
@@ -8337,7 +8337,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 641,
-    "data": "2026-04-11",
+    "dataEnvio": "2026-04-11",
     "placa": "SZQ9D09",
     "contrato": "A&L SLB",
     "status": "CONCLUIDO",
@@ -8350,7 +8350,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 642,
-    "data": "2026-04-13",
+    "dataEnvio": "2026-04-13",
     "placa": "JZW00229",
     "contrato": "APIA CKS",
     "status": "REPOSIÇÃO",
@@ -8363,7 +8363,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 643,
-    "data": "2026-04-13",
+    "dataEnvio": "2026-04-13",
     "placa": "JZW00229",
     "contrato": "APIA CKS",
     "status": "REPOSIÇÃO",
@@ -8376,7 +8376,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 644,
-    "data": "2026-04-13",
+    "dataEnvio": "2026-04-13",
     "placa": "RWP9G38",
     "contrato": "APIA CKS",
     "status": "REPOSIÇÃO",
@@ -8389,7 +8389,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 645,
-    "data": "2026-04-13",
+    "dataEnvio": "2026-04-13",
     "placa": "RWP9G38",
     "contrato": "APIA CKS",
     "status": "NEGOCIAÇÃO",
@@ -8402,7 +8402,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 646,
-    "data": "2026-04-16",
+    "dataEnvio": "2026-04-16",
     "placa": "EC281846",
     "contrato": "APIA CKS",
     "status": "REPOSIÇÃO",
@@ -8415,7 +8415,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 647,
-    "data": "2026-04-16",
+    "dataEnvio": "2026-04-16",
     "placa": "EC281846",
     "contrato": "APIA CKS",
     "status": "REPOSIÇÃO",
@@ -8428,7 +8428,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 648,
-    "data": "2026-04-16",
+    "dataEnvio": "2026-04-16",
     "placa": "QYN4A09",
     "contrato": "CIVIL MASTER",
     "status": "NEGOCIAÇÃO",
@@ -8441,7 +8441,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 649,
-    "data": "2026-04-16",
+    "dataEnvio": "2026-04-16",
     "placa": "QYN4A09",
     "contrato": "CIVIL MASTER",
     "status": "NEGOCIAÇÃO",
@@ -8454,7 +8454,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 650,
-    "data": "2026-04-16",
+    "dataEnvio": "2026-04-16",
     "placa": "RBN4E40",
     "contrato": "APIA SLB",
     "status": "REPOSIÇÃO",
@@ -8467,7 +8467,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 651,
-    "data": "2026-04-16",
+    "dataEnvio": "2026-04-16",
     "placa": "RBN4E40",
     "contrato": "APIA SLB",
     "status": "REPOSIÇÃO",
@@ -8480,7 +8480,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 652,
-    "data": "2026-04-17",
+    "dataEnvio": "2026-04-17",
     "placa": "RCK1J15",
     "contrato": "A&L ORILANDIA",
     "status": "NEGOCIAÇÃO",
@@ -8493,7 +8493,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 653,
-    "data": "2026-04-17",
+    "dataEnvio": "2026-04-17",
     "placa": "RCK1J15",
     "contrato": "A&L ORILANDIA",
     "status": "NEGOCIAÇÃO",
@@ -8506,7 +8506,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 654,
-    "data": "2026-04-17",
+    "dataEnvio": "2026-04-17",
     "placa": "RCK1J15",
     "contrato": "A&L ORILANDIA",
     "status": "NEGOCIAÇÃO",
@@ -8519,7 +8519,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 655,
-    "data": "2026-04-17",
+    "dataEnvio": "2026-04-17",
     "placa": "RCK1J15",
     "contrato": "A&L ORILANDIA",
     "status": "NEGOCIAÇÃO",
@@ -8532,7 +8532,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 656,
-    "data": "2026-04-17",
+    "dataEnvio": "2026-04-17",
     "placa": "RCK1J15",
     "contrato": "A&L ORILANDIA",
     "status": "NEGOCIAÇÃO",
@@ -8545,7 +8545,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 657,
-    "data": "2026-04-17",
+    "dataEnvio": "2026-04-17",
     "placa": "RCK1J15",
     "contrato": "A&L ORILANDIA",
     "status": "NEGOCIAÇÃO",
@@ -8558,7 +8558,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 658,
-    "data": "2026-04-17",
+    "dataEnvio": "2026-04-17",
     "placa": "RCK1J15",
     "contrato": "A&L ORILANDIA",
     "status": "NEGOCIAÇÃO",
@@ -8571,7 +8571,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 659,
-    "data": "2026-04-17",
+    "dataEnvio": "2026-04-17",
     "placa": "RCK1J15",
     "contrato": "A&L ORILANDIA",
     "status": "NEGOCIAÇÃO",
@@ -8584,7 +8584,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 660,
-    "data": "2026-04-17",
+    "dataEnvio": "2026-04-17",
     "placa": "QVG5J81",
     "contrato": "A&L S11D",
     "status": "NEGOCIAÇÃO",
@@ -8597,7 +8597,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 661,
-    "data": "2026-04-17",
+    "dataEnvio": "2026-04-17",
     "placa": "QVG5J81",
     "contrato": "A&L S11D",
     "status": "NEGOCIAÇÃO",
@@ -8610,7 +8610,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 662,
-    "data": "2026-04-17",
+    "dataEnvio": "2026-04-17",
     "placa": "QVG5J81",
     "contrato": "A&L S11D",
     "status": "NEGOCIAÇÃO",
@@ -8623,7 +8623,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 663,
-    "data": "2026-04-17",
+    "dataEnvio": "2026-04-17",
     "placa": "QVG5J81",
     "contrato": "A&L S11D",
     "status": "NEGOCIAÇÃO",
@@ -8636,7 +8636,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 664,
-    "data": "2026-04-20",
+    "dataEnvio": "2026-04-20",
     "placa": "QTN7A85",
     "contrato": "G. DIAS",
     "status": "NEGOCIAÇÃO",
@@ -8649,7 +8649,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 665,
-    "data": "2026-04-20",
+    "dataEnvio": "2026-04-20",
     "placa": "QTN7A85",
     "contrato": "G. DIAS",
     "status": "NEGOCIAÇÃO",
@@ -8662,7 +8662,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 666,
-    "data": "2026-04-22",
+    "dataEnvio": "2026-04-22",
     "placa": "RXH8D26",
     "contrato": "APIA SLB",
     "status": "NEGOCIAÇÃO",
@@ -8675,7 +8675,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 667,
-    "data": "2026-04-22",
+    "dataEnvio": "2026-04-22",
     "placa": "RXH8D26",
     "contrato": "APIA SLB",
     "status": "NEGOCIAÇÃO",
@@ -8688,7 +8688,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 668,
-    "data": "2026-04-22",
+    "dataEnvio": "2026-04-22",
     "placa": "QTN7A95",
     "contrato": "CIVIL MASTER",
     "status": "NEGOCIAÇÃO",
@@ -8701,7 +8701,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 669,
-    "data": "2026-04-23",
+    "dataEnvio": "2026-04-23",
     "placa": "QVS3F00",
     "contrato": "APIA CKS",
     "status": "NEGOCIAÇÃO",
@@ -8714,7 +8714,7 @@ export const avariasData: Avaria[] = [
   },
   {
     "id": 699,
-    "data": "",
+    "dataEnvio": "",
     "placa": "",
     "contrato": "SEM CONTRATO",
     "status": "",
