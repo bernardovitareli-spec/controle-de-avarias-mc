@@ -242,7 +242,7 @@ const Index = () => {
 
         {/* Contract Summary Cards */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-          {contratos.map((contrato) => {
+          {contratos.map((contrato, idx) => {
             const items = filtered.filter((a) => a.contrato === contrato);
             if (items.length === 0) return null;
             const total = items.reduce((s, a) => s + a.valor, 0);
@@ -253,7 +253,7 @@ const Index = () => {
               <Card key={contrato} className="relative overflow-hidden">
                 <div
                   className="absolute top-0 left-0 w-1 h-full"
-                  style={{ backgroundColor: CONTRACT_COLORS[contrato] }}
+                  style={{ backgroundColor: getContractColor(contrato, idx) }}
                 />
                 <CardContent className="p-5 pl-6">
                   <div className="flex items-start justify-between mb-3">
