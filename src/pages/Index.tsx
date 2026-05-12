@@ -384,6 +384,25 @@ const Index = () => {
           Dados extraídos da planilha Avarias - Ápia · Referência: {new Date().toLocaleDateString("pt-BR")}
         </footer>
       </main>
+
+      <PdfReportDialog
+        open={pdfOpen}
+        onOpenChange={setPdfOpen}
+        data={filtered}
+        filters={{
+          contratos: filterContratos,
+          pareceres: filterPareceres,
+          placas: filterPlacas,
+          criticidades: filterCriticidades,
+          nf: filterNF,
+        }}
+        meta={{
+          importacaoNome: importacao?.nome_arquivo,
+          importacaoData: importacao?.data_importacao,
+          totalImportacao: hasReal ? realRows.length : undefined,
+        }}
+        totalDashboard={filtered.length}
+      />
     </div>
   );
 };
