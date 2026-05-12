@@ -59,8 +59,8 @@ const Index = () => {
   const avgAtraso = Math.round(filtered.reduce((s, a) => s + a.diasAtraso, 0) / (filtered.length || 1));
   const maxAtraso = Math.max(...filtered.map((a) => a.diasAtraso), 0);
 
-  const contratos = [...new Set(avariasData.map((a) => a.contrato))];
-  const categorias = [...new Set(avariasData.map((a) => a.categoria))];
+  const contratos: string[] = [...new Set(avariasData.map((a) => a.contrato))];
+  const categorias: string[] = [...new Set(avariasData.map((a) => a.categoria))];
 
   // Chart data: by contract
   const byContract = contratos.map((c) => {
