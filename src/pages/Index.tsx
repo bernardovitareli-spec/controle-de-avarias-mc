@@ -13,7 +13,9 @@ import {
   ChartTooltipContent,
 } from "@/components/ui/chart";
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, PieChart, Pie, Cell, ResponsiveContainer } from "recharts";
-import { DollarSign, Truck, Clock, AlertTriangle, FileText, Filter } from "lucide-react";
+import { DollarSign, Truck, Clock, AlertTriangle, FileText, Filter, X } from "lucide-react";
+import { MultiSelect } from "@/components/MultiSelect";
+import { criticidade as critOf } from "@/modules/avarias/utils";
 
 const CATEGORY_COLORS: Record<string, string> = {
   "Concluído": "hsl(142, 71%, 45%)",
@@ -40,27 +42,54 @@ const formatCurrency = (v: number) =>
   v.toLocaleString("pt-BR", { style: "currency", currency: "BRL" });
 
 const Index = () => {
-  const [filterContrato, setFilterContrato] = useState<string>("all");
-  const [filterCategoria, setFilterCategoria] = useState<string>("all");
+  const [filterContratos, setFilterContratos] = useState<string[]>([]);
+  const [filterPareceres, setFilterPareceres] = useState<string[]>([]);
+  const [filterPlacas, setFilterPlacas] = useState<string[]>([]);
+  const [filterCriticidades, setFilterCriticidades] = useState<string[]>([]);
+  const [filterNF, setFilterNF] = useState<string[]>([]);
 
   const { loading, hasReal, importacao, rows: realRows, semNF, semParecer } = useAvariasData();
   const avariasData = hasReal ? realRows : mockAvariasData;
 
   const filtered = useMemo(() => {
     return avariasData.filter((a) => {
-      if (filterContrato !== "all" && a.contrato !== filterContrato) return false;
-      if (filterCategoria !== "all" && a.categoria !== filterCategoria) return false;
+      if (filterContratos.length && !filterContratos.includes(a.contrato)) return false;
+      if (filterPareceres.length && !filterPareceres.includes(a.categoria)) return false;
+      if (filterPlacas.length && !filterPlacas.includes(a.placa)) return false;
+      if (filterCriticidades.length && !filterCriticidades.includes(critOf(a.diasAtraso))) return false;
+      if (filterNF.length) {
+        const hasNF = !!(a.nf && String(a.nf).trim());
+        const want = filterNF.includes("Com NF");
+        const wantNo = filterNF.includes("Sem NF");
+        if (want && !wantNo && !hasNF) return false;
+        if (wantNo && !want && hasNF) return false;
+      }
       return true;
     });
-  }, [avariasData, filterContrato, filterCategoria]);
+  }, [avariasData, filterContratos, filterPareceres, filterPlacas, filterCriticidades, filterNF]);
 
   const totalValor = filtered.reduce((s, a) => s + a.valor, 0);
   const totalItens = filtered.length;
   const avgAtraso = Math.round(filtered.reduce((s, a) => s + a.diasAtraso, 0) / (filtered.length || 1));
   const maxAtraso = Math.max(...filtered.map((a) => a.diasAtraso), 0);
 
-  const contratos: string[] = [...new Set(avariasData.map((a) => a.contrato))];
-  const categorias: string[] = [...new Set(avariasData.map((a) => a.categoria))];
+  const contratos: string[] = useMemo(() => [...new Set(avariasData.map((a) => a.contrato))].sort(), [avariasData]);
+  const categorias: string[] = useMemo(() => [...new Set(avariasData.map((a) => a.categoria))].sort(), [avariasData]);
+  const placas: string[] = useMemo(() => [...new Set(avariasData.map((a) => a.placa))].sort(), [avariasData]);
+  const criticidades = ["Baixa", "Média", "Alta", "Crítica"];
+
+  const activeChips: { label: string; onRemove: () => void }[] = [
+    ...filterContratos.map((v) => ({ label: `Contrato: ${v}`, onRemove: () => setFilterContratos(filterContratos.filter((x) => x !== v)) })),
+    ...filterPareceres.map((v) => ({ label: `Parecer: ${v}`, onRemove: () => setFilterPareceres(filterPareceres.filter((x) => x !== v)) })),
+    ...filterPlacas.map((v) => ({ label: `Placa: ${v}`, onRemove: () => setFilterPlacas(filterPlacas.filter((x) => x !== v)) })),
+    ...filterCriticidades.map((v) => ({ label: `Criticidade: ${v}`, onRemove: () => setFilterCriticidades(filterCriticidades.filter((x) => x !== v)) })),
+    ...filterNF.map((v) => ({ label: `NF: ${v}`, onRemove: () => setFilterNF(filterNF.filter((x) => x !== v)) })),
+  ];
+  const hasAnyFilter = activeChips.length > 0;
+  const clearAll = () => {
+    setFilterContratos([]); setFilterPareceres([]); setFilterPlacas([]);
+    setFilterCriticidades([]); setFilterNF([]);
+  };
 
   // Chart data: by contract
   const byContract = contratos.map((c) => {
@@ -159,42 +188,74 @@ const Index = () => {
 
         {/* Filters */}
         <Card>
-          <CardContent className="p-4">
-            <div className="flex flex-wrap items-center gap-3">
+          <CardContent className="p-4 space-y-3">
+            <div className="flex flex-wrap items-center gap-2">
               <Filter className="h-4 w-4 text-muted-foreground" />
-              <span className="text-sm font-medium text-muted-foreground">Filtros:</span>
-              <Select value={filterContrato} onValueChange={setFilterContrato}>
-                <SelectTrigger className="w-[180px] h-9">
-                  <SelectValue placeholder="Contrato" />
-                </SelectTrigger>
-                <SelectContent>
-                  <SelectItem value="all">Todos os Contratos</SelectItem>
-                  {contratos.map((c) => (
-                    <SelectItem key={c} value={c}>{c}</SelectItem>
-                  ))}
-                </SelectContent>
-              </Select>
-              <Select value={filterCategoria} onValueChange={setFilterCategoria}>
-                <SelectTrigger className="w-[180px] h-9">
-                  <SelectValue placeholder="Categoria" />
-                </SelectTrigger>
-                <SelectContent>
-                  <SelectItem value="all">Todas as Categorias</SelectItem>
-                  {categorias.map((c) => (
-                    <SelectItem key={c} value={c}>{c}</SelectItem>
-                  ))}
-                </SelectContent>
-              </Select>
-              {(filterContrato !== "all" || filterCategoria !== "all") && (
-                <Button
-                  variant="ghost"
-                  size="sm"
-                  onClick={() => { setFilterContrato("all"); setFilterCategoria("all"); }}
-                  className="text-xs"
-                >
-                  Limpar filtros
+              <span className="text-sm font-medium text-muted-foreground mr-1">Filtros:</span>
+              <MultiSelect
+                options={contratos}
+                selected={filterContratos}
+                onChange={setFilterContratos}
+                placeholder="Todos os Contratos"
+                label="contratos"
+              />
+              <MultiSelect
+                options={categorias}
+                selected={filterPareceres}
+                onChange={setFilterPareceres}
+                placeholder="Todos os Pareceres"
+                label="pareceres"
+              />
+              <MultiSelect
+                options={placas}
+                selected={filterPlacas}
+                onChange={setFilterPlacas}
+                placeholder="Todas as Placas"
+                label="placas"
+              />
+              <MultiSelect
+                options={criticidades}
+                selected={filterCriticidades}
+                onChange={setFilterCriticidades}
+                placeholder="Toda Criticidade"
+                label="criticidades"
+                searchable={false}
+                width="w-[180px]"
+              />
+              <MultiSelect
+                options={["Com NF", "Sem NF"]}
+                selected={filterNF}
+                onChange={setFilterNF}
+                placeholder="NF (todos)"
+                label="opções"
+                searchable={false}
+                width="w-[160px]"
+              />
+              {hasAnyFilter && (
+                <Button variant="ghost" size="sm" onClick={clearAll} className="text-xs ml-auto">
+                  <X className="h-3 w-3 mr-1" /> Limpar filtros
                 </Button>
               )}
+            </div>
+            <div className="flex flex-wrap items-center gap-1.5 pt-2 border-t">
+              <span className="text-xs text-muted-foreground mr-1 mt-1">Aplicados:</span>
+              {!hasAnyFilter && (
+                <span className="text-xs text-muted-foreground italic mt-1">
+                  Nenhum filtro aplicado — exibindo base completa da última importação.
+                </span>
+              )}
+              {activeChips.map((c) => (
+                <Badge key={c.label} variant="secondary" className="gap-1 pr-1 mt-1">
+                  {c.label}
+                  <button
+                    onClick={c.onRemove}
+                    className="hover:bg-background/50 rounded-sm p-0.5"
+                    aria-label={`Remover ${c.label}`}
+                  >
+                    <X className="h-3 w-3" />
+                  </button>
+                </Badge>
+              ))}
             </div>
           </CardContent>
         </Card>
