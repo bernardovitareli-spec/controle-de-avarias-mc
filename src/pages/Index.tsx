@@ -13,7 +13,9 @@ import {
   ChartTooltipContent,
 } from "@/components/ui/chart";
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, PieChart, Pie, Cell, ResponsiveContainer } from "recharts";
-import { DollarSign, Truck, Clock, AlertTriangle, FileText, Filter } from "lucide-react";
+import { DollarSign, Truck, Clock, AlertTriangle, FileText, Filter, X } from "lucide-react";
+import { MultiSelect } from "@/components/MultiSelect";
+import { criticidade as critOf } from "@/modules/avarias/utils";
 
 const CATEGORY_COLORS: Record<string, string> = {
   "Concluído": "hsl(142, 71%, 45%)",
