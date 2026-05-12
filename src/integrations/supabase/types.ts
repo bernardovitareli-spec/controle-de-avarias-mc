@@ -14,7 +14,122 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      avarias_importacoes: {
+        Row: {
+          created_at: string
+          data_importacao: string
+          id: string
+          nome_arquivo: string
+          observacoes: string | null
+          status_importacao: string
+          total_duplicados: number
+          total_linhas_lidas: number
+          total_registros_ignorados: number
+          total_registros_validos: number
+          updated_at: string
+          usuario_id: string | null
+          valor_total_importado: number
+        }
+        Insert: {
+          created_at?: string
+          data_importacao?: string
+          id?: string
+          nome_arquivo: string
+          observacoes?: string | null
+          status_importacao?: string
+          total_duplicados?: number
+          total_linhas_lidas?: number
+          total_registros_ignorados?: number
+          total_registros_validos?: number
+          updated_at?: string
+          usuario_id?: string | null
+          valor_total_importado?: number
+        }
+        Update: {
+          created_at?: string
+          data_importacao?: string
+          id?: string
+          nome_arquivo?: string
+          observacoes?: string | null
+          status_importacao?: string
+          total_duplicados?: number
+          total_linhas_lidas?: number
+          total_registros_ignorados?: number
+          total_registros_validos?: number
+          updated_at?: string
+          usuario_id?: string | null
+          valor_total_importado?: number
+        }
+        Relationships: []
+      }
+      avarias_registros: {
+        Row: {
+          categoria: string | null
+          chave_duplicidade: string | null
+          contrato: string | null
+          created_at: string
+          data_envio: string | null
+          id: string
+          importacao_id: string
+          nf_mc: string | null
+          observacoes: string | null
+          parecer_normalizado: string | null
+          parecer_original: string | null
+          placa: string | null
+          status_normalizado: string | null
+          status_original: string | null
+          subcategoria: string | null
+          updated_at: string
+          valor: number
+        }
+        Insert: {
+          categoria?: string | null
+          chave_duplicidade?: string | null
+          contrato?: string | null
+          created_at?: string
+          data_envio?: string | null
+          id?: string
+          importacao_id: string
+          nf_mc?: string | null
+          observacoes?: string | null
+          parecer_normalizado?: string | null
+          parecer_original?: string | null
+          placa?: string | null
+          status_normalizado?: string | null
+          status_original?: string | null
+          subcategoria?: string | null
+          updated_at?: string
+          valor?: number
+        }
+        Update: {
+          categoria?: string | null
+          chave_duplicidade?: string | null
+          contrato?: string | null
+          created_at?: string
+          data_envio?: string | null
+          id?: string
+          importacao_id?: string
+          nf_mc?: string | null
+          observacoes?: string | null
+          parecer_normalizado?: string | null
+          parecer_original?: string | null
+          placa?: string | null
+          status_normalizado?: string | null
+          status_original?: string | null
+          subcategoria?: string | null
+          updated_at?: string
+          valor?: number
+        }
+        Relationships: [
+          {
+            foreignKeyName: "avarias_registros_importacao_id_fkey"
+            columns: ["importacao_id"]
+            isOneToOne: false
+            referencedRelation: "avarias_importacoes"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
     }
     Views: {
       [_ in never]: never
