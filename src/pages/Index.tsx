@@ -48,6 +48,7 @@ const Index = () => {
   const [filterPlacas, setFilterPlacas] = useState<string[]>([]);
   const [filterCriticidades, setFilterCriticidades] = useState<string[]>([]);
   const [filterNF, setFilterNF] = useState<string[]>([]);
+  const [pdfOpen, setPdfOpen] = useState(false);
 
   const { loading, hasReal, importacao, rows: realRows, semNF, semParecer } = useAvariasData();
   const avariasData = hasReal ? realRows : mockAvariasData;
