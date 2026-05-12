@@ -1,5 +1,6 @@
 import { useState, useMemo } from "react";
-import { avariasData } from "@/data/avarias";
+import { avariasData as mockAvariasData } from "@/data/avarias";
+import { useAvariasData } from "@/modules/avarias/useAvariasData";
 import { KPICard } from "@/components/KPICard";
 import { AvariasTable } from "@/components/AvariasTable";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
