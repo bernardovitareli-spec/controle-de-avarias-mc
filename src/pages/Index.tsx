@@ -43,13 +43,16 @@ const Index = () => {
   const [filterContrato, setFilterContrato] = useState<string>("all");
   const [filterCategoria, setFilterCategoria] = useState<string>("all");
 
+  const { loading, hasReal, importacao, rows: realRows, semNF, semParecer } = useAvariasData();
+  const avariasData = hasReal ? realRows : mockAvariasData;
+
   const filtered = useMemo(() => {
     return avariasData.filter((a) => {
       if (filterContrato !== "all" && a.contrato !== filterContrato) return false;
       if (filterCategoria !== "all" && a.categoria !== filterCategoria) return false;
       return true;
     });
-  }, [filterContrato, filterCategoria]);
+  }, [avariasData, filterContrato, filterCategoria]);
 
   const totalValor = filtered.reduce((s, a) => s + a.valor, 0);
   const totalItens = filtered.length;
