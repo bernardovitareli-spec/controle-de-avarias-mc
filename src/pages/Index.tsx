@@ -122,6 +122,9 @@ const Index = () => {
               </p>
             </div>
             <div className="flex items-center gap-2">
+              <Button size="sm" onClick={() => setPdfOpen(true)} disabled={!filtered.length}>
+                <FileDown className="h-4 w-4 mr-1.5" />Gerar Relatório PDF
+              </Button>
               <Button variant="outline" size="sm" asChild>
                 <a href="/avarias"><FileText className="h-4 w-4 mr-1.5" />Abrir Módulo</a>
               </Button>
