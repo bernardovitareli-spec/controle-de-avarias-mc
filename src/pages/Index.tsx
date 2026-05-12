@@ -1,5 +1,6 @@
 import { useState, useMemo } from "react";
-import { avariasData } from "@/data/avarias";
+import { avariasData as mockAvariasData } from "@/data/avarias";
+import { useAvariasData } from "@/modules/avarias/useAvariasData";
 import { KPICard } from "@/components/KPICard";
 import { AvariasTable } from "@/components/AvariasTable";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -42,21 +43,24 @@ const Index = () => {
   const [filterContrato, setFilterContrato] = useState<string>("all");
   const [filterCategoria, setFilterCategoria] = useState<string>("all");
 
+  const { loading, hasReal, importacao, rows: realRows, semNF, semParecer } = useAvariasData();
+  const avariasData = hasReal ? realRows : mockAvariasData;
+
   const filtered = useMemo(() => {
     return avariasData.filter((a) => {
       if (filterContrato !== "all" && a.contrato !== filterContrato) return false;
       if (filterCategoria !== "all" && a.categoria !== filterCategoria) return false;
       return true;
     });
-  }, [filterContrato, filterCategoria]);
+  }, [avariasData, filterContrato, filterCategoria]);
 
   const totalValor = filtered.reduce((s, a) => s + a.valor, 0);
   const totalItens = filtered.length;
   const avgAtraso = Math.round(filtered.reduce((s, a) => s + a.diasAtraso, 0) / (filtered.length || 1));
   const maxAtraso = Math.max(...filtered.map((a) => a.diasAtraso), 0);
 
-  const contratos = [...new Set(avariasData.map((a) => a.contrato))];
-  const categorias = [...new Set(avariasData.map((a) => a.categoria))];
+  const contratos: string[] = [...new Set(avariasData.map((a) => a.contrato))];
+  const categorias: string[] = [...new Set(avariasData.map((a) => a.categoria))];
 
   // Chart data: by contract
   const byContract = contratos.map((c) => {
@@ -100,8 +104,31 @@ const Index = () => {
       </header>
 
       <main className="max-w-[1400px] mx-auto px-6 py-6 space-y-6">
+        {/* Origem dos dados / auditoria */}
+        <div className={`rounded-md border px-4 py-2.5 text-xs flex flex-wrap items-center gap-x-4 gap-y-1 ${hasReal ? "bg-muted/40" : "bg-amber-500/10 border-amber-500/30"}`}>
+          {loading ? (
+            <span className="text-muted-foreground">Carregando dados…</span>
+          ) : hasReal && importacao ? (
+            <>
+              <span className="font-medium">Fonte: importação real</span>
+              <span className="text-muted-foreground">Arquivo: <code>{importacao.nome_arquivo}</code></span>
+              <span className="text-muted-foreground">Importado em: {new Date(importacao.data_importacao).toLocaleString("pt-BR")}</span>
+              <span className="text-muted-foreground">Registros: {realRows.length}</span>
+              <span className="text-muted-foreground">Sem NF: {semNF}</span>
+              <span className="text-muted-foreground">Sem parecer: {semParecer}</span>
+            </>
+          ) : (
+            <>
+              <AlertTriangle className="h-3.5 w-3.5 text-amber-600" />
+              <span className="font-medium text-amber-800 dark:text-amber-300">Nenhuma importação real encontrada — exibindo dados de exemplo.</span>
+              <a href="/avarias" className="underline ml-auto">Importar planilha</a>
+            </>
+          )}
+        </div>
+
         {/* KPIs */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+
           <KPICard
             title="Valor Total"
             value={formatCurrency(totalValor)}
