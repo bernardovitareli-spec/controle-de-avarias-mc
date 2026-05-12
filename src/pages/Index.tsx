@@ -188,42 +188,74 @@ const Index = () => {
 
         {/* Filters */}
         <Card>
-          <CardContent className="p-4">
-            <div className="flex flex-wrap items-center gap-3">
+          <CardContent className="p-4 space-y-3">
+            <div className="flex flex-wrap items-center gap-2">
               <Filter className="h-4 w-4 text-muted-foreground" />
-              <span className="text-sm font-medium text-muted-foreground">Filtros:</span>
-              <Select value={filterContrato} onValueChange={setFilterContrato}>
-                <SelectTrigger className="w-[180px] h-9">
-                  <SelectValue placeholder="Contrato" />
-                </SelectTrigger>
-                <SelectContent>
-                  <SelectItem value="all">Todos os Contratos</SelectItem>
-                  {contratos.map((c) => (
-                    <SelectItem key={c} value={c}>{c}</SelectItem>
-                  ))}
-                </SelectContent>
-              </Select>
-              <Select value={filterCategoria} onValueChange={setFilterCategoria}>
-                <SelectTrigger className="w-[180px] h-9">
-                  <SelectValue placeholder="Categoria" />
-                </SelectTrigger>
-                <SelectContent>
-                  <SelectItem value="all">Todas as Categorias</SelectItem>
-                  {categorias.map((c) => (
-                    <SelectItem key={c} value={c}>{c}</SelectItem>
-                  ))}
-                </SelectContent>
-              </Select>
-              {(filterContrato !== "all" || filterCategoria !== "all") && (
-                <Button
-                  variant="ghost"
-                  size="sm"
-                  onClick={() => { setFilterContrato("all"); setFilterCategoria("all"); }}
-                  className="text-xs"
-                >
-                  Limpar filtros
+              <span className="text-sm font-medium text-muted-foreground mr-1">Filtros:</span>
+              <MultiSelect
+                options={contratos}
+                selected={filterContratos}
+                onChange={setFilterContratos}
+                placeholder="Todos os Contratos"
+                label="contratos"
+              />
+              <MultiSelect
+                options={categorias}
+                selected={filterPareceres}
+                onChange={setFilterPareceres}
+                placeholder="Todos os Pareceres"
+                label="pareceres"
+              />
+              <MultiSelect
+                options={placas}
+                selected={filterPlacas}
+                onChange={setFilterPlacas}
+                placeholder="Todas as Placas"
+                label="placas"
+              />
+              <MultiSelect
+                options={criticidades}
+                selected={filterCriticidades}
+                onChange={setFilterCriticidades}
+                placeholder="Toda Criticidade"
+                label="criticidades"
+                searchable={false}
+                width="w-[180px]"
+              />
+              <MultiSelect
+                options={["Com NF", "Sem NF"]}
+                selected={filterNF}
+                onChange={setFilterNF}
+                placeholder="NF (todos)"
+                label="opções"
+                searchable={false}
+                width="w-[160px]"
+              />
+              {hasAnyFilter && (
+                <Button variant="ghost" size="sm" onClick={clearAll} className="text-xs ml-auto">
+                  <X className="h-3 w-3 mr-1" /> Limpar filtros
                 </Button>
               )}
+            </div>
+            <div className="flex flex-wrap items-center gap-1.5 pt-2 border-t">
+              <span className="text-xs text-muted-foreground mr-1 mt-1">Aplicados:</span>
+              {!hasAnyFilter && (
+                <span className="text-xs text-muted-foreground italic mt-1">
+                  Nenhum filtro aplicado — exibindo base completa da última importação.
+                </span>
+              )}
+              {activeChips.map((c) => (
+                <Badge key={c.label} variant="secondary" className="gap-1 pr-1 mt-1">
+                  {c.label}
+                  <button
+                    onClick={c.onRemove}
+                    className="hover:bg-background/50 rounded-sm p-0.5"
+                    aria-label={`Remover ${c.label}`}
+                  >
+                    <X className="h-3 w-3" />
+                  </button>
+                </Badge>
+              ))}
             </div>
           </CardContent>
         </Card>
