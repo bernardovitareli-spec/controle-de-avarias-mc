@@ -13,9 +13,10 @@ import {
   ChartTooltipContent,
 } from "@/components/ui/chart";
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, PieChart, Pie, Cell, ResponsiveContainer } from "recharts";
-import { DollarSign, Truck, Clock, AlertTriangle, FileText, Filter, X } from "lucide-react";
+import { DollarSign, Truck, Clock, AlertTriangle, FileText, Filter, X, FileDown } from "lucide-react";
 import { MultiSelect } from "@/components/MultiSelect";
 import { criticidade as critOf } from "@/modules/avarias/utils";
+import { PdfReportDialog } from "@/components/PdfReportDialog";
 
 const CATEGORY_COLORS: Record<string, string> = {
   "Concluído": "hsl(142, 71%, 45%)",
@@ -47,6 +48,7 @@ const Index = () => {
   const [filterPlacas, setFilterPlacas] = useState<string[]>([]);
   const [filterCriticidades, setFilterCriticidades] = useState<string[]>([]);
   const [filterNF, setFilterNF] = useState<string[]>([]);
+  const [pdfOpen, setPdfOpen] = useState(false);
 
   const { loading, hasReal, importacao, rows: realRows, semNF, semParecer } = useAvariasData();
   const avariasData = hasReal ? realRows : mockAvariasData;
@@ -120,6 +122,9 @@ const Index = () => {
               </p>
             </div>
             <div className="flex items-center gap-2">
+              <Button size="sm" onClick={() => setPdfOpen(true)} disabled={!filtered.length}>
+                <FileDown className="h-4 w-4 mr-1.5" />Gerar Relatório PDF
+              </Button>
               <Button variant="outline" size="sm" asChild>
                 <a href="/avarias"><FileText className="h-4 w-4 mr-1.5" />Abrir Módulo</a>
               </Button>
@@ -379,6 +384,25 @@ const Index = () => {
           Dados extraídos da planilha Avarias - Ápia · Referência: {new Date().toLocaleDateString("pt-BR")}
         </footer>
       </main>
+
+      <PdfReportDialog
+        open={pdfOpen}
+        onOpenChange={setPdfOpen}
+        data={filtered}
+        filters={{
+          contratos: filterContratos,
+          pareceres: filterPareceres,
+          placas: filterPlacas,
+          criticidades: filterCriticidades,
+          nf: filterNF,
+        }}
+        meta={{
+          importacaoNome: importacao?.nome_arquivo,
+          importacaoData: importacao?.data_importacao,
+          totalImportacao: hasReal ? realRows.length : undefined,
+        }}
+        totalDashboard={filtered.length}
+      />
     </div>
   );
 };
