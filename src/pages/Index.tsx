@@ -86,10 +86,15 @@ const Index = () => {
                 Painel executivo · Atualizado em {new Date().toLocaleDateString("pt-BR")}
               </p>
             </div>
-            <Badge variant="outline" className="text-xs gap-1.5 px-3 py-1.5">
-              <AlertTriangle className="h-3 w-3" />
-              {avariasData.filter((a) => a.diasAtraso > 180).length} avarias críticas (&gt;180 dias)
-            </Badge>
+            <div className="flex items-center gap-2">
+              <Button variant="outline" size="sm" asChild>
+                <a href="/avarias"><FileText className="h-4 w-4 mr-1.5" />Abrir Módulo</a>
+              </Button>
+              <Badge variant="outline" className="text-xs gap-1.5 px-3 py-1.5">
+                <AlertTriangle className="h-3 w-3" />
+                {avariasData.filter((a) => a.diasAtraso > 180).length} avarias críticas (&gt;180 dias)
+              </Badge>
+            </div>
           </div>
         </div>
       </header>
