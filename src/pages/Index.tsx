@@ -17,6 +17,7 @@ import { DollarSign, Truck, Clock, AlertTriangle, FileText, Filter, X, FileDown 
 import { MultiSelect } from "@/components/MultiSelect";
 import { criticidade as critOf } from "@/modules/avarias/utils";
 import { PdfReportDialog } from "@/components/PdfReportDialog";
+import { UserMenu } from "@/components/UserMenu";
 
 const CATEGORY_COLORS: Record<string, string> = {
   "Concluído": "hsl(142, 71%, 45%)",
@@ -132,6 +133,7 @@ const Index = () => {
                 <AlertTriangle className="h-3 w-3" />
                 {avariasData.filter((a) => a.diasAtraso > 180).length} avarias críticas (&gt;180 dias)
               </Badge>
+              <UserMenu />
             </div>
           </div>
         </div>
