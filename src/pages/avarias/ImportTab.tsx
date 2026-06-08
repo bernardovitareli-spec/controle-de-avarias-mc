@@ -118,85 +118,47 @@ export default function ImportTab({ onImported }: { onImported: () => void }) {
     if (!parsed || !file || !summary) return;
     setSaving(true);
     try {
-      // 1. cria importação
-      const { data: imp, error: e1 } = await supabase
-        .from("avarias_importacoes")
-        .insert({
-          nome_arquivo: file.name,
-          total_linhas_lidas: summary.totalLinhasLidas,
-          total_registros_validos: summary.validos - summary.duplicados,
-          total_registros_ignorados: summary.ignoradas,
-          total_duplicados: summary.duplicados,
-          valor_total_importado: summary.valorTotal,
-          status_importacao: "confirmada",
-        })
-        .select()
-        .single();
-      if (e1) throw e1;
-
-      // 2. monta registros (ignora duplicados existentes)
-      const existingKeys = new Set<string>();
-      const keys = parsed.allRows.map((r) =>
-        buildDuplicateKey({
+      const registros = parsed.allRows.map((r) => {
+        const chave = buildDuplicateKey({
           data_envio: r.data_envio,
           placa: r.placa,
           contrato: r.contrato,
           valor: r.valor,
           nf_mc: r.nf_mc,
           observacoes: r.observacoes,
-        })
-      );
-      const chunkSize = 200;
-      for (let i = 0; i < keys.length; i += chunkSize) {
-        const slice = keys.slice(i, i + chunkSize);
-        const { data } = await supabase
-          .from("avarias_registros")
-          .select("chave_duplicidade")
-          .in("chave_duplicidade", slice);
-        data?.forEach((d) => d.chave_duplicidade && existingKeys.add(d.chave_duplicidade));
-      }
+        });
+        return {
+          data_envio: r.data_envio,
+          placa: r.placa || null,
+          contrato: r.contrato || null,
+          status_original: r.status_original,
+          status_normalizado: normalizeStatus(r.status_original),
+          nf_mc: r.nf_mc,
+          valor: r.valor,
+          parecer_original: r.parecer_original,
+          parecer_normalizado: normalizeParecer(r.parecer_original),
+          observacoes: r.observacoes,
+          categoria: classifyAvaria(r.observacoes),
+          chave_duplicidade: chave,
+        };
+      });
 
-      const registros = parsed.allRows
-        .map((r) => {
-          const chave = buildDuplicateKey({
-            data_envio: r.data_envio,
-            placa: r.placa,
-            contrato: r.contrato,
-            valor: r.valor,
-            nf_mc: r.nf_mc,
-            observacoes: r.observacoes,
-          });
-          if (existingKeys.has(chave)) return null;
-          return {
-            importacao_id: imp.id,
-            data_envio: r.data_envio,
-            placa: r.placa || null,
-            contrato: r.contrato || null,
-            status_original: r.status_original,
-            status_normalizado: normalizeStatus(r.status_original),
-            nf_mc: r.nf_mc,
-            valor: r.valor,
-            parecer_original: r.parecer_original,
-            parecer_normalizado: normalizeParecer(r.parecer_original),
-            observacoes: r.observacoes,
-            categoria: classifyAvaria(r.observacoes),
-            chave_duplicidade: chave,
-          };
-        })
-        .filter(Boolean) as any[];
+      const { data, error } = await supabase.rpc("create_avarias_import", {
+        p_nome_arquivo: file.name,
+        p_total_linhas_lidas: summary.totalLinhasLidas,
+        p_total_registros_ignorados: summary.ignoradas,
+        p_valor_total_importado: summary.valorTotal,
+        p_registros: registros as any,
+      });
+      if (error) throw error;
 
-      // insere em chunks
-      const insertChunk = 500;
-      for (let i = 0; i < registros.length; i += insertChunk) {
-        const { error: e2 } = await supabase
-          .from("avarias_registros")
-          .insert(registros.slice(i, i + insertChunk));
-        if (e2) throw e2;
-      }
+      const result = (data ?? {}) as { importacao_id?: string; inseridos?: number; duplicados?: number };
+      const inseridos = result.inseridos ?? 0;
+      const duplicados = result.duplicados ?? 0;
 
       toast({
         title: "Importação concluída",
-        description: `${registros.length} registros gravados (${summary.duplicados} duplicidades ignoradas).`,
+        description: `${inseridos} registros inseridos · ${duplicados} duplicidades ignoradas.`,
       });
       reset();
       onImported();
@@ -211,6 +173,7 @@ export default function ImportTab({ onImported }: { onImported: () => void }) {
       setSaving(false);
     }
   };
+
 
   return (
     <div className="space-y-6">
