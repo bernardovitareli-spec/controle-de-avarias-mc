@@ -135,7 +135,16 @@ export type Database = {
       [_ in never]: never
     }
     Functions: {
-      [_ in never]: never
+      create_avarias_import: {
+        Args: {
+          p_nome_arquivo: string
+          p_registros: Json
+          p_total_linhas_lidas: number
+          p_total_registros_ignorados: number
+          p_valor_total_importado: number
+        }
+        Returns: Json
+      }
     }
     Enums: {
       [_ in never]: never
