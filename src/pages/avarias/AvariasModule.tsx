@@ -7,6 +7,7 @@ import DashboardTab from "./DashboardTab";
 import ImportTab from "./ImportTab";
 import HistoricoTab from "./HistoricoTab";
 import RelatoriosTab from "./RelatoriosTab";
+import { UserMenu } from "@/components/UserMenu";
 
 export default function AvariasModule() {
   const [tab, setTab] = useState("dashboard");
