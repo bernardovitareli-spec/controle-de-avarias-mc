@@ -26,6 +26,7 @@ export default function AvariasModule() {
               </p>
             </div>
           </div>
+          <UserMenu />
         </div>
       </header>
 
