@@ -133,6 +133,7 @@ const Index = () => {
                 <AlertTriangle className="h-3 w-3" />
                 {avariasData.filter((a) => a.diasAtraso > 180).length} avarias críticas (&gt;180 dias)
               </Badge>
+              <UserMenu />
             </div>
           </div>
         </div>
