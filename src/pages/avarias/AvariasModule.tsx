@@ -8,9 +8,11 @@ import ImportTab from "./ImportTab";
 import HistoricoTab from "./HistoricoTab";
 import RelatoriosTab from "./RelatoriosTab";
 import { UserMenu } from "@/components/UserMenu";
+import { useUserRole } from "@/hooks/useUserRole";
 
 export default function AvariasModule() {
   const [tab, setTab] = useState("dashboard");
+  const { podeImportar } = useUserRole();
 
   return (
     <div className="min-h-screen bg-background">
@@ -35,13 +37,18 @@ export default function AvariasModule() {
         <Tabs value={tab} onValueChange={setTab}>
           <TabsList className="mb-6">
             <TabsTrigger value="dashboard"><BarChart3 className="h-4 w-4 mr-2" />Dashboard</TabsTrigger>
-            <TabsTrigger value="import"><Upload className="h-4 w-4 mr-2" />Importar Planilha</TabsTrigger>
+            {/* Importar é restrito a Administradores */}
+            {podeImportar && (
+              <TabsTrigger value="import"><Upload className="h-4 w-4 mr-2" />Importar Planilha</TabsTrigger>
+            )}
             <TabsTrigger value="historico"><History className="h-4 w-4 mr-2" />Histórico</TabsTrigger>
             <TabsTrigger value="relatorios"><FileText className="h-4 w-4 mr-2" />Relatórios</TabsTrigger>
           </TabsList>
 
           <TabsContent value="dashboard"><DashboardTab /></TabsContent>
-          <TabsContent value="import"><ImportTab onImported={() => setTab("dashboard")} /></TabsContent>
+          {podeImportar && (
+            <TabsContent value="import"><ImportTab onImported={() => setTab("dashboard")} /></TabsContent>
+          )}
           <TabsContent value="historico"><HistoricoTab /></TabsContent>
           <TabsContent value="relatorios"><RelatoriosTab /></TabsContent>
         </Tabs>

@@ -1,5 +1,7 @@
 import { useAuth } from "@/contexts/AuthContext";
+import { useUserRole } from "@/hooks/useUserRole";
 import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -13,6 +15,7 @@ import { useNavigate } from "react-router-dom";
 
 export function UserMenu() {
   const { user, signOut } = useAuth();
+  const { principalLabel, isLoading } = useUserRole();
   const navigate = useNavigate();
 
   if (!user) return null;
@@ -34,6 +37,11 @@ export function UserMenu() {
         <DropdownMenuLabel className="font-normal">
           <div className="text-xs text-muted-foreground">Sessão</div>
           <div className="text-sm truncate">{user.email}</div>
+          <div className="mt-1.5">
+            <Badge variant="secondary" className="text-[10px]">
+              {isLoading ? "Carregando papel…" : principalLabel}
+            </Badge>
+          </div>
         </DropdownMenuLabel>
         <DropdownMenuSeparator />
         <DropdownMenuItem onClick={handleSignOut} className="text-destructive focus:text-destructive">
