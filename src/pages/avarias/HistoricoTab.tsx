@@ -33,12 +33,16 @@ export default function HistoricoTab() {
       </CardHeader>
       <CardContent>
         {loading ? (
-          <div className="p-8 text-center text-muted-foreground">
-            <Loader2 className="h-5 w-5 animate-spin mx-auto" />
+          <div className="space-y-2">
+            {Array.from({ length: 4 }).map((_, i) => (
+              <Skeleton key={i} className="h-12 w-full" />
+            ))}
           </div>
         ) : items.length === 0 ? (
-          <div className="p-8 text-center text-muted-foreground">
-            Nenhuma importação registrada ainda.
+          <div className="py-12 text-center text-muted-foreground">
+            <Inbox className="h-8 w-8 mx-auto mb-2 opacity-50" />
+            <p className="text-sm font-medium text-foreground">Nenhuma importação ainda</p>
+            <p className="text-xs mt-1">Importe uma planilha na aba acima para começar.</p>
           </div>
         ) : (
           <div className="overflow-auto rounded-md border">
