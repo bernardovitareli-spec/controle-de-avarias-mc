@@ -9,7 +9,7 @@ import { Button } from "@/components/ui/button";
 import { Loader2, ArrowLeft } from "lucide-react";
 import { toast } from "sonner";
 import { useNavigate } from "react-router-dom";
-import { AppHeader } from "@/components/AppHeader";
+import { PageHeader } from "@/components/AppLayout";
 import { Skeleton } from "@/components/ui/skeleton";
 
 type AdminUserRow = {
@@ -99,17 +99,11 @@ export default function AdminUsuarios() {
   };
 
   return (
-    <div className="min-h-screen bg-background">
-      <AppHeader />
-      <main className="max-w-5xl mx-auto px-4 sm:px-6 py-6 space-y-5">
-        <div className="flex items-center justify-between gap-3">
-          <div>
-            <h1 className="text-xl sm:text-2xl font-semibold tracking-tight">Gestão de Usuários</h1>
-            <p className="text-sm text-muted-foreground">
-              Defina o papel de cada usuário do sistema.
-            </p>
-          </div>
-        </div>
+    <div className="max-w-5xl mx-auto px-4 sm:px-6 py-6 space-y-5">
+      <PageHeader
+        title="Gestão de Usuários"
+        subtitle="Defina o papel de cada usuário do sistema."
+      />
 
         <Card className="shadow-card">
           <CardHeader>
