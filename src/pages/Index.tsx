@@ -18,6 +18,8 @@ import { MultiSelect } from "@/components/MultiSelect";
 import { criticidade as critOf } from "@/modules/avarias/utils";
 import { PdfReportDialog } from "@/components/PdfReportDialog";
 import { UserMenu } from "@/components/UserMenu";
+import { EditAvariaDialog, EditAvariaTarget } from "@/components/EditAvariaDialog";
+import { useUserRole } from "@/hooks/useUserRole";
 
 const CATEGORY_COLORS: Record<string, string> = {
   "Concluído": "hsl(142, 71%, 45%)",
@@ -50,6 +52,8 @@ const Index = () => {
   const [filterCriticidades, setFilterCriticidades] = useState<string[]>([]);
   const [filterNF, setFilterNF] = useState<string[]>([]);
   const [pdfOpen, setPdfOpen] = useState(false);
+  const [editTarget, setEditTarget] = useState<EditAvariaTarget | null>(null);
+  const { podeEditar } = useUserRole();
 
   const { loading, hasReal, importacao, rows: realRows, semNF, semParecer } = useAvariasData();
   const avariasData = hasReal ? realRows : mockAvariasData;
@@ -379,8 +383,28 @@ const Index = () => {
         {/* Table */}
         <div>
           <h2 className="text-lg font-semibold mb-3">Detalhamento de Avarias</h2>
-          <AvariasTable data={filtered} />
+          <AvariasTable
+            data={filtered}
+            onEdit={
+              hasReal && podeEditar
+                ? (item) =>
+                    setEditTarget({
+                      id: String(item.id),
+                      placa: item.placa,
+                      nf: item.nf ?? "",
+                      parecer: item.parecer ?? "",
+                      observacoes: item.observacoes ?? "",
+                    })
+                : undefined
+            }
+          />
         </div>
+
+        <EditAvariaDialog
+          open={!!editTarget}
+          onOpenChange={(v) => !v && setEditTarget(null)}
+          target={editTarget}
+        />
 
         <footer className="text-center text-xs text-muted-foreground py-4 border-t">
           Dados extraídos da planilha Avarias - Ápia · Referência: {new Date().toLocaleDateString("pt-BR")}
