@@ -14,6 +14,7 @@ export interface AvariasDataState {
   loading: boolean;
   hasReal: boolean;
   importacao: AvariaImportacao | null;
+  importacoes: AvariaImportacao[];
   rows: Avaria[];
   semNF: number;
   semParecer: number;
@@ -22,29 +23,29 @@ export interface AvariasDataState {
 }
 
 interface AvariasQueryResult {
-  importacao: AvariaImportacao | null;
+  importacoes: AvariaImportacao[];
   rows: Avaria[];
   semNF: number;
   semParecer: number;
 }
 
-const QUERY_KEY = ["avarias", "latest"] as const;
+const QUERY_KEY = ["avarias"] as const;
 
-async function fetchLatestAvarias(): Promise<AvariasQueryResult> {
+async function fetchConsolidatedAvarias(): Promise<AvariasQueryResult> {
   const { data: imps, error: impErr } = await supabase
     .from("avarias_importacoes")
     .select("*")
     .in("status_importacao", ["confirmada", "concluida"])
-    .order("data_importacao", { ascending: false })
-    .limit(1);
+    .order("data_importacao", { ascending: false });
 
   if (impErr) throw impErr;
 
-  const imp = imps?.[0] ?? null;
-  if (!imp) {
-    return { importacao: null, rows: [], semNF: 0, semParecer: 0 };
+  const importacoes = (imps ?? []) as any as AvariaImportacao[];
+  if (importacoes.length === 0) {
+    return { importacoes: [], rows: [], semNF: 0, semParecer: 0 };
   }
 
+  const ids = importacoes.map((i) => i.id);
   const all: any[] = [];
   const pageSize = 1000;
   let from = 0;
@@ -52,7 +53,7 @@ async function fetchLatestAvarias(): Promise<AvariasQueryResult> {
     const { data, error } = await supabase
       .from("avarias_registros")
       .select("*")
-      .eq("importacao_id", imp.id)
+      .in("importacao_id", ids)
       .range(from, from + pageSize - 1);
     if (error) throw error;
     if (!data || data.length === 0) break;
@@ -90,7 +91,7 @@ async function fetchLatestAvarias(): Promise<AvariasQueryResult> {
       (r.parecer_normalizado && r.parecer_normalizado === "Sem Parecer")
   ).length;
 
-  return { importacao: imp as any, rows: mapped, semNF, semParecer };
+  return { importacoes, rows: mapped, semNF, semParecer };
 }
 
 export function useAvariasData(): AvariasDataState {
@@ -98,7 +99,7 @@ export function useAvariasData(): AvariasDataState {
 
   const { data, isLoading, error, refetch } = useQuery<AvariasQueryResult, Error>({
     queryKey: QUERY_KEY,
-    queryFn: fetchLatestAvarias,
+    queryFn: fetchConsolidatedAvarias,
     staleTime: 30_000,
   });
 
@@ -121,12 +122,14 @@ export function useAvariasData(): AvariasDataState {
     };
   }, [queryClient]);
 
-  const importacao = data?.importacao ?? null;
+  const importacoes = data?.importacoes ?? [];
+  const importacao = importacoes[0] ?? null;
 
   return {
     loading: isLoading,
-    hasReal: !!importacao,
+    hasReal: importacoes.length > 0,
     importacao,
+    importacoes,
     rows: data?.rows ?? [],
     semNF: data?.semNF ?? 0,
     semParecer: data?.semParecer ?? 0,
