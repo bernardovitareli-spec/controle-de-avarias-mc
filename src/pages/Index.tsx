@@ -77,9 +77,11 @@ const Index = () => {
         if (want && !wantNo && !hasNF) return false;
         if (wantNo && !want && hasNF) return false;
       }
+      if (dataInicial && (!a.dataEnvio || a.dataEnvio < dataInicial)) return false;
+      if (dataFinal && (!a.dataEnvio || a.dataEnvio > dataFinal)) return false;
       return true;
     });
-  }, [avariasData, filterContratos, filterPareceres, filterPlacas, filterCriticidades, filterNF]);
+  }, [avariasData, filterContratos, filterPareceres, filterPlacas, filterCriticidades, filterNF, dataInicial, dataFinal]);
 
   const totalValor = filtered.reduce((s, a) => s + a.valor, 0);
   const totalItens = filtered.length;
