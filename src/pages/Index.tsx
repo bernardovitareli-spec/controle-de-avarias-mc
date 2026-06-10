@@ -3,6 +3,8 @@ import { avariasData as mockAvariasData } from "@/data/avarias";
 import { useAvariasData } from "@/modules/avarias/useAvariasData";
 import { KPICard } from "@/components/KPICard";
 import { AvariasTable } from "@/components/AvariasTable";
+import { AppHeader } from "@/components/AppHeader";
+import { Skeleton } from "@/components/ui/skeleton";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -116,32 +118,22 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      {/* Header */}
-      <header className="border-b bg-card/80 backdrop-blur-sm sticky top-0 z-10">
-        <div className="max-w-[1400px] mx-auto px-6 py-4">
-          <div className="flex items-center justify-between">
-            <div>
-              <h1 className="text-2xl font-bold tracking-tight">Gestão de Avarias - MC</h1>
-              <p className="text-sm text-muted-foreground mt-0.5">
-                Painel executivo · Atualizado em {new Date().toLocaleDateString("pt-BR")}
-              </p>
-            </div>
-            <div className="flex items-center gap-2">
-              <Button size="sm" onClick={() => setPdfOpen(true)} disabled={!filtered.length}>
-                <FileDown className="h-4 w-4 mr-1.5" />Gerar Relatório PDF
-              </Button>
-              <Button variant="outline" size="sm" asChild>
-                <a href="/avarias"><FileText className="h-4 w-4 mr-1.5" />Abrir Módulo</a>
-              </Button>
-              <Badge variant="outline" className="text-xs gap-1.5 px-3 py-1.5">
-                <AlertTriangle className="h-3 w-3" />
-                {avariasData.filter((a) => a.diasAtraso > 180).length} avarias críticas (&gt;180 dias)
-              </Badge>
-              <UserMenu />
-            </div>
-          </div>
-        </div>
-      </header>
+      <AppHeader
+        actions={
+          <>
+            <Button size="sm" onClick={() => setPdfOpen(true)} disabled={!filtered.length} className="hidden sm:inline-flex">
+              <FileDown className="h-4 w-4 mr-1.5" />Relatório PDF
+            </Button>
+            <Button size="icon" variant="default" onClick={() => setPdfOpen(true)} disabled={!filtered.length} className="sm:hidden" aria-label="Gerar relatório PDF">
+              <FileDown className="h-4 w-4" />
+            </Button>
+            <Badge variant="outline" className="text-xs gap-1.5 px-2.5 py-1.5 hidden lg:inline-flex border-brand-accent text-brand-accent">
+              <AlertTriangle className="h-3 w-3" />
+              {avariasData.filter((a) => a.diasAtraso > 180).length} críticas (&gt;180d)
+            </Badge>
+          </>
+        }
+      />
 
       <main className="max-w-[1400px] mx-auto px-6 py-6 space-y-6">
         {/* Origem dos dados / auditoria */}
