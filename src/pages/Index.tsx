@@ -402,7 +402,7 @@ const Index = () => {
         <footer className="text-center text-xs text-muted-foreground py-4 border-t">
           Dados extraídos da planilha Avarias - Ápia · Referência: {new Date().toLocaleDateString("pt-BR")}
         </footer>
-      </main>
+      </div>
 
       <PdfReportDialog
         open={pdfOpen}
