@@ -14,8 +14,10 @@ import {
   ChartTooltipContent,
 } from "@/components/ui/chart";
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, PieChart, Pie, Cell } from "recharts";
-import { DollarSign, Truck, Clock, AlertTriangle, FileText, Filter, X, FileDown, RefreshCw, Inbox, FileX, HelpCircle, Flame } from "lucide-react";
+import { DollarSign, Truck, Clock, AlertTriangle, FileText, Filter, X, FileDown, RefreshCw, Inbox, FileX, HelpCircle, Flame, Database } from "lucide-react";
 import { MultiSelect } from "@/components/MultiSelect";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
 import { criticidade as critOf } from "@/modules/avarias/utils";
 import { PdfReportDialog } from "@/components/PdfReportDialog";
 
