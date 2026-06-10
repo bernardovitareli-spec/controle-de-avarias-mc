@@ -27,6 +27,9 @@ export interface PdfMeta {
   importacaoNome?: string | null;
   importacaoData?: string | null;
   totalImportacao?: number;
+  logoDataUrl?: string | null;
+  chartContractDataUrl?: string | null;
+  chartParecerDataUrl?: string | null;
 }
 
 const fmtDateBR = (iso?: string | null) => {
