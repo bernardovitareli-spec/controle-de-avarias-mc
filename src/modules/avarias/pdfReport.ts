@@ -27,6 +27,9 @@ export interface PdfMeta {
   importacaoNome?: string | null;
   importacaoData?: string | null;
   totalImportacao?: number;
+  logoDataUrl?: string | null;
+  chartContractDataUrl?: string | null;
+  chartParecerDataUrl?: string | null;
 }
 
 const fmtDateBR = (iso?: string | null) => {
@@ -88,18 +91,39 @@ export function generatePdfReport(
     y += lines.length * (size + 2) + 4;
   };
 
-  // ---- Cabeçalho / Capa
-  doc.setFillColor(30, 41, 59);
-  doc.rect(0, 0, pageW, 70, "F");
-  doc.setTextColor(255);
+  // ---- Cabeçalho / Capa com a marca MC
+  doc.setFillColor(255, 255, 255);
+  doc.rect(0, 0, pageW, 110, "F");
+  // faixa lateral primária
+  doc.setFillColor(59, 78, 168); // primary aproximada
+  doc.rect(0, 0, 6, 110, "F");
+
+  if (meta.logoDataUrl) {
+    try {
+      doc.addImage(meta.logoDataUrl, "PNG", margin, 22, 64, 64);
+    } catch {
+      /* ignore */
+    }
+  }
+
+  const textX = margin + (meta.logoDataUrl ? 80 : 0);
+  doc.setTextColor(30, 41, 59);
   doc.setFont("helvetica", "bold");
-  doc.setFontSize(16);
-  doc.text("Relatório Executivo de Avarias - MC Terraplenagem", margin, 32);
+  doc.setFontSize(18);
+  doc.text("Relatório Executivo de Avarias", textX, 50);
   doc.setFont("helvetica", "normal");
-  doc.setFontSize(10);
-  doc.text("Análise de avarias por contrato e equipamento", margin, 50);
-  doc.text(`Emitido em: ${emissao.toLocaleString("pt-BR")}`, pageW - margin, 50, { align: "right" });
-  y = 90;
+  doc.setFontSize(12);
+  doc.setTextColor(80);
+  doc.text("MC Terraplenagem", textX, 68);
+  doc.setFontSize(9);
+  doc.setTextColor(120);
+  doc.text(`Emitido em: ${emissao.toLocaleString("pt-BR")}`, textX, 86);
+
+  // linha divisória
+  doc.setDrawColor(226, 232, 240);
+  doc.setLineWidth(0.8);
+  doc.line(margin, 110, pageW - margin, 110);
+  y = 130;
 
   // ---- Filtros
   h1("Filtros Aplicados");
@@ -170,6 +194,28 @@ export function generatePdfReport(
     });
     y = (doc as any).lastAutoTable.finalY + 16;
   }
+
+  // ---- Gráficos
+  if (options.graficos && (meta.chartContractDataUrl || meta.chartParecerDataUrl)) {
+    h1("Gráficos");
+    const imgW = pageW - margin * 2;
+    const imgH = imgW * (380 / 900); // mantém proporção do canvas
+    if (meta.chartContractDataUrl) {
+      ensure(imgH + 16);
+      try {
+        doc.addImage(meta.chartContractDataUrl, "PNG", margin, y, imgW, imgH);
+        y += imgH + 14;
+      } catch { /* ignore */ }
+    }
+    if (meta.chartParecerDataUrl) {
+      ensure(imgH + 16);
+      try {
+        doc.addImage(meta.chartParecerDataUrl, "PNG", margin, y, imgW, imgH);
+        y += imgH + 14;
+      } catch { /* ignore */ }
+    }
+  }
+
 
   // ---- Análise por Contrato
   if (options.analiseContrato && contratos.length) {

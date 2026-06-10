@@ -20,6 +20,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { criticidade as critOf } from "@/modules/avarias/utils";
 import { PdfReportDialog } from "@/components/PdfReportDialog";
+import { exportAvariasExcel } from "@/modules/avarias/excelExport";
 import { InsightsAlertsCard } from "@/components/InsightsAlertsCard";
 import { DataQualityCard } from "@/components/DataQualityCard";
 
@@ -142,6 +143,9 @@ const Index = () => {
             </Button>
             <Button variant="outline" size="sm" onClick={() => setShowFilters((v) => !v)}>
               <Filter className="h-4 w-4 mr-1.5" /> Filtros
+            </Button>
+            <Button variant="outline" size="sm" onClick={() => exportAvariasExcel(filtered)} disabled={!filtered.length}>
+              <FileDown className="h-4 w-4 mr-1.5" /> Exportar Excel
             </Button>
             <Button size="sm" onClick={() => setPdfOpen(true)} disabled={!filtered.length}>
               <FileDown className="h-4 w-4 mr-1.5" /> Gerar Relatório PDF
@@ -492,6 +496,8 @@ const Index = () => {
           totalImportacao: hasReal ? realRows.length : undefined,
         }}
         totalDashboard={filtered.length}
+        chartContract={byContract.map((d, i) => ({ ...d, color: getContractColor(d.name, i) }))}
+        chartParecer={byCategory.map((d) => ({ ...d, color: CATEGORY_COLORS[d.name] || "#94a3b8" }))}
       />
     </div>
   );
