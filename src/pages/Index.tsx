@@ -144,6 +144,9 @@ const Index = () => {
             <Button variant="outline" size="sm" onClick={() => setShowFilters((v) => !v)}>
               <Filter className="h-4 w-4 mr-1.5" /> Filtros
             </Button>
+            <Button variant="outline" size="sm" onClick={() => exportAvariasExcel(filtered)} disabled={!filtered.length}>
+              <FileDown className="h-4 w-4 mr-1.5" /> Exportar Excel
+            </Button>
             <Button size="sm" onClick={() => setPdfOpen(true)} disabled={!filtered.length}>
               <FileDown className="h-4 w-4 mr-1.5" /> Gerar Relatório PDF
             </Button>
