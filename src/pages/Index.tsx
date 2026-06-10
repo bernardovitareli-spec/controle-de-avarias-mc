@@ -4,7 +4,6 @@ import { useAvariasData } from "@/modules/avarias/useAvariasData";
 import { KPICard } from "@/components/KPICard";
 import { AvariasTable } from "@/components/AvariasTable";
 import { AppHeader } from "@/components/AppHeader";
-import { Skeleton } from "@/components/ui/skeleton";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
