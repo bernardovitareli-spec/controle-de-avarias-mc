@@ -3,18 +3,18 @@ import { avariasData as mockAvariasData } from "@/data/avarias";
 import { useAvariasData } from "@/modules/avarias/useAvariasData";
 import { KPICard } from "@/components/KPICard";
 import { AvariasTable } from "@/components/AvariasTable";
-import { AppHeader } from "@/components/AppHeader";
+import { PageHeader } from "@/components/AppLayout";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { Skeleton } from "@/components/ui/skeleton";
 import {
   ChartContainer,
   ChartTooltip,
   ChartTooltipContent,
 } from "@/components/ui/chart";
-import { BarChart, Bar, XAxis, YAxis, CartesianGrid, PieChart, Pie, Cell, ResponsiveContainer } from "recharts";
-import { DollarSign, Truck, Clock, AlertTriangle, FileText, Filter, X, FileDown } from "lucide-react";
+import { BarChart, Bar, XAxis, YAxis, CartesianGrid, PieChart, Pie, Cell } from "recharts";
+import { DollarSign, Truck, Clock, AlertTriangle, FileText, Filter, X, FileDown, RefreshCw, Inbox } from "lucide-react";
 import { MultiSelect } from "@/components/MultiSelect";
 import { criticidade as critOf } from "@/modules/avarias/utils";
 import { PdfReportDialog } from "@/components/PdfReportDialog";
@@ -53,10 +53,11 @@ const Index = () => {
   const [filterCriticidades, setFilterCriticidades] = useState<string[]>([]);
   const [filterNF, setFilterNF] = useState<string[]>([]);
   const [pdfOpen, setPdfOpen] = useState(false);
+  const [showFilters, setShowFilters] = useState(true);
   const [editTarget, setEditTarget] = useState<EditAvariaTarget | null>(null);
   const { podeEditar } = useUserRole();
 
-  const { loading, hasReal, importacao, rows: realRows, semNF, semParecer } = useAvariasData();
+  const { loading, hasReal, importacao, rows: realRows, semNF, semParecer, refresh } = useAvariasData();
   const avariasData = hasReal ? realRows : mockAvariasData;
 
   const filtered = useMemo(() => {
@@ -116,25 +117,26 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen bg-background">
-      <AppHeader
+    <div className="max-w-[1400px] mx-auto px-4 sm:px-6 py-6 space-y-6">
+      <PageHeader
+        title="Dashboard de Avarias"
+        subtitle="Visão consolidada dos lotes importados, com KPIs, gráficos e detalhamento."
         actions={
           <>
-            <Button size="sm" onClick={() => setPdfOpen(true)} disabled={!filtered.length} className="hidden sm:inline-flex">
-              <FileDown className="h-4 w-4 mr-1.5" />Relatório PDF
+            <Button variant="outline" size="sm" onClick={refresh} disabled={loading}>
+              <RefreshCw className={`h-4 w-4 mr-1.5 ${loading ? "animate-spin" : ""}`} /> Atualizar
             </Button>
-            <Button size="icon" variant="default" onClick={() => setPdfOpen(true)} disabled={!filtered.length} className="sm:hidden" aria-label="Gerar relatório PDF">
-              <FileDown className="h-4 w-4" />
+            <Button variant="outline" size="sm" onClick={() => setShowFilters((v) => !v)}>
+              <Filter className="h-4 w-4 mr-1.5" /> Filtros
             </Button>
-            <Badge variant="outline" className="text-xs gap-1.5 px-2.5 py-1.5 hidden lg:inline-flex border-brand-accent text-brand-accent">
-              <AlertTriangle className="h-3 w-3" />
-              {avariasData.filter((a) => a.diasAtraso > 180).length} críticas (&gt;180d)
-            </Badge>
+            <Button size="sm" onClick={() => setPdfOpen(true)} disabled={!filtered.length}>
+              <FileDown className="h-4 w-4 mr-1.5" /> Gerar Relatório PDF
+            </Button>
           </>
         }
       />
 
-      <main className="max-w-[1400px] mx-auto px-6 py-6 space-y-6">
+      <div className="space-y-6">
         {/* Origem dos dados / auditoria */}
         <div className={`rounded-md border px-4 py-2.5 text-xs flex flex-wrap items-center gap-x-4 gap-y-1 ${hasReal ? "bg-muted/40" : "bg-amber-500/10 border-amber-500/30"}`}>
           {loading ? (
@@ -189,7 +191,8 @@ const Index = () => {
         </div>
 
         {/* Filters */}
-        <Card>
+        {showFilters && (
+        <Card className="shadow-card">
           <CardContent className="p-4 space-y-3">
             <div className="flex flex-wrap items-center gap-2">
               <Filter className="h-4 w-4 text-muted-foreground" />
@@ -261,6 +264,7 @@ const Index = () => {
             </div>
           </CardContent>
         </Card>
+        )}
 
         {/* Charts */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
@@ -400,7 +404,7 @@ const Index = () => {
         <footer className="text-center text-xs text-muted-foreground py-4 border-t">
           Dados extraídos da planilha Avarias - Ápia · Referência: {new Date().toLocaleDateString("pt-BR")}
         </footer>
-      </main>
+      </div>
 
       <PdfReportDialog
         open={pdfOpen}

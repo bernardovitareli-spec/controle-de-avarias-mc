@@ -5,11 +5,15 @@ import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import Index from "./pages/Index.tsx";
 import NotFound from "./pages/NotFound.tsx";
-import AvariasModule from "./pages/avarias/AvariasModule.tsx";
 import AdminUsuarios from "./pages/AdminUsuarios.tsx";
 import Login from "./pages/Login.tsx";
+import AvariasListPage from "./pages/avarias/AvariasListPage.tsx";
+import ImportPage from "./pages/avarias/ImportPage.tsx";
+import HistoricoPage from "./pages/avarias/HistoricoPage.tsx";
+import RelatoriosPage from "./pages/RelatoriosPage.tsx";
 import { AuthProvider } from "./contexts/AuthContext.tsx";
 import { ProtectedRoute } from "./components/ProtectedRoute.tsx";
+import { AppLayout } from "./components/AppLayout.tsx";
 
 const queryClient = new QueryClient();
 
@@ -22,9 +26,20 @@ const App = () => (
         <AuthProvider>
           <Routes>
             <Route path="/login" element={<Login />} />
-            <Route path="/" element={<ProtectedRoute><Index /></ProtectedRoute>} />
-            <Route path="/avarias" element={<ProtectedRoute><AvariasModule /></ProtectedRoute>} />
-            <Route path="/admin/usuarios" element={<ProtectedRoute><AdminUsuarios /></ProtectedRoute>} />
+            <Route
+              element={
+                <ProtectedRoute>
+                  <AppLayout />
+                </ProtectedRoute>
+              }
+            >
+              <Route path="/" element={<Index />} />
+              <Route path="/avarias" element={<AvariasListPage />} />
+              <Route path="/avarias/importar" element={<ImportPage />} />
+              <Route path="/avarias/historico" element={<HistoricoPage />} />
+              <Route path="/relatorios" element={<RelatoriosPage />} />
+              <Route path="/admin/usuarios" element={<AdminUsuarios />} />
+            </Route>
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
