@@ -195,6 +195,28 @@ export function generatePdfReport(
     y = (doc as any).lastAutoTable.finalY + 16;
   }
 
+  // ---- Gráficos
+  if (options.graficos && (meta.chartContractDataUrl || meta.chartParecerDataUrl)) {
+    h1("Gráficos");
+    const imgW = pageW - margin * 2;
+    const imgH = imgW * (380 / 900); // mantém proporção do canvas
+    if (meta.chartContractDataUrl) {
+      ensure(imgH + 16);
+      try {
+        doc.addImage(meta.chartContractDataUrl, "PNG", margin, y, imgW, imgH);
+        y += imgH + 14;
+      } catch { /* ignore */ }
+    }
+    if (meta.chartParecerDataUrl) {
+      ensure(imgH + 16);
+      try {
+        doc.addImage(meta.chartParecerDataUrl, "PNG", margin, y, imgW, imgH);
+        y += imgH + 14;
+      } catch { /* ignore */ }
+    }
+  }
+
+
   // ---- Análise por Contrato
   if (options.analiseContrato && contratos.length) {
     h1("Análise por Contrato");
