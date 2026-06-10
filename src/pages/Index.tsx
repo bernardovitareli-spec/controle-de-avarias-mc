@@ -398,6 +398,16 @@ const Index = () => {
           </Card>
         </div>
 
+        {/* Insights & Data Quality */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+          <InsightsAlertsCard data={filtered} />
+          <DataQualityCard
+            data={filtered}
+            onFilterSemNF={() => setFilterNF(["Sem NF"])}
+            onFilterSemParecer={() => setFilterPareceres(["Sem Parecer"])}
+          />
+        </div>
+
         {/* Contract Summary Cards */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           {contratos.map((contrato, idx) => {
