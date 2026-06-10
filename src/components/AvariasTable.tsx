@@ -3,11 +3,12 @@ import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@
 import { Badge } from "@/components/ui/badge";
 import { cn } from "@/lib/utils";
 import { Avaria } from "@/data/avarias";
-import { ArrowUpDown } from "lucide-react";
+import { ArrowUpDown, Pencil } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 interface AvariasTableProps {
   data: Avaria[];
+  onEdit?: (item: Avaria) => void;
 }
 
 function getDelayColor(dias: number) {
@@ -32,7 +33,7 @@ function getCategoriaColor(cat: string) {
 
 type SortField = "dataEnvio" | "valor" | "diasAtraso" | "placa";
 
-export function AvariasTable({ data }: AvariasTableProps) {
+export function AvariasTable({ data, onEdit }: AvariasTableProps) {
   const [sortField, setSortField] = useState<SortField>("diasAtraso");
   const [sortDir, setSortDir] = useState<"asc" | "desc">("desc");
 
@@ -87,6 +88,7 @@ export function AvariasTable({ data }: AvariasTableProps) {
               </Button>
             </TableHead>
             <TableHead className="font-semibold">Observações</TableHead>
+            {onEdit && <TableHead className="w-[60px]"></TableHead>}
           </TableRow>
         </TableHeader>
         <TableBody>
@@ -113,6 +115,13 @@ export function AvariasTable({ data }: AvariasTableProps) {
               <TableCell className="max-w-[200px] truncate text-sm text-muted-foreground" title={item.observacoes}>
                 {item.observacoes}
               </TableCell>
+              {onEdit && (
+                <TableCell className="text-right">
+                  <Button variant="ghost" size="icon" className="h-8 w-8" onClick={() => onEdit(item)} title="Editar">
+                    <Pencil className="h-4 w-4" />
+                  </Button>
+                </TableCell>
+              )}
             </TableRow>
           ))}
         </TableBody>
