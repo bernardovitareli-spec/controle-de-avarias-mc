@@ -496,6 +496,8 @@ const Index = () => {
           totalImportacao: hasReal ? realRows.length : undefined,
         }}
         totalDashboard={filtered.length}
+        chartContract={byContract.map((d, i) => ({ ...d, color: getContractColor(d.name, i) }))}
+        chartParecer={byCategory.map((d) => ({ ...d, color: CATEGORY_COLORS[d.name] || "#94a3b8" }))}
       />
     </div>
   );
