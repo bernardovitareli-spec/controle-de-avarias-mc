@@ -60,8 +60,9 @@ export default function RelatoriosPage() {
         data={rows}
         filters={{ contratos: [], pareceres: [], placas: [], criticidades: [], nf: [] }}
         meta={{
-          arquivoOrigem: importacao?.nome_arquivo,
-          dataImportacao: importacao?.data_importacao,
+          importacaoNome: importacao?.nome_arquivo,
+          importacaoData: importacao?.data_importacao,
+          totalImportacao: total,
         }}
         totalDashboard={total}
       />
