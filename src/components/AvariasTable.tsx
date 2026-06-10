@@ -61,7 +61,7 @@ export function AvariasTable({ data, onEdit }: AvariasTableProps) {
   };
 
   return (
-    <div className="rounded-xl border bg-card overflow-hidden">
+    <div className="rounded-xl border bg-card overflow-hidden shadow-card">
       <Table>
         <TableHeader>
           <TableRow className="bg-muted/50">

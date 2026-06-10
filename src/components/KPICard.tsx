@@ -14,7 +14,7 @@ interface KPICardProps {
 
 export function KPICard({ title, value, subtitle, icon: Icon, className, iconClassName }: KPICardProps) {
   return (
-    <Card className={cn("relative overflow-hidden", className)}>
+    <Card className={cn("relative overflow-hidden shadow-card hover:shadow-elevated transition-shadow", className)}>
       <CardContent className="p-6">
         <div className="flex items-start justify-between">
           <div className="space-y-1">
