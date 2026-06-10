@@ -20,6 +20,13 @@ import {
   type PdfMeta,
   type PdfOptions,
 } from "@/modules/avarias/pdfReport";
+import mcLogo from "@/assets/mc-logo.png.asset.json";
+import {
+  renderBarChart,
+  renderPieChart,
+  loadImageDataUrl,
+  type ChartDatum,
+} from "@/modules/avarias/chartImages";
 
 interface Props {
   open: boolean;
@@ -28,11 +35,13 @@ interface Props {
   filters: PdfFilters;
   meta: PdfMeta;
   totalDashboard: number;
+  chartContract?: ChartDatum[];
+  chartParecer?: ChartDatum[];
 }
 
 const defaultOptions: PdfOptions = {
   resumoExecutivo: true,
-  graficos: false,
+  graficos: true,
   tabelaDetalhada: true,
   analiseContrato: true,
   analiseCategoria: true,
@@ -42,7 +51,16 @@ const defaultOptions: PdfOptions = {
   observacoes: "",
 };
 
-export function PdfReportDialog({ open, onOpenChange, data, filters, meta, totalDashboard }: Props) {
+export function PdfReportDialog({
+  open,
+  onOpenChange,
+  data,
+  filters,
+  meta,
+  totalDashboard,
+  chartContract,
+  chartParecer,
+}: Props) {
   const [opts, setOpts] = useState<PdfOptions>(defaultOptions);
   const [generating, setGenerating] = useState(false);
 
@@ -69,7 +87,24 @@ export function PdfReportDialog({ open, onOpenChange, data, filters, meta, total
     }
     setGenerating(true);
     try {
-      const doc = generatePdfReport(data, filters, opts, meta);
+      const logoDataUrl = await loadImageDataUrl(mcLogo.url);
+      let chartContractDataUrl: string | null = null;
+      let chartParecerDataUrl: string | null = null;
+      if (opts.graficos) {
+        if (chartContract && chartContract.length) {
+          chartContractDataUrl = renderBarChart(chartContract, { title: "Custos por Contrato" });
+        }
+        if (chartParecer && chartParecer.length) {
+          chartParecerDataUrl = renderPieChart(chartParecer, { title: "Distribuição por Parecer" });
+        }
+      }
+      const fullMeta: PdfMeta = {
+        ...meta,
+        logoDataUrl,
+        chartContractDataUrl,
+        chartParecerDataUrl,
+      };
+      const doc = generatePdfReport(data, filters, opts, fullMeta);
       doc.save(buildFileName(filters));
       toast({ title: "Relatório gerado", description: "PDF executivo salvo com sucesso." });
       onOpenChange(false);
@@ -101,6 +136,7 @@ export function PdfReportDialog({ open, onOpenChange, data, filters, meta, total
         </DialogHeader>
         <div className="grid grid-cols-2 gap-2 py-2">
           <Item k="resumoExecutivo" label="Resumo executivo" />
+          <Item k="graficos" label="Incluir gráficos" />
           <Item k="analiseContrato" label="Análise por contrato" />
           <Item k="analiseCategoria" label="Análise por parecer/criticidade" />
           <Item k="rankingPlacas" label="Ranking de placas" />
