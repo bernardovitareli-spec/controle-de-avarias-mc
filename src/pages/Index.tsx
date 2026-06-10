@@ -20,6 +20,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { criticidade as critOf } from "@/modules/avarias/utils";
 import { PdfReportDialog } from "@/components/PdfReportDialog";
+import { exportAvariasExcel } from "@/modules/avarias/excelExport";
 import { InsightsAlertsCard } from "@/components/InsightsAlertsCard";
 import { DataQualityCard } from "@/components/DataQualityCard";
 
