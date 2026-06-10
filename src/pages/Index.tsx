@@ -151,8 +151,6 @@ const Index = () => {
       <div className="space-y-6">
         {/* Origem dos dados / auditoria */}
         <div className={`rounded-md border px-4 py-2.5 text-xs flex flex-wrap items-center gap-x-4 gap-y-1 ${hasReal ? "bg-muted/40" : "bg-amber-500/10 border-amber-500/30"}`}>
-        {/* Origem dos dados / auditoria */}
-        <div className={`rounded-md border px-4 py-2.5 text-xs flex flex-wrap items-center gap-x-4 gap-y-1 ${hasReal ? "bg-muted/40" : "bg-amber-500/10 border-amber-500/30"}`}>
           {loading ? (
             <span className="text-muted-foreground">Carregando dados…</span>
           ) : hasReal ? (
