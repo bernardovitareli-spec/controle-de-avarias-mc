@@ -14,10 +14,10 @@
     --popover: 0 0% 100%;
     --popover-foreground: 222 30% 18%;
 
-    /* Azul-marinho corporativo MC */
-    --primary: 222 47% 25%;
+    /* Azul corporativo MC (da logo) */
+    --primary: 238 45% 42%;
     --primary-foreground: 0 0% 100%;
-    --primary-glow: 222 60% 42%;
+    --primary-glow: 238 55% 58%;
 
     --secondary: 220 14% 94%;
     --secondary-foreground: 222 30% 22%;
