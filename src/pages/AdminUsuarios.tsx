@@ -8,7 +8,9 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Button } from "@/components/ui/button";
 import { Loader2, ArrowLeft } from "lucide-react";
 import { toast } from "sonner";
-import { useNavigate, Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import { AppHeader } from "@/components/AppHeader";
+import { Skeleton } from "@/components/ui/skeleton";
 
 type AdminUserRow = {
   user_id: string;
@@ -97,28 +99,28 @@ export default function AdminUsuarios() {
   };
 
   return (
-    <div className="min-h-screen bg-background p-6">
-      <div className="max-w-5xl mx-auto space-y-6">
-        <div className="flex items-center justify-between">
+    <div className="min-h-screen bg-background">
+      <AppHeader />
+      <main className="max-w-5xl mx-auto px-4 sm:px-6 py-6 space-y-5">
+        <div className="flex items-center justify-between gap-3">
           <div>
-            <h1 className="text-2xl font-semibold tracking-tight">Gestão de Usuários</h1>
+            <h1 className="text-xl sm:text-2xl font-semibold tracking-tight">Gestão de Usuários</h1>
             <p className="text-sm text-muted-foreground">
               Defina o papel de cada usuário do sistema.
             </p>
           </div>
-          <Button variant="outline" size="sm" asChild>
-            <Link to="/"><ArrowLeft className="h-4 w-4 mr-2" /> Voltar</Link>
-          </Button>
         </div>
 
-        <Card>
+        <Card className="shadow-card">
           <CardHeader>
             <CardTitle className="text-base">Usuários</CardTitle>
           </CardHeader>
           <CardContent>
             {isLoading ? (
-              <div className="py-10 flex justify-center">
-                <Loader2 className="h-5 w-5 animate-spin text-muted-foreground" />
+              <div className="space-y-2">
+                {Array.from({ length: 4 }).map((_, i) => (
+                  <Skeleton key={i} className="h-12 w-full" />
+                ))}
               </div>
             ) : error ? (
               <p className="text-sm text-destructive">
@@ -181,7 +183,7 @@ export default function AdminUsuarios() {
             )}
           </CardContent>
         </Card>
-      </div>
+      </main>
     </div>
   );
 }

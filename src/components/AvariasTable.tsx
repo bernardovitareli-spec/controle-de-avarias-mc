@@ -61,7 +61,7 @@ export function AvariasTable({ data, onEdit }: AvariasTableProps) {
   };
 
   return (
-    <div className="rounded-xl border bg-card overflow-hidden">
+    <div className="rounded-xl border bg-card overflow-hidden shadow-card">
       <Table>
         <TableHeader>
           <TableRow className="bg-muted/50">
@@ -124,6 +124,13 @@ export function AvariasTable({ data, onEdit }: AvariasTableProps) {
               )}
             </TableRow>
           ))}
+          {sorted.length === 0 && (
+            <TableRow>
+              <TableCell colSpan={onEdit ? 8 : 7} className="text-center py-12 text-sm text-muted-foreground">
+                Nenhuma avaria encontrada com os filtros atuais.
+              </TableCell>
+            </TableRow>
+          )}
         </TableBody>
       </Table>
     </div>
