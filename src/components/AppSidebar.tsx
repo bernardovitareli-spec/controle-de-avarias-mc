@@ -27,6 +27,7 @@ import { useAuth } from "@/contexts/AuthContext";
 import { useUserRole } from "@/hooks/useUserRole";
 import { useNavigate } from "react-router-dom";
 import { cn } from "@/lib/utils";
+import mcLogo from "@/assets/mc-logo.png.asset.json";
 
 interface Item {
   title: string;
