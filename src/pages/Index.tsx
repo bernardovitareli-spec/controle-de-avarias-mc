@@ -102,11 +102,14 @@ const Index = () => {
     ...filterPlacas.map((v) => ({ label: `Placa: ${v}`, onRemove: () => setFilterPlacas(filterPlacas.filter((x) => x !== v)) })),
     ...filterCriticidades.map((v) => ({ label: `Criticidade: ${v}`, onRemove: () => setFilterCriticidades(filterCriticidades.filter((x) => x !== v)) })),
     ...filterNF.map((v) => ({ label: `NF: ${v}`, onRemove: () => setFilterNF(filterNF.filter((x) => x !== v)) })),
+    ...(dataInicial ? [{ label: `De: ${dataInicial}`, onRemove: () => setDataInicial("") }] : []),
+    ...(dataFinal ? [{ label: `Até: ${dataFinal}`, onRemove: () => setDataFinal("") }] : []),
   ];
   const hasAnyFilter = activeChips.length > 0;
   const clearAll = () => {
     setFilterContratos([]); setFilterPareceres([]); setFilterPlacas([]);
     setFilterCriticidades([]); setFilterNF([]);
+    setDataInicial(""); setDataFinal("");
   };
 
   // Chart data: by contract
