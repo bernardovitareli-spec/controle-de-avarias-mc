@@ -14,8 +14,10 @@ import {
   ChartTooltipContent,
 } from "@/components/ui/chart";
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, PieChart, Pie, Cell } from "recharts";
-import { DollarSign, Truck, Clock, AlertTriangle, FileText, Filter, X, FileDown, RefreshCw, Inbox, FileX, HelpCircle, Flame } from "lucide-react";
+import { DollarSign, Truck, Clock, AlertTriangle, FileText, Filter, X, FileDown, RefreshCw, Inbox, FileX, HelpCircle, Flame, Database } from "lucide-react";
 import { MultiSelect } from "@/components/MultiSelect";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
 import { criticidade as critOf } from "@/modules/avarias/utils";
 import { PdfReportDialog } from "@/components/PdfReportDialog";
 
@@ -52,12 +54,14 @@ const Index = () => {
   const [filterPlacas, setFilterPlacas] = useState<string[]>([]);
   const [filterCriticidades, setFilterCriticidades] = useState<string[]>([]);
   const [filterNF, setFilterNF] = useState<string[]>([]);
+  const [dataInicial, setDataInicial] = useState<string>("");
+  const [dataFinal, setDataFinal] = useState<string>("");
   const [pdfOpen, setPdfOpen] = useState(false);
   const [showFilters, setShowFilters] = useState(true);
   const [editTarget, setEditTarget] = useState<EditAvariaTarget | null>(null);
   const { podeEditar } = useUserRole();
 
-  const { loading, hasReal, importacao, rows: realRows, semNF, semParecer, refresh } = useAvariasData();
+  const { loading, hasReal, importacao, importacoes, rows: realRows, semNF, semParecer, refresh } = useAvariasData();
   const avariasData = hasReal ? realRows : mockAvariasData;
 
   const filtered = useMemo(() => {
@@ -73,9 +77,11 @@ const Index = () => {
         if (want && !wantNo && !hasNF) return false;
         if (wantNo && !want && hasNF) return false;
       }
+      if (dataInicial && (!a.dataEnvio || a.dataEnvio < dataInicial)) return false;
+      if (dataFinal && (!a.dataEnvio || a.dataEnvio > dataFinal)) return false;
       return true;
     });
-  }, [avariasData, filterContratos, filterPareceres, filterPlacas, filterCriticidades, filterNF]);
+  }, [avariasData, filterContratos, filterPareceres, filterPlacas, filterCriticidades, filterNF, dataInicial, dataFinal]);
 
   const totalValor = filtered.reduce((s, a) => s + a.valor, 0);
   const totalItens = filtered.length;
@@ -96,11 +102,14 @@ const Index = () => {
     ...filterPlacas.map((v) => ({ label: `Placa: ${v}`, onRemove: () => setFilterPlacas(filterPlacas.filter((x) => x !== v)) })),
     ...filterCriticidades.map((v) => ({ label: `Criticidade: ${v}`, onRemove: () => setFilterCriticidades(filterCriticidades.filter((x) => x !== v)) })),
     ...filterNF.map((v) => ({ label: `NF: ${v}`, onRemove: () => setFilterNF(filterNF.filter((x) => x !== v)) })),
+    ...(dataInicial ? [{ label: `De: ${dataInicial}`, onRemove: () => setDataInicial("") }] : []),
+    ...(dataFinal ? [{ label: `Até: ${dataFinal}`, onRemove: () => setDataFinal("") }] : []),
   ];
   const hasAnyFilter = activeChips.length > 0;
   const clearAll = () => {
     setFilterContratos([]); setFilterPareceres([]); setFilterPlacas([]);
     setFilterCriticidades([]); setFilterNF([]);
+    setDataInicial(""); setDataFinal("");
   };
 
   // Chart data: by contract
@@ -144,14 +153,19 @@ const Index = () => {
         <div className={`rounded-md border px-4 py-2.5 text-xs flex flex-wrap items-center gap-x-4 gap-y-1 ${hasReal ? "bg-muted/40" : "bg-amber-500/10 border-amber-500/30"}`}>
           {loading ? (
             <span className="text-muted-foreground">Carregando dados…</span>
-          ) : hasReal && importacao ? (
+          ) : hasReal ? (
             <>
-              <span className="font-medium">Fonte: importação real</span>
-              <span className="text-muted-foreground">Arquivo: <code>{importacao.nome_arquivo}</code></span>
-              <span className="text-muted-foreground">Importado em: {new Date(importacao.data_importacao).toLocaleString("pt-BR")}</span>
-              <span className="text-muted-foreground">Registros: {realRows.length}</span>
+              <Database className="h-3.5 w-3.5 text-primary" />
+              <span className="font-medium">Base consolidada</span>
+              <span className="text-muted-foreground">{importacoes.length} importações</span>
+              <span className="text-muted-foreground">{realRows.length} registros</span>
               <span className="text-muted-foreground">Sem NF: {semNF}</span>
               <span className="text-muted-foreground">Sem parecer: {semParecer}</span>
+              {importacao && (
+                <span className="text-muted-foreground ml-auto">
+                  Última: {new Date(importacao.data_importacao).toLocaleDateString("pt-BR")}
+                </span>
+              )}
             </>
           ) : (
             <>
@@ -261,6 +275,24 @@ const Index = () => {
                 searchable={false}
                 width="w-[160px]"
               />
+              <div className="flex items-center gap-1.5">
+                <Label htmlFor="data-ini" className="text-xs text-muted-foreground">De</Label>
+                <Input
+                  id="data-ini"
+                  type="date"
+                  value={dataInicial}
+                  onChange={(e) => setDataInicial(e.target.value)}
+                  className="h-9 w-[150px]"
+                />
+                <Label htmlFor="data-fim" className="text-xs text-muted-foreground">Até</Label>
+                <Input
+                  id="data-fim"
+                  type="date"
+                  value={dataFinal}
+                  onChange={(e) => setDataFinal(e.target.value)}
+                  className="h-9 w-[150px]"
+                />
+              </div>
               {hasAnyFilter && (
                 <Button variant="ghost" size="sm" onClick={clearAll} className="text-xs ml-auto">
                   <X className="h-3 w-3 mr-1" /> Limpar filtros
@@ -271,7 +303,7 @@ const Index = () => {
               <span className="text-xs text-muted-foreground mr-1 mt-1">Aplicados:</span>
               {!hasAnyFilter && (
                 <span className="text-xs text-muted-foreground italic mt-1">
-                  Nenhum filtro aplicado — exibindo base completa da última importação.
+                  Nenhum filtro aplicado — exibindo base consolidada completa.
                 </span>
               )}
               {activeChips.map((c) => (
