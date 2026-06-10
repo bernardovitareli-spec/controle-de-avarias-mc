@@ -9,6 +9,8 @@ import { Button } from "@/components/ui/button";
 import { Loader2, ArrowLeft } from "lucide-react";
 import { toast } from "sonner";
 import { useNavigate, Link } from "react-router-dom";
+import { AppHeader } from "@/components/AppHeader";
+import { Skeleton } from "@/components/ui/skeleton";
 
 type AdminUserRow = {
   user_id: string;
