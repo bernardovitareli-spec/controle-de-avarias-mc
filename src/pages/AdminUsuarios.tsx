@@ -177,7 +177,7 @@ export default function AdminUsuarios() {
             )}
           </CardContent>
         </Card>
-      </main>
+      
     </div>
   );
 }
