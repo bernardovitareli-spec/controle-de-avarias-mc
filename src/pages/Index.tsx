@@ -81,6 +81,9 @@ const Index = () => {
   const totalItens = filtered.length;
   const avgAtraso = Math.round(filtered.reduce((s, a) => s + a.diasAtraso, 0) / (filtered.length || 1));
   const maxAtraso = Math.max(...filtered.map((a) => a.diasAtraso), 0);
+  const semNFFiltered = filtered.filter((a) => !a.nf || !String(a.nf).trim()).length;
+  const semParecerFiltered = filtered.filter((a) => !a.parecer || !String(a.parecer).trim() || a.categoria === "Sem Parecer").length;
+  const criticasFiltered = filtered.filter((a) => critOf(a.diasAtraso) === "Crítica").length;
 
   const contratos: string[] = useMemo(() => [...new Set(avariasData.map((a) => a.contrato))].sort(), [avariasData]);
   const categorias: string[] = useMemo(() => [...new Set(avariasData.map((a) => a.categoria))].sort(), [avariasData]);
