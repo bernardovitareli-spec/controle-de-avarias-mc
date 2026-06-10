@@ -10,12 +10,12 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { LogOut, User as UserIcon } from "lucide-react";
+import { LogOut, User as UserIcon, Users } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
 export function UserMenu() {
   const { user, signOut } = useAuth();
-  const { principalLabel, isLoading } = useUserRole();
+  const { principalLabel, isLoading, isAdmin } = useUserRole();
   const navigate = useNavigate();
 
   if (!user) return null;
@@ -44,6 +44,11 @@ export function UserMenu() {
           </div>
         </DropdownMenuLabel>
         <DropdownMenuSeparator />
+        {isAdmin && (
+          <DropdownMenuItem onClick={() => navigate("/admin/usuarios")}>
+            <Users className="h-4 w-4 mr-2" /> Gerenciar usuários
+          </DropdownMenuItem>
+        )}
         <DropdownMenuItem onClick={handleSignOut} className="text-destructive focus:text-destructive">
           <LogOut className="h-4 w-4 mr-2" /> Sair
         </DropdownMenuItem>
