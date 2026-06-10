@@ -65,7 +65,7 @@ export function EditAvariaDialog({ open, onOpenChange, target }: Props) {
 
       const { error } = await supabase
         .from("avarias_registros")
-        .update(payload)
+        .update(payload as any)
         .eq("id", target.id);
       if (error) throw error;
 
