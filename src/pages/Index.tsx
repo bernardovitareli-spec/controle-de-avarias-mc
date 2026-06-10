@@ -54,12 +54,14 @@ const Index = () => {
   const [filterPlacas, setFilterPlacas] = useState<string[]>([]);
   const [filterCriticidades, setFilterCriticidades] = useState<string[]>([]);
   const [filterNF, setFilterNF] = useState<string[]>([]);
+  const [dataInicial, setDataInicial] = useState<string>("");
+  const [dataFinal, setDataFinal] = useState<string>("");
   const [pdfOpen, setPdfOpen] = useState(false);
   const [showFilters, setShowFilters] = useState(true);
   const [editTarget, setEditTarget] = useState<EditAvariaTarget | null>(null);
   const { podeEditar } = useUserRole();
 
-  const { loading, hasReal, importacao, rows: realRows, semNF, semParecer, refresh } = useAvariasData();
+  const { loading, hasReal, importacao, importacoes, rows: realRows, semNF, semParecer, refresh } = useAvariasData();
   const avariasData = hasReal ? realRows : mockAvariasData;
 
   const filtered = useMemo(() => {
