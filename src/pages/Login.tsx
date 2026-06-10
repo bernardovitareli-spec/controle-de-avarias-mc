@@ -7,6 +7,7 @@ import { Label } from "@/components/ui/label";
 import { Button } from "@/components/ui/button";
 import { Alert, AlertDescription } from "@/components/ui/alert";
 import { Loader2, LogIn, ShieldCheck } from "lucide-react";
+import mcLogo from "@/assets/mc-logo.png.asset.json";
 
 export default function Login() {
   const { user, loading, signIn } = useAuth();
