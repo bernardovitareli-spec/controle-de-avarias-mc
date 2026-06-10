@@ -34,18 +34,16 @@ export default function Login() {
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-background via-background to-primary/5 p-4">
       <Card className="w-full max-w-md shadow-elevated border-border/60">
         <CardHeader className="space-y-3">
-          <div className="flex items-center gap-3">
-            <div className="h-11 w-11 rounded-xl bg-primary text-primary-foreground grid place-items-center font-bold shadow-card">
-              MC
-            </div>
-            <div>
-              <CardTitle className="text-lg leading-tight">MC — Gestão de Avarias</CardTitle>
-              <p className="text-xs text-muted-foreground flex items-center gap-1 mt-0.5">
+          <div className="flex flex-col items-center gap-3 pt-2">
+            <img src={mcLogo.url} alt="MC Terraplenagem" className="h-16 w-auto object-contain" />
+            <div className="text-center">
+              <CardTitle className="text-lg leading-tight">Gestão de Avarias</CardTitle>
+              <p className="text-xs text-muted-foreground flex items-center justify-center gap-1 mt-1">
                 <ShieldCheck className="h-3 w-3 text-primary" /> Acesso restrito
               </p>
             </div>
           </div>
-          <CardDescription>
+          <CardDescription className="text-center">
             Use as credenciais fornecidas pelo administrador.
           </CardDescription>
         </CardHeader>
