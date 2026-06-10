@@ -27,6 +27,7 @@ import { useAuth } from "@/contexts/AuthContext";
 import { useUserRole } from "@/hooks/useUserRole";
 import { useNavigate } from "react-router-dom";
 import { cn } from "@/lib/utils";
+import mcLogo from "@/assets/mc-logo.png.asset.json";
 
 interface Item {
   title: string;
@@ -89,15 +90,17 @@ export function AppSidebar() {
   return (
     <Sidebar collapsible="icon" className="border-r">
       <SidebarHeader className="border-b">
-        <div className={cn("flex items-center gap-2.5 px-1.5 py-1", collapsed && "justify-center px-0")}>
-          <div className="h-9 w-9 rounded-md bg-primary text-primary-foreground grid place-items-center font-bold text-sm shadow-card shrink-0">
-            MC
-          </div>
-          {!collapsed && (
-            <div className="leading-tight min-w-0">
-              <div className="text-sm font-semibold tracking-tight truncate">Gestão de Avarias</div>
-              <div className="text-[11px] text-muted-foreground -mt-0.5 truncate">MC Terraplenagem</div>
-            </div>
+        <div className={cn("flex items-center gap-2.5 px-1.5 py-2", collapsed && "justify-center px-0")}>
+          {collapsed ? (
+            <img src={mcLogo.url} alt="MC Terraplenagem" className="h-8 w-8 object-contain rounded" />
+          ) : (
+            <>
+              <img src={mcLogo.url} alt="MC Terraplenagem" className="h-10 w-auto object-contain rounded shrink-0" />
+              <div className="leading-tight min-w-0">
+                <div className="text-sm font-semibold tracking-tight truncate">Gestão de Avarias</div>
+                <div className="text-[11px] text-muted-foreground -mt-0.5 truncate">MC Terraplenagem</div>
+              </div>
+            </>
           )}
         </div>
       </SidebarHeader>

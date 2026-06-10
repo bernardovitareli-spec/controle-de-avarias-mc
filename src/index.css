@@ -14,10 +14,10 @@
     --popover: 0 0% 100%;
     --popover-foreground: 222 30% 18%;
 
-    /* Azul-marinho corporativo MC */
-    --primary: 222 47% 25%;
+    /* Azul corporativo MC (da logo) */
+    --primary: 238 45% 42%;
     --primary-foreground: 0 0% 100%;
-    --primary-glow: 222 60% 42%;
+    --primary-glow: 238 55% 58%;
 
     --secondary: 220 14% 94%;
     --secondary-foreground: 222 30% 22%;
@@ -47,19 +47,19 @@
 
     --border: 220 13% 91%;
     --input: 220 13% 91%;
-    --ring: 222 47% 25%;
+    --ring: 238 45% 42%;
 
     --radius: 0.5rem;
 
     /* Sidebar (branco, borda sutil à direita) */
     --sidebar-background: 0 0% 100%;
     --sidebar-foreground: 222 25% 22%;
-    --sidebar-primary: 222 47% 25%;
+    --sidebar-primary: 238 45% 42%;
     --sidebar-primary-foreground: 0 0% 100%;
     --sidebar-accent: 220 14% 95%;
-    --sidebar-accent-foreground: 222 47% 25%;
+    --sidebar-accent-foreground: 238 45% 42%;
     --sidebar-border: 220 13% 91%;
-    --sidebar-ring: 222 47% 25%;
+    --sidebar-ring: 238 45% 42%;
 
     --chart-1: 222 47% 35%;
     --chart-2: 38 92% 50%;

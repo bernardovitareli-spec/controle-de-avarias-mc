@@ -14,7 +14,7 @@ import {
   ChartTooltipContent,
 } from "@/components/ui/chart";
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, PieChart, Pie, Cell } from "recharts";
-import { DollarSign, Truck, Clock, AlertTriangle, FileText, Filter, X, FileDown, RefreshCw, Inbox } from "lucide-react";
+import { DollarSign, Truck, Clock, AlertTriangle, FileText, Filter, X, FileDown, RefreshCw, Inbox, FileX, HelpCircle, Flame } from "lucide-react";
 import { MultiSelect } from "@/components/MultiSelect";
 import { criticidade as critOf } from "@/modules/avarias/utils";
 import { PdfReportDialog } from "@/components/PdfReportDialog";
@@ -81,6 +81,9 @@ const Index = () => {
   const totalItens = filtered.length;
   const avgAtraso = Math.round(filtered.reduce((s, a) => s + a.diasAtraso, 0) / (filtered.length || 1));
   const maxAtraso = Math.max(...filtered.map((a) => a.diasAtraso), 0);
+  const semNFFiltered = filtered.filter((a) => !a.nf || !String(a.nf).trim()).length;
+  const semParecerFiltered = filtered.filter((a) => !a.parecer || !String(a.parecer).trim() || a.categoria === "Sem Parecer").length;
+  const criticasFiltered = filtered.filter((a) => critOf(a.diasAtraso) === "Crítica").length;
 
   const contratos: string[] = useMemo(() => [...new Set(avariasData.map((a) => a.contrato))].sort(), [avariasData]);
   const categorias: string[] = useMemo(() => [...new Set(avariasData.map((a) => a.categoria))].sort(), [avariasData]);
@@ -161,32 +164,54 @@ const Index = () => {
 
         {/* KPIs */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-
           <KPICard
             title="Valor Total"
             value={formatCurrency(totalValor)}
             subtitle={`${totalItens} avarias registradas`}
             icon={DollarSign}
+            tone="success"
           />
           <KPICard
-            title="Contratos Ativos"
+            title="Contratos"
             value={String(contratos.length)}
             subtitle={`${avariasData.length} avarias na base`}
             icon={FileText}
+            tone="info"
           />
           <KPICard
             title="Atraso Médio"
             value={`${avgAtraso} dias`}
             subtitle="Desde envio da avaria"
             icon={Clock}
-            iconClassName="bg-[hsl(var(--warning))]/10"
+            tone="warning"
           />
           <KPICard
             title="Maior Atraso"
             value={`${maxAtraso} dias`}
             subtitle="Avaria mais antiga pendente"
             icon={AlertTriangle}
-            iconClassName="bg-destructive/10"
+            tone="danger"
+          />
+          <KPICard
+            title="Sem NF"
+            value={String(semNFFiltered)}
+            subtitle="Avarias sem nota fiscal"
+            icon={FileX}
+            tone="warning"
+          />
+          <KPICard
+            title="Sem Parecer"
+            value={String(semParecerFiltered)}
+            subtitle="Aguardando análise"
+            icon={HelpCircle}
+            tone="muted"
+          />
+          <KPICard
+            title="Avarias Críticas"
+            value={String(criticasFiltered)}
+            subtitle="Atraso acima do limite"
+            icon={Flame}
+            tone="danger"
           />
         </div>
 
