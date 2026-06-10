@@ -275,6 +275,24 @@ const Index = () => {
                 searchable={false}
                 width="w-[160px]"
               />
+              <div className="flex items-center gap-1.5">
+                <Label htmlFor="data-ini" className="text-xs text-muted-foreground">De</Label>
+                <Input
+                  id="data-ini"
+                  type="date"
+                  value={dataInicial}
+                  onChange={(e) => setDataInicial(e.target.value)}
+                  className="h-9 w-[150px]"
+                />
+                <Label htmlFor="data-fim" className="text-xs text-muted-foreground">Até</Label>
+                <Input
+                  id="data-fim"
+                  type="date"
+                  value={dataFinal}
+                  onChange={(e) => setDataFinal(e.target.value)}
+                  className="h-9 w-[150px]"
+                />
+              </div>
               {hasAnyFilter && (
                 <Button variant="ghost" size="sm" onClick={clearAll} className="text-xs ml-auto">
                   <X className="h-3 w-3 mr-1" /> Limpar filtros
@@ -285,7 +303,7 @@ const Index = () => {
               <span className="text-xs text-muted-foreground mr-1 mt-1">Aplicados:</span>
               {!hasAnyFilter && (
                 <span className="text-xs text-muted-foreground italic mt-1">
-                  Nenhum filtro aplicado — exibindo base completa da última importação.
+                  Nenhum filtro aplicado — exibindo base consolidada completa.
                 </span>
               )}
               {activeChips.map((c) => (
