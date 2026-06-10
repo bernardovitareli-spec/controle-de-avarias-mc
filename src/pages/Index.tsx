@@ -191,7 +191,8 @@ const Index = () => {
         </div>
 
         {/* Filters */}
-        <Card>
+        {showFilters && (
+        <Card className="shadow-card">
           <CardContent className="p-4 space-y-3">
             <div className="flex flex-wrap items-center gap-2">
               <Filter className="h-4 w-4 text-muted-foreground" />
